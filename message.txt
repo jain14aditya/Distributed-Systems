@@ -1,0 +1,37 @@
+Hello Mam ,
+
+
+I hope you are doing fine . I came to campus yesterday .  I thought of coming on wednesday , but i went home as its nearby . Sorry for that .
+
+I added Json File generation thing inside the fusion script . Its working good .
+
+I'm using a 10 sized DAG and 100 sized DAG to test my Fusion Dag generation script ( DAG generating algorithm,that we discussed and implemented. )
+I had to seperate all these into seperate json files and seperate kernel files , inorder to apply fusion on them ( both 100 sized and 10 sized  , since for fusion ,we need 2 json file's and 2 cl file's , with only the kernel in them . ) 
+
+After that , we need to do static analysis and obtain execution times for all pairs (for every fusion and , for all partitions , and for 50 runs ,but i am doing with 10 runs and averaging them )  in those DAGs . It is similar to the  profiling results Ive shown you , last time for HOG files .
+
+So 10 sized DAG has 146 kernels(including individual and Fusion Kernels of 3 types ) and 100 sized DAG has around 4-5000 kernels and so I automated this static analysis for all pairs in that DAG's (using a script , that takes all the kernel names as input from a file . It will take all kernel names and processes one by one for 10 partitions and each partition 10times and averages them ).
+
+Its executing one kernel after the other in both DAG's .
+
+Once this static analysis is done ,i'll use these on the DAG and generated fusion DAG and will test them and report the execution times . ( It will roughly take 2-3 hrs once the static analysis is done ) .
+
+
+Since we didn't consider variable repetitions ( local and global variables because of scope issue ,  we only removed function repetitions right ) . so some kernels having a same global variable defined in them , are giving compilation errors and i'm hand picking all such files and removing such errors .
+
+I am done with removing above compile errors in 7 sized DAG (146 kernels) and started executing them . Once it is done , we will get the execution times and i'll use them on the Fusion DAG generation algorithm as input to generate the DAG and I will test them up . I'm doing the same process on 100 sized DAG . Once it is done ,i'll do the same i mentioned above .
+
+After getting execution times , I will take that DAG and I'll get the results below .
+
+1) I will take a partition value and for all nodes in the graph , i'll use this partition value during fused DAG generation as the min time for that node ( here node means kernel ). Will build graph with this and run it and will compare the  fused DAG total execution time after running the DAG vs  fused DAG total execution time before running (from static execution times)  for that partition. Will do the same for 0-10 partitions and will report the results .
+2) For a node , I'll take the minimum execution time of all partitions and for fused Node , i'll take the minimum execution time of all partitions,fusions . I mean 3 fusion types and 11 partition values = 33 values and do the same as mentioned in step 1 .
+
+
+Meanwhile  , I 'm planning to test these input /output functions to see , if they are working fine or not .
+
+Once the results are out , i'll report you the same .These execution is taking time . I m not able to do anything , since we need the real execution times to compare and profile results .  It might take a week maybe , because of the DAG size and kernels , i need to get static analysis . Since I couldn't test these kernels ,any where outside KGP , i just generated the fused kernels and was removing variable repetition errors from them one by one.
+
+
+Hope you get well soon ,
+
+ThankYou ,

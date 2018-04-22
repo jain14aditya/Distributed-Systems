@@ -1,0 +1,4 @@
+In Iterative stochastic search, we incrementally increase the search range (by r) within which the perturbations z~ are randomly sampled . 
+
+
+In Hybrid shrinking search, we first search for adversaries in a wide search range, and recursively tighten the upper bound of the search range with denser sampling in bisections. 
