@@ -59,11 +59,12 @@ def main() :
 	labelFrom = Label(frame,width=10,text="To",relief = RAISED)
 	labelFrom.place(x=100,y=400)
 
+
 	variable = StringVar(frame)
-	variable.set("Chennai")
+	variable.set("A")
 
 	variable2 = StringVar(frame)
-	variable2.set("Chennai")
+	variable2.set("B")
 
 	DropBoxTo = OptionMenu(frame,variable,"A","B","C","D")
 	DropBoxTo.place(x=200,y=300)
@@ -71,6 +72,13 @@ def main() :
 
 	DropBoxFrom = OptionMenu(frame,variable2,"A","B","C","D")
 	DropBoxFrom.place(x=200,y=400)
+
+	L1 = Label(frame, text="Budget")
+	L1.place(x=100,y=500)
+
+	E1 = Entry(frame,width =10)
+	E1.place(x=200,y=500)
+
 
 	checkButton = tkinter.Button(frame,text ="Check Availability",command = helloCallBack,bg= 'yellow')
 	checkButton.place(x=100,y=500)
