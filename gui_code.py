@@ -11,7 +11,8 @@ import calendar
 # import tkinter.messagebox
 # import ttkcalender
 # import tkSimpleDialog.Dialog
-
+ip = '192.168.0.11'
+port = 12559             
 
 def helloCallBack() :
 	# here we need to take a message and parse it back to the central server
@@ -19,11 +20,10 @@ def helloCallBack() :
 	s = socket.socket()         
  
 	# Define the port on which you want to connect
-	port = 12558              
 
 
 	# connect to the server on local computer
-	s.connect(('10.145.236.136', port))
+	s.connect((ip, port))
 
 
 	#"" here we access database ""
