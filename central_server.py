@@ -24,10 +24,10 @@ hearbeat.setblocking(0)
 
 
 ips =  {}
-ips['airport1'] = ('127.0.0.1',10000)
-ips['airport2'] = ('127.0.0.1',10001)
-ips['hotel'] = ('127.0.0.1',10002)
-ips['heartbeat'] = ('127.0.0.1',10003)
+ips['airport1'] = ('192.168.0.11',10000)
+ips['airport2'] = ('192.168.0.11',10001)
+ips['hotel'] = ('192.168.0.11',10002)
+ips['heartbeat'] = ('192.168.0.11',10003)
 
 
 airport1.connect(ips['airport1'])
@@ -49,7 +49,7 @@ port = 12559
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-server_s.bind(('127.0.0.1',port))        
+server_s.bind(('192.168.0.11',port))        
 print("socket binded to %s" %(port))
  
 # put the socket into listening mode
