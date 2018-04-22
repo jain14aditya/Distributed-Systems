@@ -8,14 +8,14 @@ print "Socket successfully created"
  
 # reserve a port on your computer in our
 # case it is 1245 but it can be anything
-port = 10000           
+port = 12559            
  
 # Next bind to the port
 # we have not typed any ip in the ip field
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-s.bind(('127.0.0.1',port))        
+s.bind(('10.17.12.27',port))        
 print "socket binded to %s" %(port)
  
 # put the socket into listening mode
@@ -36,6 +36,7 @@ while True:
    print(type(dict))
    print(dict)
    # c is the connection , conn.recv will read as many bytes as possible
+   # database will be queried and message will be sent 
 
    # send a thank you message to the client. 
    c.send('Thank you for connecting')

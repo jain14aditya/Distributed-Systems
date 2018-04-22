@@ -38,7 +38,7 @@ heartbeat.connect(ips['heartbeat'])
 
 timeout_message = 60
 
-print "Socket successfully created"
+print("Socket successfully created")
  
 # reserve a port on your computer in our
 # case it is 1245 but it can be anything
@@ -49,12 +49,12 @@ port = 12559
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-s.bind(('127.0.0.1',port))        
-print "socket binded to %s" %(port)
+server_s.bind(('127.0',port))        
+print("socket binded to %s" %(port))
  
 # put the socket into listening mode
-s.listen(5)     
-print "socket is listening"          
+server_s.listen(5)     
+print("socket is listening")          
  
 # a forever loop until we interrupt it or 
 # an error occurs
@@ -128,7 +128,7 @@ while True:
                 	inputs.remove(s)
                 	outputs.append(s)
                 	dicte = {}
-             		dicte['flag'] = 3 # 1 is request_list update , 2 is log update , 3 is zinda hain update
+             		dicte['flag'] = 3 # 1 is request_list update , 2 is log update , 3 is zinda hain bolne wala update
              		message_queue[s].append(dicte)   	
 
                 elif dict['sender'] == 'client' :
@@ -167,12 +167,11 @@ while True:
 							# read type 
 							dicte['type'] = 0 # read from permanent
 						else :
-							dicte['type'] = 2 # write temp value , since it is not a write type 
-							# 3 is write permanent value 
-							# 4 is undo temp value
-
+							dicte['type'] = 2 # write permanent value , since it is not a write type 
+							# 3 is undo permanent value 
+							
 						dicte['budget'] = dict['budget']
-						dicte[timer] = time.time() # this is used when we want to delete a request that has crossed certain limit .
+						dicte['timer'] = time.time() # this is used when we want to delete a request that has crossed certain limit .
 
 						message_queue[host].append(dicte)
 
@@ -180,6 +179,8 @@ while True:
 						dicte['3'] = -1
 
 						message_queue[hotel].append(dicte)
+
+						dicte['flag'] = 'insert'
  						outputs.append(heartbeat)
  						message_queues[heartbeat].append(dicte)
 
@@ -258,8 +259,7 @@ while True:
 						dicte['pos'] = '3'
 
 						message_queues[hotel].append(dicte)
- 						message_queues[heartbeat].append(dicte)
-
+ 						
 						dicte['from'] = from_
 						dicte['to'] = to_
 						dicte['inter'] = i
@@ -268,13 +268,17 @@ while True:
 
 
 						requests_list[counter] = dicte
+						dicte['flag'] = 'insert'
+						message_queues[heartbeat].append(dicte)
+						dicte['flag'] = 'request'
 
 						f.write("Added message "+str(from_)+"  to "+str(to_)+" to message_queue")
-							
+						
  
  						outputs.apppend(hotel)
  						outputs.append(airport1)
  						outputs.append(airport2)
+ 						outputs.append(heartbeat)
  						outputs.append(heartbeat)
 
  					counter = counter + 1

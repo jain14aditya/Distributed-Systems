@@ -1,6 +1,7 @@
 ###### This is for the main server gui code , 
 
 import tkinter
+import socket
 from tkinter import *
 from tkinter import simpledialog
 from tkinter.ttk import *
@@ -64,11 +65,11 @@ def main() :
 	variable2 = StringVar(frame)
 	variable2.set("Chennai")
 
-	DropBoxTo = OptionMenu(frame,variable,"Delhi","Hyderabad","Kolkata","Mumbai","Lucknow")
+	DropBoxTo = OptionMenu(frame,variable,"A","B","C","D")
 	DropBoxTo.place(x=200,y=300)
 
 
-	DropBoxFrom = OptionMenu(frame,variable2,"Delhi","Hyderabad","Kolkata","Mumbai","Lucknow")
+	DropBoxFrom = OptionMenu(frame,variable2,"A","B","C","D")
 	DropBoxFrom.place(x=200,y=400)
 
 	checkButton = tkinter.Button(frame,text ="Check Availability",command = helloCallBack,bg= 'yellow')
