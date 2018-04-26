@@ -1,7 +1,8 @@
 # first of all import the socket library
 import socket	 
 import json			  
- 
+import select
+
 # next create a socket object
 s = socket.socket()			
 print "Socket successfully created"
@@ -15,7 +16,7 @@ port = 10002
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-s.bind(('192.168.0.11',port))		  
+s.bind(('192.168.0.10',port))		  
 print "socket binded to %s" %(port)
  
 # put the socket into listening mode

@@ -4,7 +4,7 @@ import json
 import time
 import logging
 import select
-
+import Queue
 
 # Create a TCP/IP socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -25,17 +25,16 @@ heartbeat = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 
 ips =  {}
-ips['airport1'] = ('192.168.0.11',10000)
-ips['airport2'] = ('192.168.0.11',10001)
-ips['hotel'] = ('192.168.0.11',10002)
-ips['heartbeat'] = ('192.168.0.11',10003)
+ips['airport1'] = ('192.168.0.10',10000)
+ips['airport2'] = ('192.168.0.10',10001)
+ips['hotel'] = ('192.168.0.10',10002)
+ips['heartbeat'] = ('192.168.0.10',10003)
 
 
-airport1.connect(ips['airport1'])
-airport2.connect(ips['airport2'])
-hotel.connect(ips['hotel'])
-heartbeat.connect(ips['heartbeat'])
-
+#airport1.connect(ips['airport1'])
+#airport2.connect(ips['airport2'])
+#hotel.connect(ips['hotel'])
+#heartbeat.connect(ips['heartbeat'])
 
 timeout_message = 60
 
@@ -50,7 +49,7 @@ port = 12559
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-server.bind(('192.168.0.11',port))		
+server.bind(('192.168.0.10',port))		
 print("socket binded to %s" %(port))
  
 # put the socket into listening mode
@@ -79,10 +78,11 @@ locations = ['A','B','C','D']
 
 inputs = [server]
 outputs = []
-message_queues = {}
+message_queue = {}
 
 counter = int(0)
 
+print "opening logs.txt"
 f = open("logs.txt",'a')
 
 
@@ -109,8 +109,8 @@ while True:
 			dicte['sender'] = 'central'
 			dicte['flag'] = 'log'
 			dicte['msg'] = "Got connection from "+str(connection) 
-			outputs.append(heartbeat)
-			message_queue[heartbeat].append(dicte)
+			# outputs.append(heartbeat)
+			# message_queue[heartbeat].append(dicte)
 
 
 		else:
@@ -122,7 +122,7 @@ while True:
 				# A readable client socket has data
 				#print >>sys.stderr, 'received "%s" from %s' % (data, s.getpeername())
 				dict = json.loads(data.decode('utf-8'))
-				#message_queues[s].put(dict)
+				#message_queue[s].put(dict)
 				# Add output channel for response
 				if dict['sender'] == 'heartbeat' :
 					inputs.remove(s)
@@ -143,6 +143,10 @@ while True:
 						if graph[ (from_,to_) ] == 1 :
 							# send message to airport 1 and hotel
 							# Create a socket object
+
+							# airport1.connect(ips[airport1])
+							# hotel.connect(ips[hotel])
+							print("reached here in airport one")
 							outputs.append(airport1)
 							outputs.append(hotel)
 							host = airport1
@@ -181,8 +185,8 @@ while True:
 						message_queue[hotel].append(dicte)
 
 						dicte['flag'] = 'insert'
-						outputs.append(heartbeat)
-						message_queues[heartbeat].append(dicte)
+						# outputs.append(heartbeat)
+						# message_queue[heartbeat].append(dicte)
 
 						dicte['conn'] = s
 
@@ -192,8 +196,8 @@ while True:
 						f.write("Added message in logs "+str(from_)+" "+str(to_))
 						
 						dicte['flag'] = 'request'
-						outputs.append(heartbeat)
-						message_queue[heartbeat].append(dicte)
+						# outputs.append(heartbeat)
+						# message_queue[heartbeat].append(dicte)
 
 					else : 
 
@@ -218,12 +222,12 @@ while True:
 							dicte['sender'] = 'central'
 							dicte['flag'] = '0'
 							dicte['cost'] = 0
-							message_queues[s].append(dicte)
+							message_queue[s].append(dicte)
 							
 							f.write("Cannot find path from "+str(from_)+"  to "+str(to_))
 							dicte['flag'] = 'log'
-							outputs.append(heartbeat)
-							message_queue[heartbeat].append(dicte)
+							# outputs.append(heartbeat)
+							# message_queue[heartbeat].append(dicte)
 	
 							continue
 
@@ -245,7 +249,7 @@ while True:
 
 						dicte['budget'] = dict['budget']
 						dicte[timer] = time.time() # this is used when we	
-						message_queues[airport1].append(dicte)
+						message_queue[airport1].append(dicte)
 
 						dicte['pos']= '2'
 						dicte['from']= i
@@ -254,11 +258,11 @@ while True:
 						dicte['2'] = -1
 						dicte['3'] = -1
 
-						message_queues[airport2].append(dicte)
+						message_queue[airport2].append(dicte)
 
 						dicte['pos'] = '3'
 
-						message_queues[hotel].append(dicte)
+						message_queue[hotel].append(dicte)
 						
 						dicte['from'] = from_
 						dicte['to'] = to_
@@ -269,7 +273,7 @@ while True:
 
 						requests_list[counter] = dicte
 						dicte['flag'] = 'insert'
-						message_queues[heartbeat].append(dicte)
+						# message_queue[heartbeat].append(dicte)
 						dicte['flag'] = 'request'
 
 						f.write("Added message "+str(from_)+"  to "+str(to_)+" to message_queue")
@@ -278,8 +282,8 @@ while True:
 						outputs.apppend(hotel)
 						outputs.append(airport1)
 						outputs.append(airport2)
-						outputs.append(heartbeat)
-						outputs.append(heartbeat)
+						# outputs.append(heartbeat)
+						# outputs.append(heartbeat)
 
 					counter = counter + 1
 
@@ -309,7 +313,7 @@ while True:
 							dicte['type'] = 4
 							inputs.remove(s)
 							outputs.append(s)
-							message_queues[s].append(dicte)
+							message_queue[s].append(dicte)
 
 						elif dicte['type'] == 4:
 							# this is already a undo operation .airport has already done that , so 
@@ -322,7 +326,7 @@ while True:
 						#	dicte['type'] = 5 
 						#	inputs.remove(s)
 						#	outputs.append(s)
-						#	message_queues[s].append(dicte)
+						#	message_queue[s].append(dicte)
 
 			else:
 
@@ -335,7 +339,7 @@ while True:
 				s.close()
 
 				# Remove message queue
-				del message_queues[s]
+				del message_queue[s]
 
 
 
@@ -343,7 +347,7 @@ while True:
 	for s in writable:
 
 		try:
-			dict = message_queues[s].get_nowait()
+			dict = message_queue[s].get_nowait()
 		except Queue.Empty:
 			# No messages waiting so stop checking for writability.
 			#print >>sys.stderr, 'output queue for', s.getpeername(), 'is empty'
@@ -352,7 +356,11 @@ while True:
 			
 			#print >>sys.stderr, 'sending "%s" to %s' % (next_msg, s.getpeername())
 			#now we need to send the message to respective connection
-			s.send(dict)
+			print "inside writable"
+			if s is airport1:
+				s.connect(ips[airport1])
+				s.send(dict)
+
 			f.write("Sending message now to connection " + str(s))
 			outputs.remove(s)
 
@@ -370,7 +378,7 @@ while True:
 		s.close()
 
 		# Remove message queue
-		del message_queues[s]
+		del message_queue[s]
 
 
 
@@ -391,8 +399,8 @@ while True:
 			output.append(socket)
 
 			value['result']= 3 # timeout 
-			if socket in message_queues :
-				message_queues[socket].append(value)
+			if socket in message_queue :
+				message_queue[socket].append(value)
 
 			f.write("Message has been removed from list "+str(key)+" due to timeout")
 			removable.append(key)

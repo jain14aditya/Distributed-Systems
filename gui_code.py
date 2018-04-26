@@ -11,11 +11,15 @@ import calendar
 # import tkinter.messagebox
 # import ttkcalender
 # import tkSimpleDialog.Dialog
-ip = '192.168.0.11'
+ip = '192.168.0.10'
 port = 12559		
-E1 = None,E2 = None,E3 = None,DropBoxTo = None , DropBoxFrom = None ,Frame = None
+E1 = None
+E2 = None
+E3 = None
+DropBoxTo = None
+DropBoxFrom = None
+Frame = None
 		 
-
 def CheckCallBack() :
 
 	global E1,E2,E3,DropBoxTo,DropBoxFrom,Frame
@@ -25,16 +29,17 @@ def CheckCallBack() :
 		tkinter.messagebox.showinfo(" Please enter correct Date")
 		return
 
-	if E1.get().isdigit() == False or  (E1.get().isdigit() == True and (E1.get() < 1 or E1.get() > 10000 ) ) :
+	if E1.get().isdigit() == False or  (E1.get().isdigit() == True and (int(E1.get()) < 1 or int(E1.get()) > 10000 ) ) :
 		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 10000")
 		return
 
-	if E2.get().isdigit() == False or  (E2.get().isdigit() == True and (E2.get() < 1 or E2.get() > 4 ) ) :	
+	if E2.get().isdigit() == False or  (E2.get().isdigit() == True and (int(E2.get()) < 1 or int(E2.get()) > 4 ) ) :	
 		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 4 " )
 		return
 
 	s = socket.socket()			
 
+	print("sending to (",ip,",",port,")") 
 	# connect to the server on local computer
 	s.connect((ip, port))
 
@@ -56,8 +61,8 @@ def CheckCallBack() :
 def checkDate(date) :
 
 	global E1,E2,E3,DropBoxTo,DropBoxFrom,Frame
-
-	yy,mm,dd=E3.split('-')
+	print("hello")
+	yy,mm,dd=E3.get().split('-')
 
 	if yy.isdigit() == False or len(yy) !=4 :
 		return False
@@ -102,11 +107,11 @@ def BookCallBack() :
 		tkinter.messagebox.showinfo(" Please enter correct Date")
 		return
 
-	if E1.get().isdigit() == False or  (E1.get().isdigit() == True and (E1.get() < 1 or E1.get() > 10000 ) ) :
+	if E1.get().isdigit() == False or  (E1.get().isdigit() == True and (int(E1.get()) < 1 or int(E1.get()) > 10000 ) ) :
 		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 10000")
 		return
 
-	if E2.get().isdigit() == False or  (E2.get().isdigit() == True and (E2.get() < 1 or E2.get() > 4 ) ) :	
+	if E2.get().isdigit() == False or  (E2.get().isdigit() == True and (int(E2.get()) < 1 or int(E2.get()) > 4 ) ) :	
 		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 4 " )
 		return
 
@@ -155,11 +160,11 @@ def main() :
 	variable2 = StringVar(frame)
 	variable2.set("A")
 
-	DropBoxTo = OptionMenu(frame,variable,"A","B","C","D")
+	DropBoxTo = OptionMenu(frame,variable,"select","A","B","C","D")
 	DropBoxTo.place(x=200,y=200)
 
 
-	DropBoxFrom = OptionMenu(frame,variable2,"A","B","C","D")
+	DropBoxFrom = OptionMenu(frame,variable2,"select","A","B","C","D")
 	DropBoxFrom.place(x=200,y=300)
 
 	L1 = Label(frame, text="Budget")
