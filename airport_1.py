@@ -39,8 +39,10 @@ while True:
 			c, addr = airport1.accept() 
 			print 'Got connection from',c,addr
 			msg = c.recv(1024)
+			print msg
 			dict= json.loads(msg.decode('utf-8'))
 			print(dict)
+			
 
 
 	# if(len(msg) ==0 ) :
@@ -50,11 +52,11 @@ while True:
 	# database will be queried and message will be sent 
 
 	# send a thank you message to the client. 
-	c.send('Thank you for connecting')
+	# c.send('Thank you for connecting')
  
 	# Close the connection with the client
-	c.close()
+	# c.close()
 
-	print(" You want to continue or not ") 
+	# print(" You want to continue or not ") 
 	
 

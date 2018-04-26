@@ -6,7 +6,7 @@ from tkinter import *
 from tkinter import simpledialog
 from tkinter.ttk import *
 import calendar
-
+import json
 
 # import tkinter.messagebox
 # import ttkcalender
@@ -18,11 +18,13 @@ E2 = None
 E3 = None
 DropBoxTo = None
 DropBoxFrom = None
+to_ = None
+from_ = None
 Frame = None
 		 
 def CheckCallBack() :
 
-	global E1,E2,E3,DropBoxTo,DropBoxFrom,Frame
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
 	if (checkDate(E3.get()) ) == False :
@@ -44,15 +46,16 @@ def CheckCallBack() :
 	s.connect((ip, port))
 
 	dicte = {}
-	dicte['to'] = DropBoxTo.first_selected_option.text
+	dicte['sender'] = 'client'
+	dicte['to'] = to_.get()
 
-	dicte['from'] = DropBoxFrom.first_selected_option.text
+	dicte['from'] = from_.get()
 
 	dicte['budget'] = E1.get()
 	dicte['date'] = E3.get()
 	dicte['people'] = E2.get()
 	dicte['type'] = 1
-
+	print(dicte)
 	dict =  json.dumps(dicte).encode('utf-8')
 	
 	s.sendall(dict)
@@ -60,7 +63,7 @@ def CheckCallBack() :
 
 def checkDate(date) :
 
-	global E1,E2,E3,DropBoxTo,DropBoxFrom,Frame
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
 	print("hello")
 	yy,mm,dd=E3.get().split('-')
 
@@ -100,7 +103,7 @@ def checkDate(date) :
 
 def BookCallBack() :
 
-	global E1,E2,E3,DropBoxTo,DropBoxFrom,Frame
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
 	if (checkDate(E3.get()) ) == False :
@@ -121,9 +124,9 @@ def BookCallBack() :
 	s.connect((ip, port))
 
 	dicte = {}
-	dicte['to'] = DropBoxTo.first_selected_option.text
+	dicte['to'] = to_.get()
 
-	dicte['from'] = DropBoxFrom.first_selected_option.text
+	dicte['from'] = from_.get()
 
 	dicte['budget'] = E1.get()
 	dicte['date'] = E3.get()
@@ -137,7 +140,7 @@ def BookCallBack() :
 
 def main() :
 
-	global E1,E2,E3,DropBoxTo,DropBoxFrom,Frame
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
 
 	top = tkinter.Tk()
 	top.geometry("800x800+0+0")
@@ -154,17 +157,17 @@ def main() :
 	labelFrom.place(x=100,y=300)
 
 
-	variable = StringVar(frame)
-	variable.set("A")
+	to_ = StringVar(frame)
+	# variable.set("A")
 
-	variable2 = StringVar(frame)
-	variable2.set("A")
+	from_ = StringVar(frame)
+	# variable2.set("B")
 
-	DropBoxTo = OptionMenu(frame,variable,"select","A","B","C","D")
+	DropBoxTo = OptionMenu(frame,from_,"select","A","B","C","D")
 	DropBoxTo.place(x=200,y=200)
 
 
-	DropBoxFrom = OptionMenu(frame,variable2,"select","A","B","C","D")
+	DropBoxFrom = OptionMenu(frame,to_,"select","A","B","C","D")
 	DropBoxFrom.place(x=200,y=300)
 
 	L1 = Label(frame, text="Budget")
