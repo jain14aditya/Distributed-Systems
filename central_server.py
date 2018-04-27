@@ -90,13 +90,6 @@ counter = int(0)
 print "opening logs.txt"
 f = open("logs.txt",'a')
 
-
-# # airport1.connect((ip,port1))
-# print ips['airport1']
-# print (ip,port1)
-# print server_add
-# # airport1.connect(ips['airport1'])
-# airport1.connect(server_add)
 while True:
 
 	# Establish connection with client.
@@ -116,7 +109,7 @@ while True:
 
 			# Give the connection a queue for data we want to send
 			message_queue[connection] = Queue.Queue()
-			f.write("Got Connection from "+str(connection))
+			f.write("Got Connection from "+str(connection) + "\n")
 			dicte = {}
 			dicte['sender'] = 'central'
 			dicte['flag'] = 'log'
@@ -209,13 +202,13 @@ while True:
 						dicte['valid'] = 1 # else it would be invalid , if we delete this entry 
 						print "c = ", counter
 						requests_list[counter] = dicte
-						f.write("Added message in logs "+str(from_)+" "+str(to_))
+						f.write("Added message in logs "+str(from_)+" "+str(to_) + "\n")
 						
 						dicte['flag'] = 'request'
 						# outputs.append(heartbeat)
 						# message_queue[heartbeat].append(dicte)
 						for i in dicte:
-							print i, " = ",dicte[i]
+							print i, "\t = ",dicte[i]
 
 						print "client finished"
 
@@ -244,7 +237,7 @@ while True:
 							dicte['cost'] = 0
 							message_queue[s].put(dicte)
 							
-							f.write("Cannot find path from "+str(from_)+"  to "+str(to_))
+							f.write("Cannot find path from "+str(from_)+"  to "+str(to_) + "\n")
 							dicte['flag'] = 'log'
 							# outputs.append(heartbeat)
 							# message_queue[heartbeat].append(dicte)
@@ -296,7 +289,7 @@ while True:
 						# message_queue[heartbeat].append(dicte)
 						dicte['flag'] = 'request'
 
-						f.write("Added message "+str(from_)+"  to "+str(to_)+" to message_queue")
+						f.write("Added message "+str(from_)+"  to "+str(to_)+" to message_queue" + "\n")
 						
  
 						outputs.apppend(hotel)
@@ -425,7 +418,7 @@ while True:
 			if socket in message_queue :
 				message_queue[socket].put(value)
 
-			f.write("Message has been removed from list "+str(key)+" due to timeout")
+			f.write("Message has been removed from list "+str(key)+" due to timeout" + "\n")
 			removable.append(key)
 
 		else :

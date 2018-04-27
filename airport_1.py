@@ -2,6 +2,7 @@
 import socket	 
 import json			  
 import select
+import MySQLdb
 # next create a socket object
 airport1 = socket.socket()			
 print "Socket successfully created"
@@ -29,6 +30,7 @@ inputs = [airport1]
 outputs = []
 message_queues = {}
 
+
 while True:
  
 	readable, writable, exceptional = select.select(inputs, outputs, inputs)
@@ -41,8 +43,25 @@ while True:
 			msg = c.recv(1024)
 			print msg
 			dict= json.loads(msg.decode('utf-8'))
-			print(dict)
-			
+			for i in dict:
+				print i,"\t = ",dict[i]
+			# print(dict)
+
+			if dict['type'] == 0 :
+				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+                    user="root",         # your username
+                    passwd="root",  # your password
+                    db="distributed_systems")
+
+				cur = db.cursor()
+
+				cur.execute('select * from airport1_perm')
+
+				for row in cur.fetchall():
+					print row
+
+
+
 
 
 	# if(len(msg) ==0 ) :
