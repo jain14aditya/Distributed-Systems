@@ -32,6 +32,9 @@ ips['heartbeat'] = ('192.168.0.11',10003)
 
 
 airport1.connect(ips['airport1'])
+dicte = {}
+airport1.send(json.dumps(dicte).encode('utf-8'))
+
 airport2.connect(ips['airport2'])
 hotel.connect(ips['hotel'])
 heartbeat.connect(ips['heartbeat'])
