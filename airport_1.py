@@ -40,6 +40,8 @@ while True:
 		if s is airport1:
 			c, addr = airport1.accept() 
 			print 'Got connection from',c,addr
+			
+		else:
 			msg = c.recv(1024)
 			print msg
 			dict= json.loads(msg.decode('utf-8'))
@@ -54,11 +56,16 @@ while True:
                     db="distributed_systems")
 
 				cur = db.cursor()
+				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
+				cur.execute('update airport1_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (10,dict['from'],dict['to'],dict['Date']))
+				# db.commit()
 
-				cur.execute('select * from airport1_perm')
-
+				# cur.execute('select tickets,cost from airport1_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				cur.execute('select * from airport1_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				for row in cur.fetchall():
 					print row
+
+			# s.close()		
 
 
 

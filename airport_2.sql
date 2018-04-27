@@ -2,14 +2,14 @@
 create table airport2_perm (
 	from_loc varchar(50) , 
 	to_loc varchar(50),
-	data DATE ,
+	date_ DATE ,
 	tickets int,
 	cost int);
 
 create table airport2_temp (
 	from_loc varchar(50) , 
 	to_loc varchar(50),
-	data DATE ,
+	date_ DATE ,
 	tickets int,
 	cost int);
 

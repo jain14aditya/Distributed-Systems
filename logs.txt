@@ -1,3 +1,0 @@
-Got Connection from <socket._socketobject object at 0x7f8c82237910>Added message in logs A BSending message now to connection <socket._socketobject object at 0x7f8c82237600>Sending message now to connection <socket._socketobject object at 0x7f8c822376e0>Got Connection from <socket._socketobject object at 0x7f2f77188910>
-Added message in logs A B
-Sending message now to connection <socket._socketobject object at 0x7f2f77188600>Sending message now to connection <socket._socketobject object at 0x7f2f771886e0>

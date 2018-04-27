@@ -281,7 +281,7 @@ while True:
 						dicte['to'] = to_
 						dicte['inter'] = i
 						dicte['processed'] = 0
-						dicte['conn'] = s
+						# dicte['conn'] = s
 
 
 						requests_list[counter] = dicte
@@ -400,79 +400,80 @@ while True:
 
 	# now we check the request queue if any of the message exceeded its timeout limit
 
-	removable = []
+	# removable = []
+	
+	# for key in requests_list :
 
-	for key in requests_list :
+	# 	# if it has timedout .
+	# 	tim = time.time()
+	# 	value  = requests_list[key]
 
-		# if it has timedout .
-		tim = time.time()
-		value  = requests_list[key]
+	# 	if tim - value['timer'] > timeout  :
 
-		if tim - value['timer'] > timeout  :
+	# 		socket = socket.socket()
+	# 		# wrong line need to give a tuple with ip and port
+	# 		socket.connect(value['conn'])
+	# 		output.append(socket)
 
-			socket = socket.socket()
-			socket.connect(value['conn'])
-			output.append(socket)
+	# 		value['result']= 3 # timeout 
+	# 		if socket in message_queue :
+	# 			message_queue[socket].put(value)
 
-			value['result']= 3 # timeout 
-			if socket in message_queue :
-				message_queue[socket].put(value)
+	# 		f.write("Message has been removed from list "+str(key)+" due to timeout" + "\n")
+	# 		removable.append(key)
 
-			f.write("Message has been removed from list "+str(key)+" due to timeout" + "\n")
-			removable.append(key)
+	# 	else :
 
-		else :
+	# 		if value['hops'] == 1:
 
-			if value['hops'] == 1:
+	# 			# 1 is for aiport1 and 3 is for hotel
+	# 			if value['1'] >0 and value['3'] >0 : 
 
-				# 1 is for aiport1 and 3 is for hotel
-				if value['1'] >0 and value['3'] >0 : 
-
-					# this is successful transaction
-					socket = socket.socket()
-					socket.connect(value['conn'])
-					value['result'] = 1 # 1 is successful
-					outputs.append(socket)
-					message_queue[socket].put(value)
-
-
-				elif value['1'] == -2 or value['3'] == -2 :
-
-					# one of them failed , 2 phase commit failed 
-					# this is successful transaction
-					socket = socket.socket()
-					socket.connect(value['conn'])
-					value['result'] = 2 # 1 is un-successful
-					outputs.append(socket)
-					message_queue[socket].put(value)
-					removable.append(key)
+	# 				# this is successful transaction
+	# 				socket = socket.socket()
+	# 				socket.connect(value['conn'])
+	# 				value['result'] = 1 # 1 is successful
+	# 				outputs.append(socket)
+	# 				message_queue[socket].put(value)
 
 
-			else :
+	# 			elif value['1'] == -2 or value['3'] == -2 :
 
-				if value['1'] >0 and value['2']>0 and value['3'] >0 : 
-
-					# this is successful transaction
-					socket = socket.socket()
-					socket.connect(value['conn'])
-					value['result'] = 1 # 1 is successful
-					outputs.append(socket)
-					message_queue[socket].put(value)
-
-
-				elif value['1'] == -2 or value['3'] == -2 or value['2']== -2 :
-
-					# one of them failed , 2 phase commit failed 
-					socket = socket.socket()
-					socket.connect(value['conn'])
-					value['result'] = 2 # 1 is successful
-					outputs.append(socket)
-					message_queue[socket].put(value)
-					removable.append(key)
+	# 				# one of them failed , 2 phase commit failed 
+	# 				# this is successful transaction
+	# 				socket = socket.socket()
+	# 				socket.connect(value['conn'])
+	# 				value['result'] = 2 # 1 is un-successful
+	# 				outputs.append(socket)
+	# 				message_queue[socket].put(value)
+	# 				removable.append(key)
 
 
-	for i in removable :
-		requests_list.remove(i)
+	# 		else :
+
+	# 			if value['1'] >0 and value['2']>0 and value['3'] >0 : 
+
+	# 				# this is successful transaction
+	# 				socket = socket.socket()
+	# 				socket.connect(value['conn'])
+	# 				value['result'] = 1 # 1 is successful
+	# 				outputs.append(socket)
+	# 				message_queue[socket].put(value)
+
+
+	# 			elif value['1'] == -2 or value['3'] == -2 or value['2']== -2 :
+
+	# 				# one of them failed , 2 phase commit failed 
+	# 				socket = socket.socket()
+	# 				socket.connect(value['conn'])
+	# 				value['result'] = 2 # 1 is successful
+	# 				outputs.append(socket)
+	# 				message_queue[socket].put(value)
+	# 				removable.append(key)
+
+
+	# for i in removable :
+	# 	requests_list.remove(i)
 
 
 
