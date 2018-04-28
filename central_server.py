@@ -24,15 +24,15 @@ hotel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 heartbeat = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #heartbeat.setblocking(0)
 
-# ip = '192.168.0.10'
+# ip = '10.102.61.204'
 # port1 = 10000
-# server_add = ('192.168.0.10',10000)
+# server_add = ('10.102.61.204',10000)
 
 ips =  {}
-ips['airport1'] = ['192.168.0.10',10000]
-ips['airport2'] = ['192.168.0.10',10001]
-ips['hotel'] = ['192.168.0.10',10002]
-ips['heartbeat'] = ['192.168.0.10',10003]
+ips['airport1'] = ['10.102.61.204',10000]
+ips['airport2'] = ['10.102.61.204',10001]
+ips['hotel'] = ['10.102.61.204',10002]
+ips['heartbeat'] = ['10.102.61.204',10003]
 
 
 #airport1.connect(ips['airport1'])
@@ -53,7 +53,7 @@ port = 12559
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-server.bind(('192.168.0.10',port))		
+server.bind(('10.102.61.204',port))		
 print("socket binded to %s" %(port))
  
 # put the socket into listening mode
@@ -108,8 +108,8 @@ while True:
 			#print >>sys.stderr, 'new connection from', client_address
 			connection.setblocking(0)
 			inputs.append(connection)
-			print "inputs"
-			print(inputs)
+			# print "inputs"
+			# print(inputs)
 			# Give the connection a queue for data we want to send
 			message_queue[connection] = Queue.Queue()
 			f.write("Got Connection from "+str(client_address) + "\n")
@@ -197,8 +197,8 @@ while True:
 						dicte['ip'] = s.getsockname()[0]
 						dicte['port'] =s.getsockname()[1]
 
-						dicte['client_ip'] = dict['client_ip']
-						dicte['client_port'] = dict['client_port']
+						# dicte['client_ip'] = dict['client_ip']
+						# dicte['client_port'] = dict['client_port']
 
 						# print("pos = " + str(dicte['pos']))
 						outputs.append(host)
@@ -250,12 +250,12 @@ while True:
 						print "-----------------client 1 HOP finished --------------------------"
 
 					else : 
-
+						print "-----------------client 2 HOP started --------------------------"
 						# this is a 1 hop message , needs to be verified in both the sides 
 						flag = False
 						for i in locations: 
 							
-							if i!=from_ and i != to_ and (from_,i) in graph_ and (i,to_) in graph :
+							if i!=from_ and i != to_ and (from_,i) in graph and (i,to_) in graph :
 
 								#two hop message , take the one path and query it .
 								#todo - >  can also add minimum cost path to consideration
@@ -303,16 +303,16 @@ while True:
 							dicte['type'] = 2 # write temp value , since it is not a write type 
 
 						dicte['budget'] = dict['budget']
-						dicte[timer] = time.time() # this is used when we	
+						dicte['timer'] = time.time() # this is used when we	
 						
 
 						dicte['ip'] = s.getsockname()[0]
 						dicte['port'] =s.getsockname()[1]
 
 
-						dicte['flag'] = dict['flag']
-
-						message_queue[airport1].put(dicte)
+						# dicte['flag'] = dict['flag']
+						t_a1 = copy.deepcopy(dicte)
+						message_queue[airport1].put(t_a1)
 
 						dicte['pos']= 2
 						dicte['from']= i
@@ -321,12 +321,12 @@ while True:
 						dicte[1] = -1
 						dicte[2] = -1
 						dicte[3] = -1
-
-						message_queue[airport2].put(dicte)
+						t_a2 = copy.deepcopy(dicte)
+						message_queue[airport2].put(t_a2)
 
 						dicte['pos'] = 3
-
-						message_queue[hotel].put(dicte)
+						t_a3 = copy.deepcopy(dicte)
+						message_queue[hotel].put(t_a3)
 						
 						dicte['from'] = from_
 						dicte['to'] = to_
@@ -348,14 +348,14 @@ while True:
 						f.write("Added message "+str(from_)+"  to "+str(to_)+" to message_queue" + "\n")
 						
  
-						outputs.apppend(hotel)
+						outputs.append(hotel)
 						outputs.append(airport1)
 						outputs.append(airport2)
 						# outputs.append(heartbeat)
 						# outputs.append(heartbeat)
+						print "-----------------client 2 HOP ended --------------------------"
 
 					counter = counter + 1
-
 
 				else : 
 
@@ -494,14 +494,14 @@ while True:
 			else:
 				# sending back to client
 				print "sending back to client",s.getsockname()
-				print "printing the port from which client talked",(dict['client_ip'],dict['client_port']) 
+				# print "printing the port from which client talked",(dict['client_ip'],dict['client_port']) 
 				# s.connect(dicte['client_ip'],dicte['client_port']) )
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				#s.close()	
 
 
-			f.write("Sending message now to connection " + str(s) + "\n")
+			f.write("Sending message now to connection " + str(s.getsockname()) + "\n")
 			outputs.remove(s)
 		print "-------- end of inside writable --------------\n"
 			
@@ -533,8 +533,9 @@ while True:
 		print "dict values from the requests_list"
 		for i in value:
 			print i,("\t = "),value[i]
-		s1 = value['conn']
 		print "---------- dict printed -------- "
+
+		s1 = value['conn']
 		if tim - value['timer'] > timeout  :
 			print "inside timeout "
 			# wrong line need to give a tuple with ip and port
@@ -561,7 +562,7 @@ while True:
 					# s1 = socket.socket()
 					# s1.connect( (value['client_ip'],value['client_port']) )
 					# print "socket ip,port",s.getsockname()
-					print "printing the port from which client talked",(value['client_ip'],value['client_port']) 
+					# print "printing the port from which client talked",(value['client_ip'],value['client_port']) 
 					value['result'] = 1 # 1 is successful
 					outputs.append(value['conn'])
 					print "Value = "
@@ -608,6 +609,7 @@ while True:
 					if s1 not in message_queue :
 						message_queue[s1] = Queue.Queue()
 					
+					value.pop('conn',None)
 					message_queue[s1].put(value)
 					removable.append(key)
 
@@ -622,6 +624,7 @@ while True:
 					if s1 not in message_queue :
 						message_queue[s1] = Queue.Queue()
 
+					value.pop('conn',None)
 					message_queue[s1].put(value)
 					removable.append(key)
 

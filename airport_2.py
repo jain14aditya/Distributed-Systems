@@ -14,8 +14,8 @@ port = 10001
  
 
 # Create a TCP/IP socket
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_ip = '192.168.0.10'
+# server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_ip = '10.102.61.204'
 server_host = 12559
 
 # Next bind to the port
@@ -23,7 +23,7 @@ server_host = 12559
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-airport2.bind(('192.168.0.10',port))		  
+airport2.bind(('10.102.61.204',port))		  
 print "socket binded to %s" %(port)
  
 # put the socket into listening mode
@@ -66,8 +66,8 @@ while True:
 			print(dict)
 
 			if dict['type'] == 1 :
-
-				# read type from permanent
+				print "\n\n----------------- Type1 started ---------------"
+				print "read type from permanent"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -77,7 +77,7 @@ while True:
 				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
 				# cur.execute('update airport2_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (dict['people'],dict['from'],dict['to'],dict['Date']))
 				# db.commit()
-
+				print dict['from'],dict['to'],dict['Date']
 				# cur.execute('select tickets,cost from airport2_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				cur.execute('select tickets,cost from airport2_perm where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				
@@ -90,22 +90,22 @@ while True:
 					dicte['ticket'] = row[0]
 					dicte['cost'] = row[1]
 					dicte['index'] = dict['index']
-					dicte['pos'] = 1
+					dicte['pos'] = 2
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
-
 
 				inputs.remove(s)
 				outputs.append(s)
-
+				print dict
 				message_queue[s].put(dicte)		
+				print "----------------- Type1 finished---------------"
 				# "------- Query Processing -------"
 
 			elif dict['type'] == 2 :
 
-				# writing to temp
+				print "writing to temp"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -128,10 +128,10 @@ while True:
 					dicte['ticket'] = row[0]
 					dicte['cost'] = row[1]
 					dicte['index'] = dict['index']
-					dicte['pos'] = 1
+					dicte['pos'] = 2
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 
 				if dicte['ticket'] < dict['people'] : 
@@ -153,7 +153,7 @@ while True:
 
 			elif dict['type'] == 3 :
 
-				# remove tickets in airport2_temp
+				print "remove tickets in airport2_temp"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -176,10 +176,10 @@ while True:
 					dicte['ticket'] = row[0]
 					dicte['cost'] = row[1]
 					dicte['index'] = dict['index']
-					dicte['pos'] = 1
+					dicte['pos'] = 2
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 
 				if dicte['ticket'] < dict['people'] : 
@@ -200,6 +200,7 @@ while True:
 
 			elif dict['type'] == 4 :
 
+				print "reverting back the changes from temp database"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -222,10 +223,10 @@ while True:
 					dicte['ticket'] = row[0]
 					dicte['cost'] = row[1]
 					dicte['index'] = dict['index']
-					dicte['pos'] = 1
+					dicte['pos'] = 2
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 
 
@@ -240,8 +241,7 @@ while True:
 				message_queue[s].put(dicte)	
 
 			elif dict['type'] == 5 :
-
-
+				print "reverting back the changes from temp database"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -264,10 +264,10 @@ while True:
 					dicte['ticket'] = row[0]
 					dicte['cost'] = row[1]
 					dicte['index'] = dict['index']
-					dicte['pos'] = 1
+					dicte['pos'] = 2
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 
 

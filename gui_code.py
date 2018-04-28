@@ -11,7 +11,7 @@ import json
 # import tkinter.messagebox
 # import ttkcalender
 # import tkSimpleDialog.Dialog
-ip = '192.168.0.10'
+ip = '10.102.61.204'
 port = 12559		
 E1 = None
 E2 = None
@@ -56,8 +56,8 @@ def CheckCallBack() :
 	dicte['date'] = E3.get()
 	dicte['people'] = E2.get()
 	dicte['type'] = 1
-	dicte['client_ip'] = s.getsockname()[0]
-	dicte['client_port'] = s.getsockname()[1]
+	# dicte['client_ip'] = s.getsockname()[0]
+	# dicte['client_port'] = s.getsockname()[1]
 	print(dicte)
 	dict =  json.dumps(dicte).encode('utf-8')
 	

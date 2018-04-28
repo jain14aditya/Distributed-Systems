@@ -15,7 +15,7 @@ port = 10002
 
 # Create a TCP/IP socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_ip = '192.168.0.10'
+server_ip = '10.102.61.204'
 server_host = 12559
 
 # Next bind to the port
@@ -23,7 +23,7 @@ server_host = 12559
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-hotels.bind(('192.168.0.10',port))		  
+hotels.bind(('10.102.61.204',port))		  
 print "socket binded to %s" %(port)
  
 # put the socket into listening mode
@@ -87,8 +87,8 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 				inputs.remove(s)
 				outputs.append(s)
@@ -125,8 +125,8 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 				
 				# then not possible to update or modify 
@@ -172,8 +172,8 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 				
 				# then not possible to update or modify 
@@ -218,8 +218,8 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 				
 				# then not possible to update or modify 
@@ -259,8 +259,8 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
-					dicte['client_ip'] = dict['client_ip']
-					dicte['client_port'] = dict['client_port']
+					# dicte['client_ip'] = dict['client_ip']
+					# dicte['client_port'] = dict['client_port']
 					break
 				
 				# then not possible to update or modify 
