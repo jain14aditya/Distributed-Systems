@@ -112,6 +112,7 @@ while True:
 			#now we need to send the message to respective connection
 			print "inside writable"
 			print dict
+			server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			server.connect((server_ip,server_host))
 			dicte =  json.dumps(dict).encode('utf-8')
 			server.send(dicte)
@@ -120,6 +121,7 @@ while True:
 
 			# f.write("Sending message now to connection " + str(s) + "\n")
 			s.close()
+
 			outputs.remove(s)
 
 

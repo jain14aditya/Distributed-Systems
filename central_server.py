@@ -458,7 +458,10 @@ while True:
 				s.send(dicte)
 				print "send to the airport_1",(ips['airport1'][0],ips['airport1'][1])
 
+				tvalue = message_queue[airport1]
+				del message_queue[airport1]
 				airport1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+				message_queue[airport1] = tvalue
 				#s.close()
 			elif s is airport2:
 				print "airport_2"
@@ -467,7 +470,11 @@ while True:
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the airport_2",(ips['airport2'][0],ips['airport2'][1])
+
+				tvalue = message_queue[airport2]
+				del message_queue[airport2]
 				airport2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+				message_queue[airport2] = tvalue
 				#s.close()
 			elif s is hotel:
 				print "hotel"
@@ -475,7 +482,11 @@ while True:
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the hotel",(ips['hotel'][0],ips['hotel'][1])
+
+				tvalue = message_queue[hotel]
+				del message_queue[hotel]
 				hotel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+				message_queue[hotel] = tvalue
 				#s.close()
 			else:
 				# sending back to client
