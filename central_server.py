@@ -392,7 +392,7 @@ while True:
 							
 						else :
 
-							print(str(dict['flag'])+" is used heree")
+							# print(str(dict['flag'])+" is used heree")
 							requests_list[idx][pos] = dict['flag']
 							requests_list[idx]['cost']+= int(dict['cost'])
 							requests_list[idx]['type'] =  dict['type']
@@ -686,17 +686,65 @@ while True:
 					# this is successful transaction
 					# s1 = socket.socket()
 					# s1.connect( (value['ip'],value['port']) )
-					
-					value['result'] = 2 # 1 is un-successful
-					outputs.append(value['conn'])
-					if s1 not in message_queue :
-						message_queue[s1] = Queue.Queue()
 
-					s2 = value['conn']
-					value.pop('conn',None)
+					if value[int(value['pose'])] > 0:
 
-					message_queue[s1].put(value)
-					removable.append(key)
+						if int(value['type'] ) == 2 :
+							print( "\n------------------type2/4--------------------------")
+							# if int(value['cost']) < int(value['budget']) :	
+							# 	value['type'] = 3 
+							# 	print "commit the changes"
+							# else :
+							# 	print "abort the changes"
+							# 	value['type'] = 4
+							print "abort the changes"
+							value['type'] = 4
+
+							temp = copy.deepcopy(value)
+							temp.pop('conn',None)
+							temp.pop('cost',None)
+
+							if value['pose'] == 1:
+								outputs.append(airport1)
+								message_queue[airport1].put(temp)
+
+							else :
+								outputs.append(airport2)
+								message_queue[airport2].put(temp)
+							print( "------------------Ending type2/4--------------------------")
+
+					if value[3] > 0:
+						if int(value['type'] ) == 2 :
+							print( "\n------------------type2/4--------------------------")
+							print "abort the changes"
+							value['type'] = 4
+
+							temp = copy.deepcopy(value)
+							temp.pop('conn',None)
+							temp.pop('cost',None)
+
+							outputs.append(hotel)
+							message_queue[hotel].put(temp)
+							print( "------------------Ending type2/4--------------------------")
+
+
+					count = int(0)
+					if value[ value['pose'] ] >0 or value[ value['pose'] ] == -2 :
+						count = count +1
+					if value[3] >0 or value[3] == -2 :
+						count = count +1
+
+					if count ==2 :
+ 						value['result'] = 2 # 1 is un-successful
+						outputs.append(value['conn'])
+						if s1 not in message_queue :
+							message_queue[s1] = Queue.Queue()
+
+						s2 = value['conn']
+						value.pop('conn',None)
+
+						message_queue[s1].put(value)
+						removable.append(key)
 
 				print "--------------------1 HOP end-------------------"
 
@@ -801,20 +849,93 @@ while True:
 
 						print( "------------------End type1--------------------------")
 
-				elif value[1] == -2 or value[3] == -2 or value[2]== -2 :
+				elif value[1] == -2 or value[2] == -2 or value[3]== -2 :
+					print "entered here"
+					if value[1] > 0:
+						if int(value['type'] ) == 2 :
+							print( "\n------------------type2/4--------------------------")
+							# if int(value['cost']) < int(value['budget']) :	
+							# 	value['type'] = 3 
+							# 	print "commit the changes"
+							# else :
+							# 	print "abort the changes"
+							# 	value['type'] = 4
+							print "abort the changes"
+							value['type'] = 4
+							temp = copy.deepcopy(value)
+							temp.pop('conn',None)
+							temp.pop('cost',None)
 
-					# one of them failed , 2 phase commit failed 
-					# this is successful transaction
-					# s1 = socket.socket()
-					# s1.connect( (value['ip'],value['port']) )
-					value['result'] = 2 # 1 is un-successful
-					outputs.append(s1)
-					if s1 not in message_queue :
-						message_queue[s1] = Queue.Queue()
+							a1 = copy.deepcopy(temp)
+							a1['to'] = a1['inter']
+							outputs.append(airport1)
+							message_queue[airport1].put(a1)
+							print( "------------------Ending type2/4--------------------------")
 
-					value.pop('conn',None)
-					message_queue[s1].put(value)
-					removable.append(key)
+					if value[2] > 0:
+						if int(value['type'] ) == 2 :
+							print( "\n------------------type2/4--------------------------")
+							# if int(value['cost']) < int(value['budget']) :	
+							# 	value['type'] = 3 
+							# 	print "commit the changes"
+							# else :
+							# 	print "abort the changes"
+							# 	value['type'] = 4
+							print "abort the changes"
+							value['type'] = 4
+							temp = copy.deepcopy(value)
+							temp.pop('conn',None)
+							temp.pop('cost',None)
+
+							a2 = copy.deepcopy(temp)
+							a2['from'] = a2['inter']
+							outputs.append(airport2)
+							message_queue[airport2].put(a2)
+							print( "------------------Ending type2/4--------------------------")
+
+					if value[3] > 0:
+						print "qwerty"
+						if int(value['type'] ) == 2 :
+							print( "\n------------------type2/4--------------------------")
+							# if int(value['cost']) < int(value['budget']) :	
+							# 	value['type'] = 3 
+							# 	print "commit the changes"
+							# else :
+							# 	print "abort the changes"
+							# 	value['type'] = 4
+							print "abort the changes"
+							value['type'] = 4
+							temp = copy.deepcopy(value)
+							temp.pop('conn',None)
+							temp.pop('cost',None)
+
+							outputs.append(hotel)
+							message_queue[hotel].put(temp)
+							print( "------------------Ending type2/4--------------------------")
+
+
+					count = int(0)
+					if value[1] >0 or value[1] == -2 :
+						count = count +1
+
+					if value[2] >0 or value[2] == -2 :
+						count = count +1
+
+					if value[3] >0 or value[3] == -2 :
+						count = count +1
+
+					
+					if count == 3 :
+						# one of them failed , 2 phase commit failed 
+						#sending back result to the client
+						value['result'] = 2 # 1 is un-successful
+						outputs.append(s1)
+						if s1 not in message_queue :
+							message_queue[s1] = Queue.Queue()
+
+						value.pop('conn',None)
+						message_queue[s1].put(value)
+						removable.append(key)
 
 				print "--------------------2 HOP end-----------------------"
 
