@@ -374,6 +374,7 @@ while True:
 							print(str(dict['flag'])+" is used heree")
 							requests_list[idx][pos] = dict['flag']
 						
+						s.close()
 						inputs.remove(s)
 
 
@@ -451,7 +452,7 @@ while True:
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the airport_1",(ips['airport1'][0],ips['airport1'][1])
-				s.close()
+				#s.close()
 			elif s is airport2:
 				print "airport_2"
 				airport2.connect((ips['airport2'][0],ips['airport2'][1]))
@@ -459,14 +460,14 @@ while True:
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the airport_2",(ips['airport2'][0],ips['airport2'][1])
-				s.close()
+				#s.close()
 			elif s is hotel:
 				print "hotel"
 				s.connect((ips['hotel'][0],ips['hotel'][1]))
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the hotel",(ips['hotel'][0],ips['hotel'][1])
-				s.close()
+				#s.close()
 			else:
 				# sending back to client
 				print "sending back to client",s.getsockname()
@@ -474,7 +475,7 @@ while True:
 				# s.connect( (dicte['client_ip'],dicte['client_port']) )
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.sendall(dicte)
-				s.close()	
+				#s.close()	
 
 
 			f.write("Sending message now to connection " + str(s) + "\n")

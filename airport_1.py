@@ -54,6 +54,7 @@ while True:
 
 		else:
 			msg = c.recv(1024)
+			c.close()
 			print msg
 			print type(msg)
 			dict= json.loads(msg.decode('utf-8'))
@@ -115,7 +116,7 @@ while True:
 			server.connect((server_ip,server_host))
 			dicte =  json.dumps(dict).encode('utf-8')
 			server.send(dicte)
-			server.close()
+			#server.close()
 			print "send to the central server"
 
 			# f.write("Sending message now to connection " + str(s) + "\n")
