@@ -7,7 +7,7 @@ import select
 import Queue
 import copy
 
-id = 1
+id = 2
 
 # Create a TCP/IP socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -185,7 +185,7 @@ while True:
 						dicte['Date'] = dict['date']
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
-						dicte['id'] =1 
+						dicte['id'] =2
 
 						dicte[ int(dicte['pos']) ] = -1
 						dicte['hops'] = 1
@@ -298,7 +298,7 @@ while True:
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
 						dicte['pos'] = 1
-						dicte['id'] = 1
+						dicte['id'] = 2
 
 						dicte[1] = -1
 						dicte[2] = -1
@@ -380,11 +380,11 @@ while True:
 					idx = dict['index']
 					pos = dict['pos']
 
-				
-
 					if idx in requests_list and dict['id'] == id:
 
 						print("pos = " + str(pos)+ "\tidx = "+str(dict['flag'])+ "\tidx =" +str(dict['type']))
+
+						if dict['id'] ! = id :
 
 						if dict['type'] == 4 or dict['type'] == 5 or dict['type']== -2 : 
 							#if ticket is booked or not

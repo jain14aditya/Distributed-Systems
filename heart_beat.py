@@ -7,8 +7,6 @@ import select
 import Queue
 import copy
 
-id = 1
-
 # Create a TCP/IP socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setblocking(0)
@@ -143,7 +141,7 @@ while True:
 					inputs.remove(s)
 					outputs.append(s)
 					dicte = {}
-					dicte['flag'] = 'alive' # 1 is requests_list update , 2 is log update , 3 is zinda hain bolne wala update
+					dicte['flag'] = 3 # 1 is requests_list update , 2 is log update , 3 is zinda hain bolne wala update
 					message_queue[s].put(dicte)
 
 				elif dict['sender'] == 'client' :
@@ -185,7 +183,7 @@ while True:
 						dicte['Date'] = dict['date']
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
-						dicte['id'] =1 
+
 
 						dicte[ int(dicte['pos']) ] = -1
 						dicte['hops'] = 1
@@ -298,7 +296,6 @@ while True:
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
 						dicte['pos'] = 1
-						dicte['id'] = 1
 
 						dicte[1] = -1
 						dicte[2] = -1
@@ -380,9 +377,7 @@ while True:
 					idx = dict['index']
 					pos = dict['pos']
 
-				
-
-					if idx in requests_list and dict['id'] == id:
+					if idx in requests_list :
 
 						print("pos = " + str(pos)+ "\tidx = "+str(dict['flag'])+ "\tidx =" +str(dict['type']))
 

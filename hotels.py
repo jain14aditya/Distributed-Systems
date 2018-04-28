@@ -65,6 +65,13 @@ while True:
 			# 	print i,"\t = ",dict[i]
 			print(dict)
 
+			if dict['sender'] == 'heartbeat' :
+				# now we need to update it from the message it sent
+				server_ip = dict['ip']
+				server_host = dict['port']
+				inputs.remove(s)
+				continue
+			
 			if dict['type'] == 1 :
 				print "\n\n----------------- Type1 started ---------------"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
@@ -91,6 +98,7 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
+					dicte['id'] = dict['id']
 					# dicte['client_ip'] = dict['client_ip']
 					# dicte['client_port'] = dict['client_port']
 					break
@@ -129,6 +137,7 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
+					dicte['id'] = dict['id']
 					# dicte['client_ip'] = dict['client_ip']
 					# dicte['client_port'] = dict['client_port']
 					break
@@ -182,6 +191,7 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
+					dicte['id'] = dict['id']
 					# dicte['client_ip'] = dict['client_ip']
 					# dicte['client_port'] = dict['client_port']
 					break
@@ -233,6 +243,7 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
+					dicte['id'] = dict['id']
 					# dicte['client_ip'] = dict['client_ip']
 					# dicte['client_port'] = dict['client_port']
 					break
@@ -280,6 +291,7 @@ while True:
 					dicte['index'] = dict['index']
 					dicte['pos'] = 3
 					dicte['type']= dict['type']
+					dicte['id'] = dict['id']
 					# dicte['client_ip'] = dict['client_ip']
 					# dicte['client_port'] = dict['client_port']
 					break
