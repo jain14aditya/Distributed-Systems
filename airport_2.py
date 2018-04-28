@@ -47,7 +47,7 @@ while True:
 		if s is airport2:
 			print "\n\n =========== SERVER listening ================="
 			c, addr = airport2.accept() 
-			print 'Got connection from',c,addr
+			print 'Got connection from',addr
 			c.setblocking(0)
 			inputs.append(c)
 			# Give the connection a queue for data we want to send

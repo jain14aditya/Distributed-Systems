@@ -541,14 +541,14 @@ while True:
 		# if it has timedout .
 		tim = time.time()
 		value  = requests_list[key]
-		print "dict values from the requests_list"
-		for i in value:
-			print i,("\t = "),value[i]
-		print "---------- dict printed -------- "
+		# print "dict values from the requests_list"
+		# for i in value:
+		# 	print i,("\t = "),value[i]
+		# print "---------- dict printed -------- "
 
 		s1 = value['conn']
 		v = tim - value['timer']
-		print "tim - value['timer'] = ",v, " timeour = ", timeout
+		print "tim - value['timer'] = ",v, " timeout = ", timeout
 		if tim - value['timer'] > timeout:
 			print "\n---------inside timeout --------"
 			# wrong line need to give a tuple with ip and port
@@ -585,11 +585,11 @@ while True:
 					if int(value['type'] ) == 2 :
 						print( "\n------------------type2--------------------------")
 						if int(value['cost']) < int(value['budget']) :	
-							
+							print "commit the changes"
 							value['type'] = 3 
 							
 						else :
-
+							print "abort the changes"
 							value['type'] = 4
 
 						temp = copy.deepcopy(value)
@@ -649,16 +649,16 @@ while True:
 
 
 						# yes , so send back mesages to airport1 ,hotel to commit changes
-					elif int(value['type']) == 1
+					elif int(value['type']) == 1:
 
 						print( "\n------------------type1--------------------------")
 						if int(value['cost']) < int(value['budget']) :	
-
-							print("Yeah less budget")
-
+							print "sufficient budget"
 						else :
-
-							value['flag'] = -2 	
+							print("Yeah less budget")
+							value['flag'] = -2
+							value['result']  = 2
+							value['answer'] = "Budget is too low and not possible to book"
 						
 						outputs.append(value['conn'])
 						# print "Value = "
@@ -700,26 +700,31 @@ while True:
 
 				print "value 1 = ", value[1] , "\t value 2 = ", value[2], "\t value 3 = ", value[3]
 				if value[1] >0 and value[2]>0 and value[3] >0 : 
-
+					value['result'] = 1
 					# need to do 2 phase commit part
 					if int(value['type'] ) == 2 :
 						print( "\n------------------type2--------------------------")
 						if int(value['cost']) < int(value['budget']) :	
-							
 							value['type'] = 3 
-							
+							print "commit the changes"
 						else :
-
+							print "abort the changes"
 							value['type'] = 4
 
 						temp = copy.deepcopy(value)
 						temp.pop('conn',None)
 						temp.pop('cost',None)
 
+						a1 = copy.deepcopy(temp)
+						a1['to'] = a1['inter']
 						outputs.append(airport1)
-						message_queue[airport1].put(temp)
+						message_queue[airport1].put(a1)
+
+						a2 = copy.deepcopy(temp)
+						a2['from'] = a2['inter']
 						outputs.append(airport2)
-						message_queue[airport2].put(temp)
+						message_queue[airport2].put(a2)
+						
 						message_queue[hotel].put(temp)
 						outputs.append(hotel)
 
@@ -765,16 +770,16 @@ while True:
 						print( "------------------Ending type4 --------------------------")
 
 						# yes , so send back mesages to airport1 ,hotel to commit changes
-					elif int(value['type']) == 1
+					elif int(value['type']) == 1:
 
 						print( "\n------------------type1--------------------------")
 						if int(value['cost']) < int(value['budget']) :	
-
-							print("Yeah less budget")
-
+							print "sufficient budget"
 						else :
-
-							value['flag'] = -2 	
+							print("Yeah less budget")
+							value['flag'] = -2 
+							value['result']	= 2
+							value['answer'] = "Budget is too low and not possible to book"
 						
 						outputs.append(value['conn'])
 						# print "Value = "

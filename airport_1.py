@@ -47,7 +47,7 @@ while True:
 		if s is airport1:
 			print "\n\n =========== SERVER listening ================="
 			c, addr = airport1.accept() 
-			print 'Got connection from',c,addr
+			print 'Got connection from',addr
 			c.setblocking(0)
 			inputs.append(c)
 			# Give the connection a queue for data we want to send
@@ -214,7 +214,7 @@ while True:
 				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
 				# cur.execute('update airport1_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (dict['people'],dict['from'],dict['to'],dict['Date']))
 				# db.commit()
-
+				print "dict['from'] = ",dict['from'], " dict['to'] = ", dict['to']
 				# cur.execute('select tickets,cost from airport1_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				cur.execute('select tickets,cost from airport1_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				
@@ -233,7 +233,7 @@ while True:
 					# dicte['client_port'] = dict['client_port']
 					break
 
-
+				print "ticket = ",dicte['ticket'], " people = ",dict['people']
 				val = int(dicte['ticket']) + int(dict['people'])
 				print "val = ",val 
 				cur.execute('update airport1_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (val,dict['from'],dict['to'],dict['Date']))

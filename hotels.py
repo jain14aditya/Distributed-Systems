@@ -238,7 +238,8 @@ while True:
 					break
 				
 				# then not possible to update or modify 
-				val = int(dicte['availability']) - int(dict['people'])
+				print "dict['people'] = ",int(dict['people'])
+				val = int(dicte['availability']) + int(dict['people'])
 				print "val = ",val 
 				cur.execute('update hotel_temp set availability = %s where to_loc = %s and date_ = %s', (val,dict['to'],dict['Date']))
 				db.commit()
@@ -284,7 +285,8 @@ while True:
 					break
 				
 				# then not possible to update or modify 
-				val = int(dicte['availability']) - int(dict['people'])
+				print "dict['people'] = ",int(dict['people'])
+				val = int(dicte['availability']) + int(dict['people'])
 				print "val = ",val 
 				cur.execute('update hotel_perm set availability = %s where to_loc = %s and date_ = %s', (val,dict['to'],dict['Date']))
 				db.commit()
