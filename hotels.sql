@@ -1,7 +1,7 @@
 
 create table hotel_perm (
 	to_loc varchar(50),
-	data DATE ,
+	date_ DATE ,
 	availability int,
 	cost int);
 

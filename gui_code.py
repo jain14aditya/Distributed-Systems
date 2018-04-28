@@ -40,10 +40,11 @@ def CheckCallBack() :
 		return
 
 	s = socket.socket()			
-
+	print("client value = " + str(s.getsockname()))
 	print("sending to (",ip,",",port,")") 
 	# connect to the server on local computer
 	s.connect((ip, port))
+	print("client value = " + str(s.getsockname()))
 
 	dicte = {}
 	dicte['sender'] = 'client'
@@ -55,10 +56,21 @@ def CheckCallBack() :
 	dicte['date'] = E3.get()
 	dicte['people'] = E2.get()
 	dicte['type'] = 1
+	dicte['client_ip'] = s.getsockname()[0]
+	dicte['client_port'] = s.getsockname()[1]
 	print(dicte)
 	dict =  json.dumps(dicte).encode('utf-8')
 	
 	s.sendall(dict)
+	msg = s.recv(1024)
+	if len(msg) == 0 :
+		print("None")
+	print("recievec data from the central server")
+	print(msg)
+	dict = json.loads(msg.decode('utf-8'))
+	for i in dict:
+		print(i + "\t = " + dict[i])
+	s.close()
 
 
 def checkDate(date) :

@@ -1,0 +1,2343 @@
+Got Connection from <socket._socketobject object at 0x7ff7884e2910>
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7ff7884e2600>Sending message now to connection <socket._socketobject object at 0x7ff7884e26e0>Got Connection from ('192.168.0.10', 47226)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fe18c143600>Sending message now to connection <socket._socketobject object at 0x7fe18c1436e0>Got Connection from ('192.168.0.10', 47514)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f149048c600>
+Sending message now to connection <socket._socketobject object at 0x7f149048c6e0>
+Got Connection from ('192.168.0.10', 47520)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f20ed834600>
+Sending message now to connection <socket._socketobject object at 0x7f20ed8346e0>
+Got Connection from ('192.168.0.10', 47556)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fee7320e600>
+Sending message now to connection <socket._socketobject object at 0x7fee7320e6e0>
+Got Connection from ('192.168.0.10', 47564)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fbec1efa600>
+Sending message now to connection <socket._socketobject object at 0x7fbec1efa6e0>
+Got Connection from ('192.168.0.10', 47642)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f5dc5fd5600>
+Sending message now to connection <socket._socketobject object at 0x7f5dc5fd56e0>
+Got Connection from ('192.168.0.10', 47644)
+Got Connection from ('192.168.0.10', 47656)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f0df76d1600>
+Sending message now to connection <socket._socketobject object at 0x7f0df76d16e0>
+Got Connection from ('192.168.0.10', 47658)
+Got Connection from ('192.168.0.10', 47694)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f87b4c95600>
+Sending message now to connection <socket._socketobject object at 0x7f87b4c956e0>
+Got Connection from ('192.168.0.10', 47696)
+Got Connection from ('192.168.0.10', 47724)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f551d5c0600>
+Sending message now to connection <socket._socketobject object at 0x7f551d5c06e0>
+Got Connection from ('192.168.0.10', 47726)
+Got Connection from ('192.168.0.10', 47734)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fe8fba53600>
+Sending message now to connection <socket._socketobject object at 0x7fe8fba536e0>
+Got Connection from ('192.168.0.10', 47736)
+Got Connection from ('192.168.0.10', 47846)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f0d9cbed600>
+Got Connection from ('192.168.0.10', 47866)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f7ef94cc600>
+Sending message now to connection <socket._socketobject object at 0x7f7ef94cc6e0>
+Got Connection from ('192.168.0.10', 47878)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f25be83b600>
+Sending message now to connection <socket._socketobject object at 0x7f25be83b6e0>
+Got Connection from ('192.168.0.10', 47938)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f204706a600>
+Sending message now to connection <socket._socketobject object at 0x7f204706a6e0>
+Got Connection from ('192.168.0.10', 47956)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fe41e02e600>
+Sending message now to connection <socket._socketobject object at 0x7fe41e02e6e0>
+Got Connection from ('192.168.0.10', 48246)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f44a2e26600>
+Sending message now to connection <socket._socketobject object at 0x7f44a2e266e0>
+Got Connection from ('192.168.0.10', 48252)
+Got Connection from ('192.168.0.10', 48254)
+Got Connection from ('192.168.0.10', 48334)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fc2429ff600>
+Sending message now to connection <socket._socketobject object at 0x7fc2429ff6e0>
+Got Connection from ('192.168.0.10', 48340)
+Got Connection from ('192.168.0.10', 48342)
+Got Connection from ('192.168.0.10', 48366)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f2ff7052600>
+Sending message now to connection <socket._socketobject object at 0x7f2ff70526e0>
+Got Connection from ('192.168.0.10', 48372)
+Got Connection from ('192.168.0.10', 48374)
+Got Connection from ('192.168.0.10', 48408)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fe0fa804600>
+Sending message now to connection <socket._socketobject object at 0x7fe0fa8046e0>
+Got Connection from ('192.168.0.10', 48414)
+Got Connection from ('192.168.0.10', 48424)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7faf1720b600>
+Sending message now to connection <socket._socketobject object at 0x7faf1720b6e0>
+Got Connection from ('192.168.0.10', 48430)
+Got Connection from ('192.168.0.10', 48458)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f005cd94600>
+Sending message now to connection <socket._socketobject object at 0x7f005cd946e0>
+Got Connection from ('192.168.0.10', 48464)
+Got Connection from ('192.168.0.10', 48510)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fb95a1e2600>
+Sending message now to connection <socket._socketobject object at 0x7fb95a1e26e0>
+Got Connection from ('192.168.0.10', 48516)
+Got Connection from ('192.168.0.10', 48518)
+Got Connection from ('192.168.0.10', 48600)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fa73c9a0600>
+Sending message now to connection <socket._socketobject object at 0x7fa73c9a06e0>
+Got Connection from ('192.168.0.10', 48606)
+Got Connection from ('192.168.0.10', 48608)
+Got Connection from ('192.168.0.10', 48628)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f39ac7f9600>
+Sending message now to connection <socket._socketobject object at 0x7f39ac7f96e0>
+Got Connection from ('192.168.0.10', 48634)
+Got Connection from ('192.168.0.10', 48636)
+Got Connection from ('192.168.0.10', 48646)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f2fdfc95600>
+Sending message now to connection <socket._socketobject object at 0x7f2fdfc956e0>
+Got Connection from ('192.168.0.10', 48652)
+Got Connection from ('192.168.0.10', 48654)
+Got Connection from ('192.168.0.10', 48662)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f7876f26600>
+Sending message now to connection <socket._socketobject object at 0x7f7876f266e0>
+Got Connection from ('192.168.0.10', 48668)
+Got Connection from ('192.168.0.10', 48670)
+Got Connection from ('192.168.0.10', 48672)
+Sending message now to connection <socket._socketobject object at 0x7f7876f26ad0>
+Got Connection from ('192.168.0.10', 48698)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f4158b54600>
+Sending message now to connection <socket._socketobject object at 0x7f4158b546e0>
+Got Connection from ('192.168.0.10', 48704)
+Got Connection from ('192.168.0.10', 48706)
+Got Connection from ('192.168.0.10', 48708)
+Sending message now to connection <socket._socketobject object at 0x7f4158b54ad0>
+Got Connection from ('192.168.0.10', 48710)
+Sending message now to connection <socket._socketobject object at 0x7f4158b54c90>
+Got Connection from ('192.168.0.10', 48712)
+Sending message now to connection <socket._socketobject object at 0x7f4158b54e50>
+Got Connection from ('192.168.0.10', 48714)
+Sending message now to connection <socket._socketobject object at 0x7f41578cb050>
+Got Connection from ('192.168.0.10', 48716)
+Sending message now to connection <socket._socketobject object at 0x7f41578cb210>
+Got Connection from ('192.168.0.10', 48718)
+Sending message now to connection <socket._socketobject object at 0x7f41578cb3d0>
+Got Connection from ('192.168.0.10', 48720)
+Sending message now to connection <socket._socketobject object at 0x7f41578cb590>
+Got Connection from ('192.168.0.10', 48722)
+Sending message now to connection <socket._socketobject object at 0x7f41578cb750>
+Got Connection from ('192.168.0.10', 48724)
+Sending message now to connection <socket._socketobject object at 0x7f41578cb910>
+Got Connection from ('192.168.0.10', 48726)
+Sending message now to connection <socket._socketobject object at 0x7f41578cbad0>
+Got Connection from ('192.168.0.10', 48728)
+Sending message now to connection <socket._socketobject object at 0x7f41578cbc90>
+Got Connection from ('192.168.0.10', 48730)
+Sending message now to connection <socket._socketobject object at 0x7f41578cbe50>
+Got Connection from ('192.168.0.10', 48732)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7050>
+Got Connection from ('192.168.0.10', 48734)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7210>
+Got Connection from ('192.168.0.10', 48736)
+Sending message now to connection <socket._socketobject object at 0x7f41578d73d0>
+Got Connection from ('192.168.0.10', 48738)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7590>
+Got Connection from ('192.168.0.10', 48740)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7750>
+Got Connection from ('192.168.0.10', 48742)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7910>
+Got Connection from ('192.168.0.10', 48744)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7ad0>
+Got Connection from ('192.168.0.10', 48746)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7c90>
+Got Connection from ('192.168.0.10', 48748)
+Sending message now to connection <socket._socketobject object at 0x7f41578d7e50>
+Got Connection from ('192.168.0.10', 48750)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5050>
+Got Connection from ('192.168.0.10', 48752)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5210>
+Got Connection from ('192.168.0.10', 48754)
+Sending message now to connection <socket._socketobject object at 0x7f41578e53d0>
+Got Connection from ('192.168.0.10', 48756)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5590>
+Got Connection from ('192.168.0.10', 48758)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5750>
+Got Connection from ('192.168.0.10', 48760)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5910>
+Got Connection from ('192.168.0.10', 48762)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5ad0>
+Got Connection from ('192.168.0.10', 48764)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5c90>
+Got Connection from ('192.168.0.10', 48766)
+Sending message now to connection <socket._socketobject object at 0x7f41578e5e50>
+Got Connection from ('192.168.0.10', 48768)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5e050>
+Got Connection from ('192.168.0.10', 48770)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5e210>
+Got Connection from ('192.168.0.10', 48772)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5e3d0>
+Got Connection from ('192.168.0.10', 48774)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5e590>
+Got Connection from ('192.168.0.10', 48776)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5e750>
+Got Connection from ('192.168.0.10', 48778)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5e910>
+Got Connection from ('192.168.0.10', 48780)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5ead0>
+Got Connection from ('192.168.0.10', 48782)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5ec90>
+Got Connection from ('192.168.0.10', 48784)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5ee50>
+Got Connection from ('192.168.0.10', 48786)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6b050>
+Got Connection from ('192.168.0.10', 48788)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6b210>
+Got Connection from ('192.168.0.10', 48790)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6b3d0>
+Got Connection from ('192.168.0.10', 48792)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6b590>
+Got Connection from ('192.168.0.10', 48794)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6b750>
+Got Connection from ('192.168.0.10', 48796)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6b910>
+Got Connection from ('192.168.0.10', 48798)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6bad0>
+Got Connection from ('192.168.0.10', 48800)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6bc90>
+Got Connection from ('192.168.0.10', 48802)
+Sending message now to connection <socket._socketobject object at 0x7f4156d6be50>
+Got Connection from ('192.168.0.10', 48804)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77050>
+Got Connection from ('192.168.0.10', 48806)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77210>
+Got Connection from ('192.168.0.10', 48808)
+Sending message now to connection <socket._socketobject object at 0x7f4156d773d0>
+Got Connection from ('192.168.0.10', 48810)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77590>
+Got Connection from ('192.168.0.10', 48812)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77750>
+Got Connection from ('192.168.0.10', 48814)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77910>
+Got Connection from ('192.168.0.10', 48816)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77ad0>
+Got Connection from ('192.168.0.10', 48818)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77c90>
+Got Connection from ('192.168.0.10', 48820)
+Sending message now to connection <socket._socketobject object at 0x7f4156d77e50>
+Got Connection from ('192.168.0.10', 48822)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84050>
+Got Connection from ('192.168.0.10', 48824)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84210>
+Got Connection from ('192.168.0.10', 48826)
+Sending message now to connection <socket._socketobject object at 0x7f4156d843d0>
+Got Connection from ('192.168.0.10', 48828)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84590>
+Got Connection from ('192.168.0.10', 48830)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84750>
+Got Connection from ('192.168.0.10', 48832)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84910>
+Got Connection from ('192.168.0.10', 48834)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84ad0>
+Got Connection from ('192.168.0.10', 48836)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84c90>
+Got Connection from ('192.168.0.10', 48838)
+Sending message now to connection <socket._socketobject object at 0x7f4156d84e50>
+Got Connection from ('192.168.0.10', 48840)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90050>
+Got Connection from ('192.168.0.10', 48842)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90210>
+Got Connection from ('192.168.0.10', 48844)
+Sending message now to connection <socket._socketobject object at 0x7f4156d903d0>
+Got Connection from ('192.168.0.10', 48846)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90590>
+Got Connection from ('192.168.0.10', 48848)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90750>
+Got Connection from ('192.168.0.10', 48850)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90910>
+Got Connection from ('192.168.0.10', 48852)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90ad0>
+Got Connection from ('192.168.0.10', 48854)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90c90>
+Got Connection from ('192.168.0.10', 48856)
+Sending message now to connection <socket._socketobject object at 0x7f4156d90e50>
+Got Connection from ('192.168.0.10', 48858)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1c050>
+Got Connection from ('192.168.0.10', 48860)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1c210>
+Got Connection from ('192.168.0.10', 48862)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1c3d0>
+Got Connection from ('192.168.0.10', 48864)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1c590>
+Got Connection from ('192.168.0.10', 48866)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1c750>
+Got Connection from ('192.168.0.10', 48868)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1c910>
+Got Connection from ('192.168.0.10', 48870)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1cad0>
+Got Connection from ('192.168.0.10', 48872)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1cc90>
+Got Connection from ('192.168.0.10', 48874)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1ce50>
+Got Connection from ('192.168.0.10', 48876)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29050>
+Got Connection from ('192.168.0.10', 48878)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29210>
+Got Connection from ('192.168.0.10', 48880)
+Sending message now to connection <socket._socketobject object at 0x7f4156d293d0>
+Got Connection from ('192.168.0.10', 48882)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29590>
+Got Connection from ('192.168.0.10', 48884)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29750>
+Got Connection from ('192.168.0.10', 48886)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29910>
+Got Connection from ('192.168.0.10', 48888)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29ad0>
+Got Connection from ('192.168.0.10', 48890)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29c90>
+Got Connection from ('192.168.0.10', 48892)
+Sending message now to connection <socket._socketobject object at 0x7f4156d29e50>
+Got Connection from ('192.168.0.10', 48894)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36050>
+Got Connection from ('192.168.0.10', 48896)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36210>
+Got Connection from ('192.168.0.10', 48898)
+Sending message now to connection <socket._socketobject object at 0x7f4156d363d0>
+Got Connection from ('192.168.0.10', 48900)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36590>
+Got Connection from ('192.168.0.10', 48902)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36750>
+Got Connection from ('192.168.0.10', 48904)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36910>
+Got Connection from ('192.168.0.10', 48906)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36ad0>
+Got Connection from ('192.168.0.10', 48908)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36c90>
+Got Connection from ('192.168.0.10', 48910)
+Sending message now to connection <socket._socketobject object at 0x7f4156d36e50>
+Got Connection from ('192.168.0.10', 48912)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43050>
+Got Connection from ('192.168.0.10', 48914)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43210>
+Got Connection from ('192.168.0.10', 48916)
+Sending message now to connection <socket._socketobject object at 0x7f4156d433d0>
+Got Connection from ('192.168.0.10', 48918)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43590>
+Got Connection from ('192.168.0.10', 48920)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43750>
+Got Connection from ('192.168.0.10', 48922)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43910>
+Got Connection from ('192.168.0.10', 48924)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43ad0>
+Got Connection from ('192.168.0.10', 48926)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43c90>
+Got Connection from ('192.168.0.10', 48928)
+Sending message now to connection <socket._socketobject object at 0x7f4156d43e50>
+Got Connection from ('192.168.0.10', 48930)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4f050>
+Got Connection from ('192.168.0.10', 48932)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4f210>
+Got Connection from ('192.168.0.10', 48934)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4f3d0>
+Got Connection from ('192.168.0.10', 48936)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4f590>
+Got Connection from ('192.168.0.10', 48938)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4f750>
+Got Connection from ('192.168.0.10', 48940)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4f910>
+Got Connection from ('192.168.0.10', 48942)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4fad0>
+Got Connection from ('192.168.0.10', 48944)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4fc90>
+Got Connection from ('192.168.0.10', 48946)
+Sending message now to connection <socket._socketobject object at 0x7f4156d4fe50>
+Got Connection from ('192.168.0.10', 48948)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5b050>
+Got Connection from ('192.168.0.10', 48950)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5b210>
+Got Connection from ('192.168.0.10', 48952)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5b3d0>
+Got Connection from ('192.168.0.10', 48954)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5b590>
+Got Connection from ('192.168.0.10', 48956)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5b750>
+Got Connection from ('192.168.0.10', 48958)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5b910>
+Got Connection from ('192.168.0.10', 48960)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5bad0>
+Got Connection from ('192.168.0.10', 48962)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5bc90>
+Got Connection from ('192.168.0.10', 48964)
+Sending message now to connection <socket._socketobject object at 0x7f4156d5be50>
+Got Connection from ('192.168.0.10', 48966)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8050>
+Got Connection from ('192.168.0.10', 48968)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8210>
+Got Connection from ('192.168.0.10', 48970)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce83d0>
+Got Connection from ('192.168.0.10', 48972)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8590>
+Got Connection from ('192.168.0.10', 48974)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8750>
+Got Connection from ('192.168.0.10', 48976)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8910>
+Got Connection from ('192.168.0.10', 48978)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8ad0>
+Got Connection from ('192.168.0.10', 48980)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8c90>
+Got Connection from ('192.168.0.10', 48982)
+Sending message now to connection <socket._socketobject object at 0x7f4156ce8e50>
+Got Connection from ('192.168.0.10', 48984)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4050>
+Got Connection from ('192.168.0.10', 48986)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4210>
+Got Connection from ('192.168.0.10', 48988)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf43d0>
+Got Connection from ('192.168.0.10', 48990)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4590>
+Got Connection from ('192.168.0.10', 48992)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4750>
+Got Connection from ('192.168.0.10', 48994)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4910>
+Got Connection from ('192.168.0.10', 48996)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4ad0>
+Got Connection from ('192.168.0.10', 48998)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4c90>
+Got Connection from ('192.168.0.10', 49000)
+Sending message now to connection <socket._socketobject object at 0x7f4156cf4e50>
+Got Connection from ('192.168.0.10', 49002)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01050>
+Got Connection from ('192.168.0.10', 49004)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01210>
+Got Connection from ('192.168.0.10', 49006)
+Sending message now to connection <socket._socketobject object at 0x7f4156d013d0>
+Got Connection from ('192.168.0.10', 49008)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01590>
+Got Connection from ('192.168.0.10', 49010)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01750>
+Got Connection from ('192.168.0.10', 49012)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01910>
+Got Connection from ('192.168.0.10', 49014)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01ad0>
+Got Connection from ('192.168.0.10', 49016)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01c90>
+Got Connection from ('192.168.0.10', 49018)
+Sending message now to connection <socket._socketobject object at 0x7f4156d01e50>
+Got Connection from ('192.168.0.10', 49020)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0d050>
+Got Connection from ('192.168.0.10', 49022)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0d210>
+Got Connection from ('192.168.0.10', 49024)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0d3d0>
+Got Connection from ('192.168.0.10', 49026)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0d590>
+Got Connection from ('192.168.0.10', 49028)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0d750>
+Got Connection from ('192.168.0.10', 49030)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0d910>
+Got Connection from ('192.168.0.10', 49032)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0dad0>
+Got Connection from ('192.168.0.10', 49034)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0dc90>
+Got Connection from ('192.168.0.10', 49036)
+Sending message now to connection <socket._socketobject object at 0x7f4156d0de50>
+Got Connection from ('192.168.0.10', 49038)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1b050>
+Got Connection from ('192.168.0.10', 49040)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1b210>
+Got Connection from ('192.168.0.10', 49042)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1b3d0>
+Got Connection from ('192.168.0.10', 49044)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1b590>
+Got Connection from ('192.168.0.10', 49046)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1b750>
+Got Connection from ('192.168.0.10', 49048)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1b910>
+Got Connection from ('192.168.0.10', 49050)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1bad0>
+Got Connection from ('192.168.0.10', 49052)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1bc90>
+Got Connection from ('192.168.0.10', 49054)
+Sending message now to connection <socket._socketobject object at 0x7f4156d1be50>
+Got Connection from ('192.168.0.10', 49056)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7050>
+Got Connection from ('192.168.0.10', 49058)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7210>
+Got Connection from ('192.168.0.10', 49060)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca73d0>
+Got Connection from ('192.168.0.10', 49062)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7590>
+Got Connection from ('192.168.0.10', 49064)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7750>
+Got Connection from ('192.168.0.10', 49066)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7910>
+Got Connection from ('192.168.0.10', 49068)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7ad0>
+Got Connection from ('192.168.0.10', 49070)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7c90>
+Got Connection from ('192.168.0.10', 49072)
+Sending message now to connection <socket._socketobject object at 0x7f4156ca7e50>
+Got Connection from ('192.168.0.10', 49074)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3050>
+Got Connection from ('192.168.0.10', 49076)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3210>
+Got Connection from ('192.168.0.10', 49078)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb33d0>
+Got Connection from ('192.168.0.10', 49080)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3590>
+Got Connection from ('192.168.0.10', 49082)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3750>
+Got Connection from ('192.168.0.10', 49084)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3910>
+Got Connection from ('192.168.0.10', 49086)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3ad0>
+Got Connection from ('192.168.0.10', 49088)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3c90>
+Got Connection from ('192.168.0.10', 49090)
+Sending message now to connection <socket._socketobject object at 0x7f4156cb3e50>
+Got Connection from ('192.168.0.10', 49092)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbf050>
+Got Connection from ('192.168.0.10', 49094)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbf210>
+Got Connection from ('192.168.0.10', 49096)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbf3d0>
+Got Connection from ('192.168.0.10', 49098)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbf590>
+Got Connection from ('192.168.0.10', 49100)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbf750>
+Got Connection from ('192.168.0.10', 49102)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbf910>
+Got Connection from ('192.168.0.10', 49104)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbfad0>
+Got Connection from ('192.168.0.10', 49106)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbfc90>
+Got Connection from ('192.168.0.10', 49108)
+Sending message now to connection <socket._socketobject object at 0x7f4156cbfe50>
+Got Connection from ('192.168.0.10', 49110)
+Sending message now to connection <socket._socketobject object at 0x7f4156ccc050>
+Got Connection from ('192.168.0.10', 49112)
+Sending message now to connection <socket._socketobject object at 0x7f4156ccc210>
+Got Connection from ('192.168.0.10', 49114)
+Sending message now to connection <socket._socketobject object at 0x7f4156ccc3d0>
+Got Connection from ('192.168.0.10', 49116)
+Sending message now to connection <socket._socketobject object at 0x7f4156ccc590>
+Got Connection from ('192.168.0.10', 49118)
+Sending message now to connection <socket._socketobject object at 0x7f4156ccc750>
+Got Connection from ('192.168.0.10', 49120)
+Sending message now to connection <socket._socketobject object at 0x7f4156ccc910>
+Got Connection from ('192.168.0.10', 49122)
+Sending message now to connection <socket._socketobject object at 0x7f4156cccad0>
+Got Connection from ('192.168.0.10', 49124)
+Sending message now to connection <socket._socketobject object at 0x7f4156cccc90>
+Got Connection from ('192.168.0.10', 49126)
+Sending message now to connection <socket._socketobject object at 0x7f4156ccce50>
+Got Connection from ('192.168.0.10', 49128)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9050>
+Got Connection from ('192.168.0.10', 49130)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9210>
+Got Connection from ('192.168.0.10', 49132)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd93d0>
+Got Connection from ('192.168.0.10', 49134)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9590>
+Got Connection from ('192.168.0.10', 49136)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9750>
+Got Connection from ('192.168.0.10', 49138)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9910>
+Got Connection from ('192.168.0.10', 49140)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9ad0>
+Got Connection from ('192.168.0.10', 49142)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9c90>
+Got Connection from ('192.168.0.10', 49144)
+Sending message now to connection <socket._socketobject object at 0x7f4156cd9e50>
+Got Connection from ('192.168.0.10', 49146)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65050>
+Got Connection from ('192.168.0.10', 49148)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65210>
+Got Connection from ('192.168.0.10', 49150)
+Sending message now to connection <socket._socketobject object at 0x7f4156c653d0>
+Got Connection from ('192.168.0.10', 49152)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65590>
+Got Connection from ('192.168.0.10', 49154)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65750>
+Got Connection from ('192.168.0.10', 49156)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65910>
+Got Connection from ('192.168.0.10', 49158)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65ad0>
+Got Connection from ('192.168.0.10', 49160)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65c90>
+Got Connection from ('192.168.0.10', 49162)
+Sending message now to connection <socket._socketobject object at 0x7f4156c65e50>
+Got Connection from ('192.168.0.10', 49164)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72050>
+Got Connection from ('192.168.0.10', 49166)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72210>
+Got Connection from ('192.168.0.10', 49168)
+Sending message now to connection <socket._socketobject object at 0x7f4156c723d0>
+Got Connection from ('192.168.0.10', 49170)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72590>
+Got Connection from ('192.168.0.10', 49172)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72750>
+Got Connection from ('192.168.0.10', 49174)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72910>
+Got Connection from ('192.168.0.10', 49176)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72ad0>
+Got Connection from ('192.168.0.10', 49178)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72c90>
+Got Connection from ('192.168.0.10', 49180)
+Sending message now to connection <socket._socketobject object at 0x7f4156c72e50>
+Got Connection from ('192.168.0.10', 49182)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7f050>
+Got Connection from ('192.168.0.10', 49184)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7f210>
+Got Connection from ('192.168.0.10', 49186)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7f3d0>
+Got Connection from ('192.168.0.10', 49188)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7f590>
+Got Connection from ('192.168.0.10', 49190)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7f750>
+Got Connection from ('192.168.0.10', 49192)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7f910>
+Got Connection from ('192.168.0.10', 49194)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7fad0>
+Got Connection from ('192.168.0.10', 49196)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7fc90>
+Got Connection from ('192.168.0.10', 49198)
+Sending message now to connection <socket._socketobject object at 0x7f4156c7fe50>
+Got Connection from ('192.168.0.10', 49200)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8b050>
+Got Connection from ('192.168.0.10', 49202)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8b210>
+Got Connection from ('192.168.0.10', 49204)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8b3d0>
+Got Connection from ('192.168.0.10', 49206)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8b590>
+Got Connection from ('192.168.0.10', 49208)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8b750>
+Got Connection from ('192.168.0.10', 49210)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8b910>
+Got Connection from ('192.168.0.10', 49212)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8bad0>
+Got Connection from ('192.168.0.10', 49214)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8bc90>
+Got Connection from ('192.168.0.10', 49216)
+Sending message now to connection <socket._socketobject object at 0x7f4156c8be50>
+Got Connection from ('192.168.0.10', 49218)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97050>
+Got Connection from ('192.168.0.10', 49220)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97210>
+Got Connection from ('192.168.0.10', 49222)
+Sending message now to connection <socket._socketobject object at 0x7f4156c973d0>
+Got Connection from ('192.168.0.10', 49224)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97590>
+Got Connection from ('192.168.0.10', 49226)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97750>
+Got Connection from ('192.168.0.10', 49228)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97910>
+Got Connection from ('192.168.0.10', 49230)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97ad0>
+Got Connection from ('192.168.0.10', 49232)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97c90>
+Got Connection from ('192.168.0.10', 49234)
+Sending message now to connection <socket._socketobject object at 0x7f4156c97e50>
+Got Connection from ('192.168.0.10', 49236)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23050>
+Got Connection from ('192.168.0.10', 49238)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23210>
+Got Connection from ('192.168.0.10', 49240)
+Sending message now to connection <socket._socketobject object at 0x7f4156c233d0>
+Got Connection from ('192.168.0.10', 49242)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23590>
+Got Connection from ('192.168.0.10', 49244)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23750>
+Got Connection from ('192.168.0.10', 49246)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23910>
+Got Connection from ('192.168.0.10', 49248)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23ad0>
+Got Connection from ('192.168.0.10', 49250)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23c90>
+Got Connection from ('192.168.0.10', 49252)
+Sending message now to connection <socket._socketobject object at 0x7f4156c23e50>
+Got Connection from ('192.168.0.10', 49254)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31050>
+Got Connection from ('192.168.0.10', 49256)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31210>
+Got Connection from ('192.168.0.10', 49258)
+Sending message now to connection <socket._socketobject object at 0x7f4156c313d0>
+Got Connection from ('192.168.0.10', 49260)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31590>
+Got Connection from ('192.168.0.10', 49262)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31750>
+Got Connection from ('192.168.0.10', 49264)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31910>
+Got Connection from ('192.168.0.10', 49266)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31ad0>
+Got Connection from ('192.168.0.10', 49268)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31c90>
+Got Connection from ('192.168.0.10', 49270)
+Sending message now to connection <socket._socketobject object at 0x7f4156c31e50>
+Got Connection from ('192.168.0.10', 49272)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3d050>
+Got Connection from ('192.168.0.10', 49274)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3d210>
+Got Connection from ('192.168.0.10', 49276)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3d3d0>
+Got Connection from ('192.168.0.10', 49278)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3d590>
+Got Connection from ('192.168.0.10', 49280)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3d750>
+Got Connection from ('192.168.0.10', 49282)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3d910>
+Got Connection from ('192.168.0.10', 49284)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3dad0>
+Got Connection from ('192.168.0.10', 49286)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3dc90>
+Got Connection from ('192.168.0.10', 49288)
+Sending message now to connection <socket._socketobject object at 0x7f4156c3de50>
+Got Connection from ('192.168.0.10', 49290)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4a050>
+Got Connection from ('192.168.0.10', 49292)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4a210>
+Got Connection from ('192.168.0.10', 49294)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4a3d0>
+Got Connection from ('192.168.0.10', 49296)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4a590>
+Got Connection from ('192.168.0.10', 49298)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4a750>
+Got Connection from ('192.168.0.10', 49300)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4a910>
+Got Connection from ('192.168.0.10', 49302)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4aad0>
+Got Connection from ('192.168.0.10', 49304)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4ac90>
+Got Connection from ('192.168.0.10', 49306)
+Sending message now to connection <socket._socketobject object at 0x7f4156c4ae50>
+Got Connection from ('192.168.0.10', 49308)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56050>
+Got Connection from ('192.168.0.10', 49310)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56210>
+Got Connection from ('192.168.0.10', 49312)
+Sending message now to connection <socket._socketobject object at 0x7f4156c563d0>
+Got Connection from ('192.168.0.10', 49314)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56590>
+Got Connection from ('192.168.0.10', 49316)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56750>
+Got Connection from ('192.168.0.10', 49318)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56910>
+Got Connection from ('192.168.0.10', 49320)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56ad0>
+Got Connection from ('192.168.0.10', 49322)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56c90>
+Got Connection from ('192.168.0.10', 49324)
+Sending message now to connection <socket._socketobject object at 0x7f4156c56e50>
+Got Connection from ('192.168.0.10', 49326)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3050>
+Got Connection from ('192.168.0.10', 49328)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3210>
+Got Connection from ('192.168.0.10', 49330)
+Sending message now to connection <socket._socketobject object at 0x7f4156be33d0>
+Got Connection from ('192.168.0.10', 49332)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3590>
+Got Connection from ('192.168.0.10', 49334)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3750>
+Got Connection from ('192.168.0.10', 49336)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3910>
+Got Connection from ('192.168.0.10', 49338)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3ad0>
+Got Connection from ('192.168.0.10', 49340)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3c90>
+Got Connection from ('192.168.0.10', 49342)
+Sending message now to connection <socket._socketobject object at 0x7f4156be3e50>
+Got Connection from ('192.168.0.10', 49344)
+Sending message now to connection <socket._socketobject object at 0x7f4156bef050>
+Got Connection from ('192.168.0.10', 49346)
+Sending message now to connection <socket._socketobject object at 0x7f4156bef210>
+Got Connection from ('192.168.0.10', 49348)
+Sending message now to connection <socket._socketobject object at 0x7f4156bef3d0>
+Got Connection from ('192.168.0.10', 49350)
+Sending message now to connection <socket._socketobject object at 0x7f4156bef590>
+Got Connection from ('192.168.0.10', 49352)
+Sending message now to connection <socket._socketobject object at 0x7f4156bef750>
+Got Connection from ('192.168.0.10', 49354)
+Sending message now to connection <socket._socketobject object at 0x7f4156bef910>
+Got Connection from ('192.168.0.10', 49356)
+Sending message now to connection <socket._socketobject object at 0x7f4156befad0>
+Got Connection from ('192.168.0.10', 49358)
+Sending message now to connection <socket._socketobject object at 0x7f4156befc90>
+Got Connection from ('192.168.0.10', 49360)
+Sending message now to connection <socket._socketobject object at 0x7f4156befe50>
+Got Connection from ('192.168.0.10', 49362)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfb050>
+Got Connection from ('192.168.0.10', 49364)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfb210>
+Got Connection from ('192.168.0.10', 49366)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfb3d0>
+Got Connection from ('192.168.0.10', 49368)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfb590>
+Got Connection from ('192.168.0.10', 49370)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfb750>
+Got Connection from ('192.168.0.10', 49372)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfb910>
+Got Connection from ('192.168.0.10', 49374)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfbad0>
+Got Connection from ('192.168.0.10', 49376)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfbc90>
+Got Connection from ('192.168.0.10', 49378)
+Sending message now to connection <socket._socketobject object at 0x7f4156bfbe50>
+Got Connection from ('192.168.0.10', 49380)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08050>
+Got Connection from ('192.168.0.10', 49382)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08210>
+Got Connection from ('192.168.0.10', 49384)
+Sending message now to connection <socket._socketobject object at 0x7f4156c083d0>
+Got Connection from ('192.168.0.10', 49386)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08590>
+Got Connection from ('192.168.0.10', 49388)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08750>
+Got Connection from ('192.168.0.10', 49390)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08910>
+Got Connection from ('192.168.0.10', 49392)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08ad0>
+Got Connection from ('192.168.0.10', 49394)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08c90>
+Got Connection from ('192.168.0.10', 49396)
+Sending message now to connection <socket._socketobject object at 0x7f4156c08e50>
+Got Connection from ('192.168.0.10', 49398)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15050>
+Got Connection from ('192.168.0.10', 49400)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15210>
+Got Connection from ('192.168.0.10', 49402)
+Sending message now to connection <socket._socketobject object at 0x7f4156c153d0>
+Got Connection from ('192.168.0.10', 49404)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15590>
+Got Connection from ('192.168.0.10', 49406)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15750>
+Got Connection from ('192.168.0.10', 49408)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15910>
+Got Connection from ('192.168.0.10', 49410)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15ad0>
+Got Connection from ('192.168.0.10', 49412)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15c90>
+Got Connection from ('192.168.0.10', 49414)
+Sending message now to connection <socket._socketobject object at 0x7f4156c15e50>
+Got Connection from ('192.168.0.10', 49416)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2050>
+Got Connection from ('192.168.0.10', 49418)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2210>
+Got Connection from ('192.168.0.10', 49420)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba23d0>
+Got Connection from ('192.168.0.10', 49422)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2590>
+Got Connection from ('192.168.0.10', 49424)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2750>
+Got Connection from ('192.168.0.10', 49426)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2910>
+Got Connection from ('192.168.0.10', 49428)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2ad0>
+Got Connection from ('192.168.0.10', 49430)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2c90>
+Got Connection from ('192.168.0.10', 49432)
+Sending message now to connection <socket._socketobject object at 0x7f4156ba2e50>
+Got Connection from ('192.168.0.10', 49434)
+Sending message now to connection <socket._socketobject object at 0x7f4156bae050>
+Got Connection from ('192.168.0.10', 49436)
+Sending message now to connection <socket._socketobject object at 0x7f4156bae210>
+Got Connection from ('192.168.0.10', 49438)
+Sending message now to connection <socket._socketobject object at 0x7f4156bae3d0>
+Got Connection from ('192.168.0.10', 49440)
+Sending message now to connection <socket._socketobject object at 0x7f4156bae590>
+Got Connection from ('192.168.0.10', 49442)
+Sending message now to connection <socket._socketobject object at 0x7f4156bae750>
+Got Connection from ('192.168.0.10', 49444)
+Sending message now to connection <socket._socketobject object at 0x7f4156bae910>
+Got Connection from ('192.168.0.10', 49446)
+Sending message now to connection <socket._socketobject object at 0x7f4156baead0>
+Got Connection from ('192.168.0.10', 49448)
+Sending message now to connection <socket._socketobject object at 0x7f4156baec90>
+Got Connection from ('192.168.0.10', 49450)
+Sending message now to connection <socket._socketobject object at 0x7f4156baee50>
+Got Connection from ('192.168.0.10', 49452)
+Sending message now to connection <socket._socketobject object at 0x7f4156bba050>
+Got Connection from ('192.168.0.10', 49454)
+Sending message now to connection <socket._socketobject object at 0x7f4156bba210>
+Got Connection from ('192.168.0.10', 49456)
+Sending message now to connection <socket._socketobject object at 0x7f4156bba3d0>
+Got Connection from ('192.168.0.10', 49458)
+Sending message now to connection <socket._socketobject object at 0x7f4156bba590>
+Got Connection from ('192.168.0.10', 49460)
+Sending message now to connection <socket._socketobject object at 0x7f4156bba750>
+Got Connection from ('192.168.0.10', 49462)
+Sending message now to connection <socket._socketobject object at 0x7f4156bba910>
+Got Connection from ('192.168.0.10', 49464)
+Sending message now to connection <socket._socketobject object at 0x7f4156bbaad0>
+Got Connection from ('192.168.0.10', 49466)
+Sending message now to connection <socket._socketobject object at 0x7f4156bbac90>
+Got Connection from ('192.168.0.10', 49468)
+Sending message now to connection <socket._socketobject object at 0x7f4156bbae50>
+Got Connection from ('192.168.0.10', 49470)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7050>
+Got Connection from ('192.168.0.10', 49472)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7210>
+Got Connection from ('192.168.0.10', 49474)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc73d0>
+Got Connection from ('192.168.0.10', 49476)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7590>
+Got Connection from ('192.168.0.10', 49478)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7750>
+Got Connection from ('192.168.0.10', 49480)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7910>
+Got Connection from ('192.168.0.10', 49482)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7ad0>
+Got Connection from ('192.168.0.10', 49484)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7c90>
+Got Connection from ('192.168.0.10', 49486)
+Sending message now to connection <socket._socketobject object at 0x7f4156bc7e50>
+Got Connection from ('192.168.0.10', 49488)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3050>
+Got Connection from ('192.168.0.10', 49490)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3210>
+Got Connection from ('192.168.0.10', 49492)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd33d0>
+Got Connection from ('192.168.0.10', 49494)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3590>
+Got Connection from ('192.168.0.10', 49496)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3750>
+Got Connection from ('192.168.0.10', 49498)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3910>
+Got Connection from ('192.168.0.10', 49500)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3ad0>
+Got Connection from ('192.168.0.10', 49502)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3c90>
+Got Connection from ('192.168.0.10', 49504)
+Sending message now to connection <socket._socketobject object at 0x7f4156bd3e50>
+Got Connection from ('192.168.0.10', 49506)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60050>
+Got Connection from ('192.168.0.10', 49508)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60210>
+Got Connection from ('192.168.0.10', 49510)
+Sending message now to connection <socket._socketobject object at 0x7f4156b603d0>
+Got Connection from ('192.168.0.10', 49512)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60590>
+Got Connection from ('192.168.0.10', 49514)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60750>
+Got Connection from ('192.168.0.10', 49516)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60910>
+Got Connection from ('192.168.0.10', 49518)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60ad0>
+Got Connection from ('192.168.0.10', 49520)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60c90>
+Got Connection from ('192.168.0.10', 49522)
+Sending message now to connection <socket._socketobject object at 0x7f4156b60e50>
+Got Connection from ('192.168.0.10', 49524)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6c050>
+Got Connection from ('192.168.0.10', 49526)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6c210>
+Got Connection from ('192.168.0.10', 49528)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6c3d0>
+Got Connection from ('192.168.0.10', 49530)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6c590>
+Got Connection from ('192.168.0.10', 49532)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6c750>
+Got Connection from ('192.168.0.10', 49534)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6c910>
+Got Connection from ('192.168.0.10', 49536)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6cad0>
+Got Connection from ('192.168.0.10', 49538)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6cc90>
+Got Connection from ('192.168.0.10', 49540)
+Sending message now to connection <socket._socketobject object at 0x7f4156b6ce50>
+Got Connection from ('192.168.0.10', 49542)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7a050>
+Got Connection from ('192.168.0.10', 49544)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7a210>
+Got Connection from ('192.168.0.10', 49546)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7a3d0>
+Got Connection from ('192.168.0.10', 49548)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7a590>
+Got Connection from ('192.168.0.10', 49550)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7a750>
+Got Connection from ('192.168.0.10', 49552)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7a910>
+Got Connection from ('192.168.0.10', 49554)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7aad0>
+Got Connection from ('192.168.0.10', 49556)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7ac90>
+Got Connection from ('192.168.0.10', 49558)
+Sending message now to connection <socket._socketobject object at 0x7f4156b7ae50>
+Got Connection from ('192.168.0.10', 49560)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86050>
+Got Connection from ('192.168.0.10', 49562)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86210>
+Got Connection from ('192.168.0.10', 49564)
+Sending message now to connection <socket._socketobject object at 0x7f4156b863d0>
+Got Connection from ('192.168.0.10', 49566)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86590>
+Got Connection from ('192.168.0.10', 49568)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86750>
+Got Connection from ('192.168.0.10', 49570)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86910>
+Got Connection from ('192.168.0.10', 49572)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86ad0>
+Got Connection from ('192.168.0.10', 49574)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86c90>
+Got Connection from ('192.168.0.10', 49576)
+Sending message now to connection <socket._socketobject object at 0x7f4156b86e50>
+Got Connection from ('192.168.0.10', 49578)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92050>
+Got Connection from ('192.168.0.10', 49580)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92210>
+Got Connection from ('192.168.0.10', 49582)
+Sending message now to connection <socket._socketobject object at 0x7f4156b923d0>
+Got Connection from ('192.168.0.10', 49584)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92590>
+Got Connection from ('192.168.0.10', 49586)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92750>
+Got Connection from ('192.168.0.10', 49588)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92910>
+Got Connection from ('192.168.0.10', 49590)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92ad0>
+Got Connection from ('192.168.0.10', 49592)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92c90>
+Got Connection from ('192.168.0.10', 49594)
+Sending message now to connection <socket._socketobject object at 0x7f4156b92e50>
+Got Connection from ('192.168.0.10', 49596)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1e050>
+Got Connection from ('192.168.0.10', 49598)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1e210>
+Got Connection from ('192.168.0.10', 49600)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1e3d0>
+Got Connection from ('192.168.0.10', 49602)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1e590>
+Got Connection from ('192.168.0.10', 49604)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1e750>
+Got Connection from ('192.168.0.10', 49606)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1e910>
+Got Connection from ('192.168.0.10', 49608)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1ead0>
+Got Connection from ('192.168.0.10', 49610)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1ec90>
+Got Connection from ('192.168.0.10', 49612)
+Sending message now to connection <socket._socketobject object at 0x7f4156b1ee50>
+Got Connection from ('192.168.0.10', 49614)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2b050>
+Got Connection from ('192.168.0.10', 49616)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2b210>
+Got Connection from ('192.168.0.10', 49618)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2b3d0>
+Got Connection from ('192.168.0.10', 49620)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2b590>
+Got Connection from ('192.168.0.10', 49622)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2b750>
+Got Connection from ('192.168.0.10', 49624)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2b910>
+Got Connection from ('192.168.0.10', 49626)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2bad0>
+Got Connection from ('192.168.0.10', 49628)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2bc90>
+Got Connection from ('192.168.0.10', 49630)
+Sending message now to connection <socket._socketobject object at 0x7f4156b2be50>
+Got Connection from ('192.168.0.10', 49632)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38050>
+Got Connection from ('192.168.0.10', 49634)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38210>
+Got Connection from ('192.168.0.10', 49636)
+Sending message now to connection <socket._socketobject object at 0x7f4156b383d0>
+Got Connection from ('192.168.0.10', 49638)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38590>
+Got Connection from ('192.168.0.10', 49640)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38750>
+Got Connection from ('192.168.0.10', 49642)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38910>
+Got Connection from ('192.168.0.10', 49644)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38ad0>
+Got Connection from ('192.168.0.10', 49646)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38c90>
+Got Connection from ('192.168.0.10', 49648)
+Sending message now to connection <socket._socketobject object at 0x7f4156b38e50>
+Got Connection from ('192.168.0.10', 49650)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44050>
+Got Connection from ('192.168.0.10', 49652)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44210>
+Got Connection from ('192.168.0.10', 49654)
+Sending message now to connection <socket._socketobject object at 0x7f4156b443d0>
+Got Connection from ('192.168.0.10', 49656)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44590>
+Got Connection from ('192.168.0.10', 49658)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44750>
+Got Connection from ('192.168.0.10', 49660)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44910>
+Got Connection from ('192.168.0.10', 49662)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44ad0>
+Got Connection from ('192.168.0.10', 49664)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44c90>
+Got Connection from ('192.168.0.10', 49666)
+Sending message now to connection <socket._socketobject object at 0x7f4156b44e50>
+Got Connection from ('192.168.0.10', 49668)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51050>
+Got Connection from ('192.168.0.10', 49670)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51210>
+Got Connection from ('192.168.0.10', 49672)
+Sending message now to connection <socket._socketobject object at 0x7f4156b513d0>
+Got Connection from ('192.168.0.10', 49674)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51590>
+Got Connection from ('192.168.0.10', 49676)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51750>
+Got Connection from ('192.168.0.10', 49678)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51910>
+Got Connection from ('192.168.0.10', 49680)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51ad0>
+Got Connection from ('192.168.0.10', 49682)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51c90>
+Got Connection from ('192.168.0.10', 49684)
+Sending message now to connection <socket._socketobject object at 0x7f4156b51e50>
+Got Connection from ('192.168.0.10', 49686)
+Sending message now to connection <socket._socketobject object at 0x7f4156ade050>
+Got Connection from ('192.168.0.10', 49688)
+Sending message now to connection <socket._socketobject object at 0x7f4156ade210>
+Got Connection from ('192.168.0.10', 49690)
+Sending message now to connection <socket._socketobject object at 0x7f4156ade3d0>
+Got Connection from ('192.168.0.10', 49692)
+Sending message now to connection <socket._socketobject object at 0x7f4156ade590>
+Got Connection from ('192.168.0.10', 49694)
+Sending message now to connection <socket._socketobject object at 0x7f4156ade750>
+Got Connection from ('192.168.0.10', 49696)
+Sending message now to connection <socket._socketobject object at 0x7f4156ade910>
+Got Connection from ('192.168.0.10', 49698)
+Sending message now to connection <socket._socketobject object at 0x7f4156adead0>
+Got Connection from ('192.168.0.10', 49700)
+Sending message now to connection <socket._socketobject object at 0x7f4156adec90>
+Got Connection from ('192.168.0.10', 49702)
+Sending message now to connection <socket._socketobject object at 0x7f4156adee50>
+Got Connection from ('192.168.0.10', 49704)
+Sending message now to connection <socket._socketobject object at 0x7f4156aea050>
+Got Connection from ('192.168.0.10', 49706)
+Sending message now to connection <socket._socketobject object at 0x7f4156aea210>
+Got Connection from ('192.168.0.10', 49708)
+Sending message now to connection <socket._socketobject object at 0x7f4156aea3d0>
+Got Connection from ('192.168.0.10', 49710)
+Sending message now to connection <socket._socketobject object at 0x7f4156aea590>
+Got Connection from ('192.168.0.10', 49712)
+Sending message now to connection <socket._socketobject object at 0x7f4156aea750>
+Got Connection from ('192.168.0.10', 49714)
+Sending message now to connection <socket._socketobject object at 0x7f4156aea910>
+Got Connection from ('192.168.0.10', 49716)
+Sending message now to connection <socket._socketobject object at 0x7f4156aeaad0>
+Got Connection from ('192.168.0.10', 49718)
+Sending message now to connection <socket._socketobject object at 0x7f4156aeac90>
+Got Connection from ('192.168.0.10', 49752)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fc8b9029600>
+Sending message now to connection <socket._socketobject object at 0x7fc8b90296e0>
+Got Connection from ('192.168.0.10', 49758)
+Got Connection from ('192.168.0.10', 49760)
+Got Connection from ('192.168.0.10', 49762)
+Sending message now to connection <socket._socketobject object at 0x7fc8b9029bb0>
+Got Connection from ('192.168.0.10', 49764)
+Sending message now to connection <socket._socketobject object at 0x7fc8b9029d70>
+Got Connection from ('192.168.0.10', 49766)
+Sending message now to connection <socket._socketobject object at 0x7fc8b9029f30>
+Got Connection from ('192.168.0.10', 49768)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da0130>
+Got Connection from ('192.168.0.10', 49770)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da02f0>
+Got Connection from ('192.168.0.10', 49772)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da04b0>
+Got Connection from ('192.168.0.10', 49774)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da0670>
+Got Connection from ('192.168.0.10', 49776)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da0830>
+Got Connection from ('192.168.0.10', 49778)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da09f0>
+Got Connection from ('192.168.0.10', 49780)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da0bb0>
+Got Connection from ('192.168.0.10', 49782)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da0d70>
+Got Connection from ('192.168.0.10', 49784)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7da0f30>
+Got Connection from ('192.168.0.10', 49786)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dad130>
+Got Connection from ('192.168.0.10', 49788)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dad2f0>
+Got Connection from ('192.168.0.10', 49790)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dad4b0>
+Got Connection from ('192.168.0.10', 49792)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dad670>
+Got Connection from ('192.168.0.10', 49794)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dad830>
+Got Connection from ('192.168.0.10', 49796)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dad9f0>
+Got Connection from ('192.168.0.10', 49798)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dadbb0>
+Got Connection from ('192.168.0.10', 49800)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dadd70>
+Got Connection from ('192.168.0.10', 49802)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dadf30>
+Got Connection from ('192.168.0.10', 49804)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dba130>
+Got Connection from ('192.168.0.10', 49806)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dba2f0>
+Got Connection from ('192.168.0.10', 49808)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dba4b0>
+Got Connection from ('192.168.0.10', 49810)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dba670>
+Got Connection from ('192.168.0.10', 49812)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dba830>
+Got Connection from ('192.168.0.10', 49814)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dba9f0>
+Got Connection from ('192.168.0.10', 49816)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dbabb0>
+Got Connection from ('192.168.0.10', 49818)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dbad70>
+Got Connection from ('192.168.0.10', 49820)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7dbaf30>
+Got Connection from ('192.168.0.10', 49822)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7233130>
+Got Connection from ('192.168.0.10', 49824)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72332f0>
+Got Connection from ('192.168.0.10', 49826)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72334b0>
+Got Connection from ('192.168.0.10', 49828)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7233670>
+Got Connection from ('192.168.0.10', 49830)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7233830>
+Got Connection from ('192.168.0.10', 49832)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72339f0>
+Got Connection from ('192.168.0.10', 49834)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7233bb0>
+Got Connection from ('192.168.0.10', 49836)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7233d70>
+Got Connection from ('192.168.0.10', 49838)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7233f30>
+Got Connection from ('192.168.0.10', 49840)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7240130>
+Got Connection from ('192.168.0.10', 49842)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72402f0>
+Got Connection from ('192.168.0.10', 49844)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72404b0>
+Got Connection from ('192.168.0.10', 49846)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7240670>
+Got Connection from ('192.168.0.10', 49848)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7240830>
+Got Connection from ('192.168.0.10', 49850)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72409f0>
+Got Connection from ('192.168.0.10', 49852)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7240bb0>
+Got Connection from ('192.168.0.10', 49854)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7240d70>
+Got Connection from ('192.168.0.10', 49856)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7240f30>
+Got Connection from ('192.168.0.10', 49858)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724c130>
+Got Connection from ('192.168.0.10', 49860)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724c2f0>
+Got Connection from ('192.168.0.10', 49862)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724c4b0>
+Got Connection from ('192.168.0.10', 49864)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724c670>
+Got Connection from ('192.168.0.10', 49866)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724c830>
+Got Connection from ('192.168.0.10', 49868)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724c9f0>
+Got Connection from ('192.168.0.10', 49870)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724cbb0>
+Got Connection from ('192.168.0.10', 49872)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724cd70>
+Got Connection from ('192.168.0.10', 49874)
+Sending message now to connection <socket._socketobject object at 0x7fc8b724cf30>
+Got Connection from ('192.168.0.10', 49876)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7259130>
+Got Connection from ('192.168.0.10', 49878)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72592f0>
+Got Connection from ('192.168.0.10', 49880)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72594b0>
+Got Connection from ('192.168.0.10', 49882)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7259670>
+Got Connection from ('192.168.0.10', 49884)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7259830>
+Got Connection from ('192.168.0.10', 49886)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72599f0>
+Got Connection from ('192.168.0.10', 49888)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7259bb0>
+Got Connection from ('192.168.0.10', 49890)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7259d70>
+Got Connection from ('192.168.0.10', 49892)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7259f30>
+Got Connection from ('192.168.0.10', 49894)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7265130>
+Got Connection from ('192.168.0.10', 49896)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72652f0>
+Got Connection from ('192.168.0.10', 49898)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72654b0>
+Got Connection from ('192.168.0.10', 49900)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7265670>
+Got Connection from ('192.168.0.10', 49902)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7265830>
+Got Connection from ('192.168.0.10', 49904)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72659f0>
+Got Connection from ('192.168.0.10', 49906)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7265bb0>
+Got Connection from ('192.168.0.10', 49908)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7265d70>
+Got Connection from ('192.168.0.10', 49910)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7265f30>
+Got Connection from ('192.168.0.10', 49912)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f2130>
+Got Connection from ('192.168.0.10', 49914)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f22f0>
+Got Connection from ('192.168.0.10', 49916)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f24b0>
+Got Connection from ('192.168.0.10', 49918)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f2670>
+Got Connection from ('192.168.0.10', 49920)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f2830>
+Got Connection from ('192.168.0.10', 49922)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f29f0>
+Got Connection from ('192.168.0.10', 49924)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f2bb0>
+Got Connection from ('192.168.0.10', 49926)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f2d70>
+Got Connection from ('192.168.0.10', 49928)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f2f30>
+Got Connection from ('192.168.0.10', 49930)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fe130>
+Got Connection from ('192.168.0.10', 49932)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fe2f0>
+Got Connection from ('192.168.0.10', 49934)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fe4b0>
+Got Connection from ('192.168.0.10', 49936)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fe670>
+Got Connection from ('192.168.0.10', 49938)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fe830>
+Got Connection from ('192.168.0.10', 49940)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fe9f0>
+Got Connection from ('192.168.0.10', 49942)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71febb0>
+Got Connection from ('192.168.0.10', 49944)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fed70>
+Got Connection from ('192.168.0.10', 49946)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71fef30>
+Got Connection from ('192.168.0.10', 49948)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720b130>
+Got Connection from ('192.168.0.10', 49950)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720b2f0>
+Got Connection from ('192.168.0.10', 49952)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720b4b0>
+Got Connection from ('192.168.0.10', 49954)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720b670>
+Got Connection from ('192.168.0.10', 49956)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720b830>
+Got Connection from ('192.168.0.10', 49958)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720b9f0>
+Got Connection from ('192.168.0.10', 49960)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720bbb0>
+Got Connection from ('192.168.0.10', 49962)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720bd70>
+Got Connection from ('192.168.0.10', 49964)
+Sending message now to connection <socket._socketobject object at 0x7fc8b720bf30>
+Got Connection from ('192.168.0.10', 49966)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7218130>
+Got Connection from ('192.168.0.10', 49968)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72182f0>
+Got Connection from ('192.168.0.10', 49970)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72184b0>
+Got Connection from ('192.168.0.10', 49972)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7218670>
+Got Connection from ('192.168.0.10', 49974)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7218830>
+Got Connection from ('192.168.0.10', 49976)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72189f0>
+Got Connection from ('192.168.0.10', 49978)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7218bb0>
+Got Connection from ('192.168.0.10', 49980)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7218d70>
+Got Connection from ('192.168.0.10', 49982)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7218f30>
+Got Connection from ('192.168.0.10', 49984)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7224130>
+Got Connection from ('192.168.0.10', 49986)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72242f0>
+Got Connection from ('192.168.0.10', 49988)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72244b0>
+Got Connection from ('192.168.0.10', 49990)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7224670>
+Got Connection from ('192.168.0.10', 49992)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7224830>
+Got Connection from ('192.168.0.10', 49994)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72249f0>
+Got Connection from ('192.168.0.10', 49996)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7224bb0>
+Got Connection from ('192.168.0.10', 49998)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7224d70>
+Got Connection from ('192.168.0.10', 50000)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7224f30>
+Got Connection from ('192.168.0.10', 50002)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7230130>
+Got Connection from ('192.168.0.10', 50004)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72302f0>
+Got Connection from ('192.168.0.10', 50006)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72304b0>
+Got Connection from ('192.168.0.10', 50008)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7230670>
+Got Connection from ('192.168.0.10', 50010)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7230830>
+Got Connection from ('192.168.0.10', 50012)
+Sending message now to connection <socket._socketobject object at 0x7fc8b72309f0>
+Got Connection from ('192.168.0.10', 50014)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7230bb0>
+Got Connection from ('192.168.0.10', 50016)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7230d70>
+Got Connection from ('192.168.0.10', 50018)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7230f30>
+Got Connection from ('192.168.0.10', 50020)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bd130>
+Got Connection from ('192.168.0.10', 50022)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bd2f0>
+Got Connection from ('192.168.0.10', 50024)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bd4b0>
+Got Connection from ('192.168.0.10', 50026)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bd670>
+Got Connection from ('192.168.0.10', 50028)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bd830>
+Got Connection from ('192.168.0.10', 50030)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bd9f0>
+Got Connection from ('192.168.0.10', 50032)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bdbb0>
+Got Connection from ('192.168.0.10', 50034)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bdd70>
+Got Connection from ('192.168.0.10', 50036)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71bdf30>
+Got Connection from ('192.168.0.10', 50038)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ca130>
+Got Connection from ('192.168.0.10', 50040)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ca2f0>
+Got Connection from ('192.168.0.10', 50042)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ca4b0>
+Got Connection from ('192.168.0.10', 50044)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ca670>
+Got Connection from ('192.168.0.10', 50046)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ca830>
+Got Connection from ('192.168.0.10', 50048)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ca9f0>
+Got Connection from ('192.168.0.10', 50050)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71cabb0>
+Got Connection from ('192.168.0.10', 50052)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71cad70>
+Got Connection from ('192.168.0.10', 50054)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71caf30>
+Got Connection from ('192.168.0.10', 50056)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d6130>
+Got Connection from ('192.168.0.10', 50058)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d62f0>
+Got Connection from ('192.168.0.10', 50060)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d64b0>
+Got Connection from ('192.168.0.10', 50062)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d6670>
+Got Connection from ('192.168.0.10', 50064)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d6830>
+Got Connection from ('192.168.0.10', 50066)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d69f0>
+Got Connection from ('192.168.0.10', 50068)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d6bb0>
+Got Connection from ('192.168.0.10', 50070)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d6d70>
+Got Connection from ('192.168.0.10', 50072)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71d6f30>
+Got Connection from ('192.168.0.10', 50074)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e2130>
+Got Connection from ('192.168.0.10', 50076)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e22f0>
+Got Connection from ('192.168.0.10', 50078)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e24b0>
+Got Connection from ('192.168.0.10', 50080)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e2670>
+Got Connection from ('192.168.0.10', 50082)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e2830>
+Got Connection from ('192.168.0.10', 50084)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e29f0>
+Got Connection from ('192.168.0.10', 50086)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e2bb0>
+Got Connection from ('192.168.0.10', 50088)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e2d70>
+Got Connection from ('192.168.0.10', 50090)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71e2f30>
+Got Connection from ('192.168.0.10', 50092)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f0130>
+Got Connection from ('192.168.0.10', 50094)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f02f0>
+Got Connection from ('192.168.0.10', 50096)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f04b0>
+Got Connection from ('192.168.0.10', 50098)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f0670>
+Got Connection from ('192.168.0.10', 50100)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f0830>
+Got Connection from ('192.168.0.10', 50102)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f09f0>
+Got Connection from ('192.168.0.10', 50104)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f0bb0>
+Got Connection from ('192.168.0.10', 50106)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f0d70>
+Got Connection from ('192.168.0.10', 50108)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71f0f30>
+Got Connection from ('192.168.0.10', 50110)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717c130>
+Got Connection from ('192.168.0.10', 50112)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717c2f0>
+Got Connection from ('192.168.0.10', 50114)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717c4b0>
+Got Connection from ('192.168.0.10', 50116)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717c670>
+Got Connection from ('192.168.0.10', 50118)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717c830>
+Got Connection from ('192.168.0.10', 50120)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717c9f0>
+Got Connection from ('192.168.0.10', 50122)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717cbb0>
+Got Connection from ('192.168.0.10', 50124)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717cd70>
+Got Connection from ('192.168.0.10', 50126)
+Sending message now to connection <socket._socketobject object at 0x7fc8b717cf30>
+Got Connection from ('192.168.0.10', 50128)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7188130>
+Got Connection from ('192.168.0.10', 50130)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71882f0>
+Got Connection from ('192.168.0.10', 50132)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71884b0>
+Got Connection from ('192.168.0.10', 50134)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7188670>
+Got Connection from ('192.168.0.10', 50136)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7188830>
+Got Connection from ('192.168.0.10', 50138)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71889f0>
+Got Connection from ('192.168.0.10', 50140)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7188bb0>
+Got Connection from ('192.168.0.10', 50142)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7188d70>
+Got Connection from ('192.168.0.10', 50144)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7188f30>
+Got Connection from ('192.168.0.10', 50146)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7194130>
+Got Connection from ('192.168.0.10', 50148)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71942f0>
+Got Connection from ('192.168.0.10', 50150)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71944b0>
+Got Connection from ('192.168.0.10', 50152)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7194670>
+Got Connection from ('192.168.0.10', 50154)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7194830>
+Got Connection from ('192.168.0.10', 50156)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71949f0>
+Got Connection from ('192.168.0.10', 50158)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7194bb0>
+Got Connection from ('192.168.0.10', 50160)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7194d70>
+Got Connection from ('192.168.0.10', 50162)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7194f30>
+Got Connection from ('192.168.0.10', 50164)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a2130>
+Got Connection from ('192.168.0.10', 50166)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a22f0>
+Got Connection from ('192.168.0.10', 50168)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a24b0>
+Got Connection from ('192.168.0.10', 50170)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a2670>
+Got Connection from ('192.168.0.10', 50172)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a2830>
+Got Connection from ('192.168.0.10', 50174)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a29f0>
+Got Connection from ('192.168.0.10', 50176)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a2bb0>
+Got Connection from ('192.168.0.10', 50178)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a2d70>
+Got Connection from ('192.168.0.10', 50180)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71a2f30>
+Got Connection from ('192.168.0.10', 50182)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ae130>
+Got Connection from ('192.168.0.10', 50184)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ae2f0>
+Got Connection from ('192.168.0.10', 50186)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ae4b0>
+Got Connection from ('192.168.0.10', 50188)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ae670>
+Got Connection from ('192.168.0.10', 50190)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ae830>
+Got Connection from ('192.168.0.10', 50192)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71ae9f0>
+Got Connection from ('192.168.0.10', 50194)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71aebb0>
+Got Connection from ('192.168.0.10', 50196)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71aed70>
+Got Connection from ('192.168.0.10', 50198)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71aef30>
+Got Connection from ('192.168.0.10', 50200)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713a130>
+Got Connection from ('192.168.0.10', 50202)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713a2f0>
+Got Connection from ('192.168.0.10', 50204)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713a4b0>
+Got Connection from ('192.168.0.10', 50206)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713a670>
+Got Connection from ('192.168.0.10', 50208)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713a830>
+Got Connection from ('192.168.0.10', 50210)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713a9f0>
+Got Connection from ('192.168.0.10', 50212)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713abb0>
+Got Connection from ('192.168.0.10', 50214)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713ad70>
+Got Connection from ('192.168.0.10', 50216)
+Sending message now to connection <socket._socketobject object at 0x7fc8b713af30>
+Got Connection from ('192.168.0.10', 50218)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7147130>
+Got Connection from ('192.168.0.10', 50220)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71472f0>
+Got Connection from ('192.168.0.10', 50222)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71474b0>
+Got Connection from ('192.168.0.10', 50224)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7147670>
+Got Connection from ('192.168.0.10', 50226)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7147830>
+Got Connection from ('192.168.0.10', 50228)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71479f0>
+Got Connection from ('192.168.0.10', 50230)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7147bb0>
+Got Connection from ('192.168.0.10', 50232)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7147d70>
+Got Connection from ('192.168.0.10', 50234)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7147f30>
+Got Connection from ('192.168.0.10', 50236)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7154130>
+Got Connection from ('192.168.0.10', 50238)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71542f0>
+Got Connection from ('192.168.0.10', 50240)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71544b0>
+Got Connection from ('192.168.0.10', 50242)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7154670>
+Got Connection from ('192.168.0.10', 50244)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7154830>
+Got Connection from ('192.168.0.10', 50246)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71549f0>
+Got Connection from ('192.168.0.10', 50248)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7154bb0>
+Got Connection from ('192.168.0.10', 50250)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7154d70>
+Got Connection from ('192.168.0.10', 50252)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7154f30>
+Got Connection from ('192.168.0.10', 50254)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7160130>
+Got Connection from ('192.168.0.10', 50256)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71602f0>
+Got Connection from ('192.168.0.10', 50258)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71604b0>
+Got Connection from ('192.168.0.10', 50260)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7160670>
+Got Connection from ('192.168.0.10', 50262)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7160830>
+Got Connection from ('192.168.0.10', 50264)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71609f0>
+Got Connection from ('192.168.0.10', 50266)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7160bb0>
+Got Connection from ('192.168.0.10', 50268)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7160d70>
+Got Connection from ('192.168.0.10', 50270)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7160f30>
+Got Connection from ('192.168.0.10', 50272)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716c130>
+Got Connection from ('192.168.0.10', 50274)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716c2f0>
+Got Connection from ('192.168.0.10', 50276)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716c4b0>
+Got Connection from ('192.168.0.10', 50278)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716c670>
+Got Connection from ('192.168.0.10', 50280)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716c830>
+Got Connection from ('192.168.0.10', 50282)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716c9f0>
+Got Connection from ('192.168.0.10', 50284)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716cbb0>
+Got Connection from ('192.168.0.10', 50286)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716cd70>
+Got Connection from ('192.168.0.10', 50288)
+Sending message now to connection <socket._socketobject object at 0x7fc8b716cf30>
+Got Connection from ('192.168.0.10', 50290)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f9130>
+Got Connection from ('192.168.0.10', 50292)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f92f0>
+Got Connection from ('192.168.0.10', 50294)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f94b0>
+Got Connection from ('192.168.0.10', 50296)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f9670>
+Got Connection from ('192.168.0.10', 50298)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f9830>
+Got Connection from ('192.168.0.10', 50300)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f99f0>
+Got Connection from ('192.168.0.10', 50302)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f9bb0>
+Got Connection from ('192.168.0.10', 50304)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f9d70>
+Got Connection from ('192.168.0.10', 50306)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70f9f30>
+Got Connection from ('192.168.0.10', 50308)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7106130>
+Got Connection from ('192.168.0.10', 50310)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71062f0>
+Got Connection from ('192.168.0.10', 50312)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71064b0>
+Got Connection from ('192.168.0.10', 50314)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7106670>
+Got Connection from ('192.168.0.10', 50316)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7106830>
+Got Connection from ('192.168.0.10', 50318)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71069f0>
+Got Connection from ('192.168.0.10', 50320)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7106bb0>
+Got Connection from ('192.168.0.10', 50322)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7106d70>
+Got Connection from ('192.168.0.10', 50324)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7106f30>
+Got Connection from ('192.168.0.10', 50326)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7112130>
+Got Connection from ('192.168.0.10', 50328)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71122f0>
+Got Connection from ('192.168.0.10', 50330)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71124b0>
+Got Connection from ('192.168.0.10', 50332)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7112670>
+Got Connection from ('192.168.0.10', 50334)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7112830>
+Got Connection from ('192.168.0.10', 50336)
+Sending message now to connection <socket._socketobject object at 0x7fc8b71129f0>
+Got Connection from ('192.168.0.10', 50338)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7112bb0>
+Got Connection from ('192.168.0.10', 50340)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7112d70>
+Got Connection from ('192.168.0.10', 50342)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7112f30>
+Got Connection from ('192.168.0.10', 50344)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711f130>
+Got Connection from ('192.168.0.10', 50346)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711f2f0>
+Got Connection from ('192.168.0.10', 50348)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711f4b0>
+Got Connection from ('192.168.0.10', 50350)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711f670>
+Got Connection from ('192.168.0.10', 50352)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711f830>
+Got Connection from ('192.168.0.10', 50354)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711f9f0>
+Got Connection from ('192.168.0.10', 50356)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711fbb0>
+Got Connection from ('192.168.0.10', 50358)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711fd70>
+Got Connection from ('192.168.0.10', 50360)
+Sending message now to connection <socket._socketobject object at 0x7fc8b711ff30>
+Got Connection from ('192.168.0.10', 50362)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712b130>
+Got Connection from ('192.168.0.10', 50364)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712b2f0>
+Got Connection from ('192.168.0.10', 50366)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712b4b0>
+Got Connection from ('192.168.0.10', 50368)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712b670>
+Got Connection from ('192.168.0.10', 50370)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712b830>
+Got Connection from ('192.168.0.10', 50372)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712b9f0>
+Got Connection from ('192.168.0.10', 50374)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712bbb0>
+Got Connection from ('192.168.0.10', 50376)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712bd70>
+Got Connection from ('192.168.0.10', 50378)
+Sending message now to connection <socket._socketobject object at 0x7fc8b712bf30>
+Got Connection from ('192.168.0.10', 50380)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b8130>
+Got Connection from ('192.168.0.10', 50382)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b82f0>
+Got Connection from ('192.168.0.10', 50384)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b84b0>
+Got Connection from ('192.168.0.10', 50386)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b8670>
+Got Connection from ('192.168.0.10', 50388)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b8830>
+Got Connection from ('192.168.0.10', 50390)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b89f0>
+Got Connection from ('192.168.0.10', 50392)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b8bb0>
+Got Connection from ('192.168.0.10', 50394)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b8d70>
+Got Connection from ('192.168.0.10', 50396)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70b8f30>
+Got Connection from ('192.168.0.10', 50398)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c4130>
+Got Connection from ('192.168.0.10', 50400)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c42f0>
+Got Connection from ('192.168.0.10', 50402)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c44b0>
+Got Connection from ('192.168.0.10', 50404)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c4670>
+Got Connection from ('192.168.0.10', 50406)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c4830>
+Got Connection from ('192.168.0.10', 50408)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c49f0>
+Got Connection from ('192.168.0.10', 50410)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c4bb0>
+Got Connection from ('192.168.0.10', 50412)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c4d70>
+Got Connection from ('192.168.0.10', 50414)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70c4f30>
+Got Connection from ('192.168.0.10', 50416)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d1130>
+Got Connection from ('192.168.0.10', 50418)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d12f0>
+Got Connection from ('192.168.0.10', 50420)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d14b0>
+Got Connection from ('192.168.0.10', 50422)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d1670>
+Got Connection from ('192.168.0.10', 50424)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d1830>
+Got Connection from ('192.168.0.10', 50426)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d19f0>
+Got Connection from ('192.168.0.10', 50428)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d1bb0>
+Got Connection from ('192.168.0.10', 50430)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d1d70>
+Got Connection from ('192.168.0.10', 50432)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70d1f30>
+Got Connection from ('192.168.0.10', 50434)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70dd130>
+Got Connection from ('192.168.0.10', 50436)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70dd2f0>
+Got Connection from ('192.168.0.10', 50438)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70dd4b0>
+Got Connection from ('192.168.0.10', 50440)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70dd670>
+Got Connection from ('192.168.0.10', 50442)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70dd830>
+Got Connection from ('192.168.0.10', 50444)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70dd9f0>
+Got Connection from ('192.168.0.10', 50446)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ddbb0>
+Got Connection from ('192.168.0.10', 50448)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ddd70>
+Got Connection from ('192.168.0.10', 50450)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ddf30>
+Got Connection from ('192.168.0.10', 50452)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ea130>
+Got Connection from ('192.168.0.10', 50454)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ea2f0>
+Got Connection from ('192.168.0.10', 50456)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ea4b0>
+Got Connection from ('192.168.0.10', 50458)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ea670>
+Got Connection from ('192.168.0.10', 50460)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ea830>
+Got Connection from ('192.168.0.10', 50462)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ea9f0>
+Got Connection from ('192.168.0.10', 50464)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70eabb0>
+Got Connection from ('192.168.0.10', 50466)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70ead70>
+Got Connection from ('192.168.0.10', 50468)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70eaf30>
+Got Connection from ('192.168.0.10', 50470)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7077130>
+Got Connection from ('192.168.0.10', 50472)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70772f0>
+Got Connection from ('192.168.0.10', 50474)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70774b0>
+Got Connection from ('192.168.0.10', 50476)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7077670>
+Got Connection from ('192.168.0.10', 50478)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7077830>
+Got Connection from ('192.168.0.10', 50480)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70779f0>
+Got Connection from ('192.168.0.10', 50482)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7077bb0>
+Got Connection from ('192.168.0.10', 50484)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7077d70>
+Got Connection from ('192.168.0.10', 50486)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7077f30>
+Got Connection from ('192.168.0.10', 50488)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7083130>
+Got Connection from ('192.168.0.10', 50490)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70832f0>
+Got Connection from ('192.168.0.10', 50492)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70834b0>
+Got Connection from ('192.168.0.10', 50494)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7083670>
+Got Connection from ('192.168.0.10', 50496)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7083830>
+Got Connection from ('192.168.0.10', 50498)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70839f0>
+Got Connection from ('192.168.0.10', 50500)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7083bb0>
+Got Connection from ('192.168.0.10', 50502)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7083d70>
+Got Connection from ('192.168.0.10', 50504)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7083f30>
+Got Connection from ('192.168.0.10', 50506)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708f130>
+Got Connection from ('192.168.0.10', 50508)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708f2f0>
+Got Connection from ('192.168.0.10', 50510)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708f4b0>
+Got Connection from ('192.168.0.10', 50512)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708f670>
+Got Connection from ('192.168.0.10', 50514)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708f830>
+Got Connection from ('192.168.0.10', 50516)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708f9f0>
+Got Connection from ('192.168.0.10', 50518)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708fbb0>
+Got Connection from ('192.168.0.10', 50520)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708fd70>
+Got Connection from ('192.168.0.10', 50522)
+Sending message now to connection <socket._socketobject object at 0x7fc8b708ff30>
+Got Connection from ('192.168.0.10', 50524)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709c130>
+Got Connection from ('192.168.0.10', 50526)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709c2f0>
+Got Connection from ('192.168.0.10', 50528)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709c4b0>
+Got Connection from ('192.168.0.10', 50530)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709c670>
+Got Connection from ('192.168.0.10', 50532)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709c830>
+Got Connection from ('192.168.0.10', 50534)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709c9f0>
+Got Connection from ('192.168.0.10', 50536)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709cbb0>
+Got Connection from ('192.168.0.10', 50538)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709cd70>
+Got Connection from ('192.168.0.10', 50540)
+Sending message now to connection <socket._socketobject object at 0x7fc8b709cf30>
+Got Connection from ('192.168.0.10', 50542)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a9130>
+Got Connection from ('192.168.0.10', 50544)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a92f0>
+Got Connection from ('192.168.0.10', 50546)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a94b0>
+Got Connection from ('192.168.0.10', 50548)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a9670>
+Got Connection from ('192.168.0.10', 50550)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a9830>
+Got Connection from ('192.168.0.10', 50552)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a99f0>
+Got Connection from ('192.168.0.10', 50554)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a9bb0>
+Got Connection from ('192.168.0.10', 50556)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a9d70>
+Got Connection from ('192.168.0.10', 50558)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70a9f30>
+Got Connection from ('192.168.0.10', 50560)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7035130>
+Got Connection from ('192.168.0.10', 50562)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70352f0>
+Got Connection from ('192.168.0.10', 50564)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70354b0>
+Got Connection from ('192.168.0.10', 50566)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7035670>
+Got Connection from ('192.168.0.10', 50568)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7035830>
+Got Connection from ('192.168.0.10', 50570)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70359f0>
+Got Connection from ('192.168.0.10', 50572)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7035bb0>
+Got Connection from ('192.168.0.10', 50574)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7035d70>
+Got Connection from ('192.168.0.10', 50576)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7035f30>
+Got Connection from ('192.168.0.10', 50578)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7041130>
+Got Connection from ('192.168.0.10', 50580)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70412f0>
+Got Connection from ('192.168.0.10', 50582)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70414b0>
+Got Connection from ('192.168.0.10', 50584)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7041670>
+Got Connection from ('192.168.0.10', 50586)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7041830>
+Got Connection from ('192.168.0.10', 50588)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70419f0>
+Got Connection from ('192.168.0.10', 50590)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7041bb0>
+Got Connection from ('192.168.0.10', 50592)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7041d70>
+Got Connection from ('192.168.0.10', 50594)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7041f30>
+Got Connection from ('192.168.0.10', 50596)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704f130>
+Got Connection from ('192.168.0.10', 50598)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704f2f0>
+Got Connection from ('192.168.0.10', 50600)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704f4b0>
+Got Connection from ('192.168.0.10', 50602)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704f670>
+Got Connection from ('192.168.0.10', 50604)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704f830>
+Got Connection from ('192.168.0.10', 50606)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704f9f0>
+Got Connection from ('192.168.0.10', 50608)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704fbb0>
+Got Connection from ('192.168.0.10', 50610)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704fd70>
+Got Connection from ('192.168.0.10', 50612)
+Sending message now to connection <socket._socketobject object at 0x7fc8b704ff30>
+Got Connection from ('192.168.0.10', 50614)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705b130>
+Got Connection from ('192.168.0.10', 50616)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705b2f0>
+Got Connection from ('192.168.0.10', 50618)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705b4b0>
+Got Connection from ('192.168.0.10', 50620)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705b670>
+Got Connection from ('192.168.0.10', 50622)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705b830>
+Got Connection from ('192.168.0.10', 50624)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705b9f0>
+Got Connection from ('192.168.0.10', 50626)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705bbb0>
+Got Connection from ('192.168.0.10', 50628)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705bd70>
+Got Connection from ('192.168.0.10', 50630)
+Sending message now to connection <socket._socketobject object at 0x7fc8b705bf30>
+Got Connection from ('192.168.0.10', 50632)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7067130>
+Got Connection from ('192.168.0.10', 50634)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70672f0>
+Got Connection from ('192.168.0.10', 50636)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70674b0>
+Got Connection from ('192.168.0.10', 50638)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7067670>
+Got Connection from ('192.168.0.10', 50640)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7067830>
+Got Connection from ('192.168.0.10', 50642)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70679f0>
+Got Connection from ('192.168.0.10', 50644)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7067bb0>
+Got Connection from ('192.168.0.10', 50646)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7067d70>
+Got Connection from ('192.168.0.10', 50648)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7067f30>
+Got Connection from ('192.168.0.10', 50650)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff3130>
+Got Connection from ('192.168.0.10', 50652)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff32f0>
+Got Connection from ('192.168.0.10', 50654)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff34b0>
+Got Connection from ('192.168.0.10', 50656)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff3670>
+Got Connection from ('192.168.0.10', 50658)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff3830>
+Got Connection from ('192.168.0.10', 50660)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff39f0>
+Got Connection from ('192.168.0.10', 50662)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff3bb0>
+Got Connection from ('192.168.0.10', 50664)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff3d70>
+Got Connection from ('192.168.0.10', 50666)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6ff3f30>
+Got Connection from ('192.168.0.10', 50668)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7001130>
+Got Connection from ('192.168.0.10', 50670)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70012f0>
+Got Connection from ('192.168.0.10', 50672)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70014b0>
+Got Connection from ('192.168.0.10', 50674)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7001670>
+Got Connection from ('192.168.0.10', 50676)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7001830>
+Got Connection from ('192.168.0.10', 50678)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70019f0>
+Got Connection from ('192.168.0.10', 50680)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7001bb0>
+Got Connection from ('192.168.0.10', 50682)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7001d70>
+Got Connection from ('192.168.0.10', 50684)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7001f30>
+Got Connection from ('192.168.0.10', 50686)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700d130>
+Got Connection from ('192.168.0.10', 50688)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700d2f0>
+Got Connection from ('192.168.0.10', 50690)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700d4b0>
+Got Connection from ('192.168.0.10', 50692)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700d670>
+Got Connection from ('192.168.0.10', 50694)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700d830>
+Got Connection from ('192.168.0.10', 50696)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700d9f0>
+Got Connection from ('192.168.0.10', 50698)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700dbb0>
+Got Connection from ('192.168.0.10', 50700)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700dd70>
+Got Connection from ('192.168.0.10', 50702)
+Sending message now to connection <socket._socketobject object at 0x7fc8b700df30>
+Got Connection from ('192.168.0.10', 50704)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7019130>
+Got Connection from ('192.168.0.10', 50706)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70192f0>
+Got Connection from ('192.168.0.10', 50708)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70194b0>
+Got Connection from ('192.168.0.10', 50710)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7019670>
+Got Connection from ('192.168.0.10', 50712)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7019830>
+Got Connection from ('192.168.0.10', 50714)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70199f0>
+Got Connection from ('192.168.0.10', 50716)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7019bb0>
+Got Connection from ('192.168.0.10', 50718)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7019d70>
+Got Connection from ('192.168.0.10', 50720)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7019f30>
+Got Connection from ('192.168.0.10', 50722)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7026130>
+Got Connection from ('192.168.0.10', 50724)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70262f0>
+Got Connection from ('192.168.0.10', 50726)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70264b0>
+Got Connection from ('192.168.0.10', 50728)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7026670>
+Got Connection from ('192.168.0.10', 50730)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7026830>
+Got Connection from ('192.168.0.10', 50732)
+Sending message now to connection <socket._socketobject object at 0x7fc8b70269f0>
+Got Connection from ('192.168.0.10', 50734)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7026bb0>
+Got Connection from ('192.168.0.10', 50736)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7026d70>
+Got Connection from ('192.168.0.10', 50738)
+Sending message now to connection <socket._socketobject object at 0x7fc8b7026f30>
+Got Connection from ('192.168.0.10', 50740)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb3130>
+Got Connection from ('192.168.0.10', 50742)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb32f0>
+Got Connection from ('192.168.0.10', 50744)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb34b0>
+Got Connection from ('192.168.0.10', 50746)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb3670>
+Got Connection from ('192.168.0.10', 50748)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb3830>
+Got Connection from ('192.168.0.10', 50750)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb39f0>
+Got Connection from ('192.168.0.10', 50752)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb3bb0>
+Got Connection from ('192.168.0.10', 50754)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb3d70>
+Got Connection from ('192.168.0.10', 50756)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fb3f30>
+Got Connection from ('192.168.0.10', 50758)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbf130>
+Got Connection from ('192.168.0.10', 50760)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbf2f0>
+Got Connection from ('192.168.0.10', 50762)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbf4b0>
+Got Connection from ('192.168.0.10', 50764)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbf670>
+Got Connection from ('192.168.0.10', 50766)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbf830>
+Got Connection from ('192.168.0.10', 50768)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbf9f0>
+Got Connection from ('192.168.0.10', 50770)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbfbb0>
+Got Connection from ('192.168.0.10', 50772)
+Sending message now to connection <socket._socketobject object at 0x7fc8b6fbfd70>
+Got Connection from ('192.168.0.10', 50792)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fafc22e8600>
+Sending message now to connection <socket._socketobject object at 0x7fafc22e86e0>
+Got Connection from ('192.168.0.10', 50798)
+Got Connection from ('192.168.0.10', 50800)
+Got Connection from ('192.168.0.10', 50918)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f1720de2600>
+Sending message now to connection <socket._socketobject object at 0x7f1720de26e0>
+Got Connection from ('192.168.0.10', 50924)
+Got Connection from ('192.168.0.10', 50926)
+Got Connection from ('192.168.0.10', 51018)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f84c6814600>
+Sending message now to connection <socket._socketobject object at 0x7f84c68146e0>
+Got Connection from ('192.168.0.10', 51024)
+Got Connection from ('192.168.0.10', 51058)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f8f9b63f600>
+Sending message now to connection <socket._socketobject object at 0x7f8f9b63f6e0>
+Got Connection from ('192.168.0.10', 51090)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7ff33d0ec600>
+Sending message now to connection <socket._socketobject object at 0x7ff33d0ec6e0>
+Got Connection from ('192.168.0.10', 51154)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f883819a600>
+Sending message now to connection <socket._socketobject object at 0x7f883819a6e0>
+Got Connection from ('192.168.0.10', 51178)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f89a1b89600>
+Sending message now to connection <socket._socketobject object at 0x7f89a1b896e0>
+Got Connection from ('192.168.0.10', 51260)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f8e87824600>
+Sending message now to connection <socket._socketobject object at 0x7f8e878246e0>
+Got Connection from ('192.168.0.10', 53220)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f72be622600>
+Sending message now to connection <socket._socketobject object at 0x7f72be6226e0>
+Got Connection from ('192.168.0.10', 53282)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f9feb582600>
+Sending message now to connection <socket._socketobject object at 0x7f9feb5826e0>
+Got Connection from ('192.168.0.10', 53288)
+Got Connection from ('192.168.0.10', 53290)
+Got Connection from ('192.168.0.10', 53314)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f71da3e4600>
+Sending message now to connection <socket._socketobject object at 0x7f71da3e46e0>
+Got Connection from ('192.168.0.10', 53320)
+Got Connection from ('192.168.0.10', 53326)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fcf929ab600>
+Sending message now to connection <socket._socketobject object at 0x7fcf929ab6e0>
+Got Connection from ('192.168.0.10', 53332)
+Got Connection from ('192.168.0.10', 53334)
+Got Connection from ('192.168.0.10', 53336)
+Sending message now to connection <socket._socketobject object at 0x7fcf929abbb0>
+Got Connection from ('192.168.0.10', 53362)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fc1ea1ad600>
+Sending message now to connection <socket._socketobject object at 0x7fc1ea1ad6e0>
+Got Connection from ('192.168.0.10', 53368)
+Got Connection from ('192.168.0.10', 53370)
+Got Connection from ('192.168.0.10', 53372)
+Sending message now to connection <socket._socketobject object at 0x7fc1ea1adbb0>
+Got Connection from ('192.168.0.10', 53398)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f0911ee1600>
+Sending message now to connection <socket._socketobject object at 0x7f0911ee16e0>
+Got Connection from ('192.168.0.10', 53404)
+Got Connection from ('192.168.0.10', 53406)
+Got Connection from ('192.168.0.10', 53408)
+Sending message now to connection <socket._socketobject object at 0x7f0911ee1bb0>
+Got Connection from ('192.168.0.10', 53642)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f04939eb600>
+Sending message now to connection <socket._socketobject object at 0x7f04939eb6e0>
+Got Connection from ('192.168.0.10', 53648)
+Got Connection from ('192.168.0.10', 53650)
+Got Connection from ('192.168.0.10', 53652)
+Sending message now to connection <socket._socketobject object at 0x7f04939ebbb0>
+Got Connection from ('192.168.0.10', 53706)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f8947dc4600>
+Sending message now to connection <socket._socketobject object at 0x7f8947dc46e0>
+Got Connection from ('192.168.0.10', 53712)
+Got Connection from ('192.168.0.10', 53714)
+Got Connection from ('192.168.0.10', 53716)
+Sending message now to connection <socket._socketobject object at 0x7f8947dc4bb0>
+Got Connection from ('192.168.0.10', 53792)
+Got Connection from ('192.168.0.10', 53806)
+Got Connection from ('192.168.0.10', 53818)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f93a641e600>
+Sending message now to connection <socket._socketobject object at 0x7f93a641e6e0>
+Got Connection from ('192.168.0.10', 53824)
+Got Connection from ('192.168.0.10', 53826)
+Got Connection from ('192.168.0.10', 53864)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f94fc5ce600>
+Sending message now to connection <socket._socketobject object at 0x7f94fc5ce6e0>
+Got Connection from ('192.168.0.10', 53870)
+Got Connection from ('192.168.0.10', 53872)
+Got Connection from ('192.168.0.10', 53960)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fa370bb2600>
+Sending message now to connection <socket._socketobject object at 0x7fa370bb26e0>
+Got Connection from ('192.168.0.10', 53966)
+Got Connection from ('192.168.0.10', 53968)
+Got Connection from ('192.168.0.10', 53986)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f8a05ae2600>
+Sending message now to connection <socket._socketobject object at 0x7f8a05ae26e0>
+Got Connection from ('192.168.0.10', 53992)
+Got Connection from ('192.168.0.10', 53994)
+Got Connection from ('192.168.0.10', 54024)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f31f8a3b600>
+Sending message now to connection <socket._socketobject object at 0x7f31f8a3b6e0>
+Got Connection from ('192.168.0.10', 54030)
+Got Connection from ('192.168.0.10', 54032)
+Got Connection from ('192.168.0.10', 54052)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f111df4d670>
+Sending message now to connection <socket._socketobject object at 0x7f111df4d750>
+Got Connection from ('192.168.0.10', 54058)
+Got Connection from ('192.168.0.10', 54060)
+Got Connection from ('192.168.0.10', 54114)
+Got Connection from ('192.168.0.10', 54132)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f9b80a3a600>
+Sending message now to connection <socket._socketobject object at 0x7f9b80a3a6e0>
+Got Connection from ('192.168.0.10', 54138)
+Got Connection from ('192.168.0.10', 54140)
+Got Connection from ('192.168.0.10', 54428)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f2bd92f9750>
+Sending message now to connection <socket._socketobject object at 0x7f2bd92f9830>
+Got Connection from ('192.168.0.10', 54434)
+Got Connection from ('192.168.0.10', 54436)
+Got Connection from ('192.168.0.10', 54556)
+Got Connection from ('192.168.0.10', 54562)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f7d1774b7c0>
+Sending message now to connection <socket._socketobject object at 0x7f7d1774b8a0>
+Got Connection from ('192.168.0.10', 54568)
+Got Connection from ('192.168.0.10', 54570)
+Got Connection from ('192.168.0.10', 54658)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fcd24552750>
+Sending message now to connection <socket._socketobject object at 0x7fcd24552830>
+Got Connection from ('192.168.0.10', 54664)
+Got Connection from ('192.168.0.10', 54666)
+Got Connection from ('192.168.0.10', 54702)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f5e9ad9e750>
+Sending message now to connection <socket._socketobject object at 0x7f5e9ad9e830>
+Got Connection from ('192.168.0.10', 54708)
+Got Connection from ('192.168.0.10', 54710)
+Got Connection from ('192.168.0.10', 54852)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f9e3941b750>
+Sending message now to connection <socket._socketobject object at 0x7f9e3941b830>
+Got Connection from ('192.168.0.10', 54920)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7fd2ba0c8750>
+Sending message now to connection <socket._socketobject object at 0x7fd2ba0c8830>
+Got Connection from ('192.168.0.10', 54926)
+Got Connection from ('192.168.0.10', 54928)
+Got Connection from ('192.168.0.10', 54936)
+Added message in logs A B
+Sending message now to connection <socket._socketobject object at 0x7f9fd7aad750>
+Sending message now to connection <socket._socketobject object at 0x7f9fd7aad830>
+Got Connection from ('192.168.0.10', 54942)
+Got Connection from ('192.168.0.10', 54944)

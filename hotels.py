@@ -2,51 +2,154 @@
 import socket	 
 import json			  
 import select
-
+import MySQLdb
+import Queue
 # next create a socket object
-s = socket.socket()			
+hotels = socket.socket()			
 print "Socket successfully created"
  
 # reserve a port on your computer in our
 # case it is 1245 but it can be anything
-port = 10002		
+port = 10002			  
  
+
+# Create a TCP/IP socket
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_ip = '192.168.0.10'
+server_host = 12559
+
 # Next bind to the port
 # we have not typed any ip in the ip field
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-s.bind(('192.168.0.10',port))		  
+hotels.bind(('192.168.0.10',port))		  
 print "socket binded to %s" %(port)
  
 # put the socket into listening mode
-s.listen(5)	  
+hotels.listen(5)	  
 print "socket is listening"			 
  
 # a forever loop until we interrupt it or 
 # an error occurs
+
+inputs = [hotels]
+outputs = []
+message_queue = {}
+
+
 while True:
  
+	readable, writable, exceptional = select.select(inputs, outputs, inputs)
 	# Establish connection with client.
-	c, addr = s.accept() 
+	for s in readable:
 
-	print 'Got connection from', addr
+		if s is hotels:
+			c, addr = hotels.accept() 
+			print 'Got connection from',c,addr
+			c.setblocking(0)
+			inputs.append(c)
+			# Give the connection a queue for data we want to send
+			message_queue[c] = Queue.Queue()
 
-	msg = c.recv(1024)
-	if(len(msg) ==0 ) :
-		continue
+		else:
+			msg = c.recv(1024)
+			print type(msg)
+			print msg
+			dict= json.loads(msg.decode('utf-8'))
+			# for i in dict:
+			# 	print i,"\t = ",dict[i]
+			print(dict)
 
-	dict= json.loads(msg.decode('utf-8'))
-	print(type(dict))
-	print(dict)
+			if dict['type'] == 1 :
+				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+                    user="root",         # your username
+                    passwd="root",  # your password
+                    db="distributed_systems")
+
+				cur = db.cursor()
+				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
+				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
+				# db.commit()
+
+				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+				
+				dicte = {}
+					
+  				for row in cur.fetchall():
+					print row
+					dicte['sender'] = 'hotel'
+					dicte['flag'] = 1
+					dicte['availability'] = row[0]
+					dicte['cost'] = row[1]
+					dicte['index'] = dict['index']
+					dicte['pos'] = 3
+					dicte['type']= dict['type']
+					dicte['client_ip'] = dict['client_ip']
+					dicte['client_port'] = dict['client_port']
+					break
+				inputs.remove(s)
+				outputs.append(s)
+
+				message_queue[s].put(dicte)		
+
+
+			# s.close()		
+	# Handle outputs
+	for s in writable:
+		print "yoyo------------"
+		try:
+			dict = message_queue[s].get_nowait()
+		except Queue.Empty:
+			# No messages waiting so stop checking for writability.
+			#print >>sys.stderr, 'output queue for', s.getpeername(), 'is empty'
+			outputs.remove(s)
+		else:
+			
+			#print >>sys.stderr, 'sending "%s" to %s' % (next_msg, s.getpeername())
+			#now we need to send the message to respective connection
+			print "inside writable"
+			print dict
+			server.connect((server_ip,server_host))
+			dicte =  json.dumps(dict).encode('utf-8')
+			server.send(dicte)
+			print "send to the central server"
+			server.close()
+
+			# f.write("Sending message now to connection " + str(s) + "\n")
+			outputs.remove(s)
+
+
+	# Handle "exceptional conditions"
+	for s in exceptional:
+
+		#print >>sys.stderr, 'handling exceptional condition for', s.getpeername()
+		# Stop listening for input on the connection
+		inputs.remove(s)
+		if s in outputs:
+			outputs.remove(s)
+		s.close()
+
+		# Remove message queue
+		del message_queue[s]
+
+
+
+
+
+	# if(len(msg) ==0 ) :
+	# 	continue
+
 	# c is the connection , conn.recv will read as many bytes as possible
+	# database will be queried and message will be sent 
 
 	# send a thank you message to the client. 
-	c.send('Thank you for connecting')
+	# c.send('Thank you for connecting')
  
 	# Close the connection with the client
-	c.close()
+	# c.close()
 
-	print(" You want to continue or not ") 
-	#a = 
+	# print(" You want to continue or not ") 
+	
 

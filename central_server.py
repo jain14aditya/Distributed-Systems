@@ -5,6 +5,7 @@ import time
 import logging
 import select
 import Queue
+import copy
 
 # Create a TCP/IP socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -23,15 +24,15 @@ hotel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 heartbeat = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #heartbeat.setblocking(0)
 
-ip = '192.168.0.10'
-port1 = 10000
-server_add = ('192.168.0.10',10000)
+# ip = '192.168.0.10'
+# port1 = 10000
+# server_add = ('192.168.0.10',10000)
 
 ips =  {}
-ips['airport1'] = ('192.168.0.10',10000)
-ips['airport2'] = ('192.168.0.10',10001)
-ips['hotel'] = ('192.168.0.10',10002)
-ips['heartbeat'] = ('192.168.0.10',10003)
+ips['airport1'] = ['192.168.0.10',10000]
+ips['airport2'] = ['192.168.0.10',10001]
+ips['hotel'] = ['192.168.0.10',10002]
+ips['heartbeat'] = ['192.168.0.10',10003]
 
 
 #airport1.connect(ips['airport1'])
@@ -99,24 +100,28 @@ while True:
 	for s in readable:
 
 		if s is server:
-			
+			print "\n\n =========== SERVER listening ================="
 			# A "readable" server socket is ready to accept a connection
 			connection, client_address = s.accept()
-			print "recieved connection from ",client_address, " connection = ", connection
+			print "recieved connection from ",client_address
+			# print "socket made for the client = ",connection.getsockname()
 			#print >>sys.stderr, 'new connection from', client_address
 			connection.setblocking(0)
 			inputs.append(connection)
-
+			print "inputs"
+			print(inputs)
 			# Give the connection a queue for data we want to send
 			message_queue[connection] = Queue.Queue()
-			f.write("Got Connection from "+str(connection) + "\n")
-			dicte = {}
-			dicte['sender'] = 'central'
-			dicte['flag'] = 'log'
-			dicte['msg'] = "Got connection from "+str(connection) 
+			f.write("Got Connection from "+str(client_address) + "\n")
+
+			# heartbeat case 
+			# dicte = {}
+			# dicte['sender'] = 'central'
+			# dicte['flag'] = 'log'
+			# dicte['msg'] = "Got connection from "+str(connection) 
 			# outputs.append(heartbeat)
 			# message_queue[heartbeat].append(dicte)
-
+			print "=========== SERVER part over ================="
 
 		else:
 			# print "client socket = ",s
@@ -128,7 +133,7 @@ while True:
 				# A readable client socket has data
 				#print >>sys.stderr, 'received "%s" from %s' % (data, s.getpeername())
 				dict = json.loads(data.decode('utf-8'))
-				print dict
+				# print dict
 				#message_queue[s].put(dict)
 				# Add output channel for response
 				if dict['sender'] == 'heartbeat' :
@@ -136,14 +141,16 @@ while True:
 					outputs.append(s)
 					dicte = {}
 					dicte['flag'] = 3 # 1 is requests_list update , 2 is log update , 3 is zinda hain bolne wala update
-					message_queue[s].append(dicte)
+					message_queue[s].put(dicte)
 
 				elif dict['sender'] == 'client' :
 
 					from_ = dict['from']
 					to_ = dict['to']
-					print from_,to_
+					# print from_,to_
 					if (from_,to_) in graph : 
+						print "\n\n-------------------client 1 HOP started --------------------"
+
 						
 						# direct flight exists ,check if the flag is read ,
 						#if it is read , just get the data from permanent store from airport server 
@@ -153,14 +160,14 @@ while True:
 
 							# airport1.connect(ips[airport1])
 							# hotel.connect(ips[hotel])
-							print("reached here in airport one")
-							outputs.append(airport1)
-							outputs.append(hotel)
+							# print("reached here in airport one")
+							# outputs.append(airport1)
+							# outputs.append(hotel)
 							host = airport1
 
 						else :
-							outputs.append(airport2)
-							outputs.append(hotel)
+						# 	outputs.append(airport2)
+						# 	outputs.append(hotel)
 							host = airport2
 
 						
@@ -170,47 +177,72 @@ while True:
 						dicte['Date'] = dict['date']
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
-						dicte['pos'] = '1'
-						dicte['1'] = -1
+						dicte['pos'] = 1
+						dicte[1] = -1
 						dicte['hops'] = 1
 						dicte['people'] = dict['people']
 						if dict['type'] == 1 :
 							# read type 
-							dicte['type'] = 0 # read from permanent
+							dicte['type'] = 1 # read from permanent
 						else :
 							dicte['type'] = 2 # write permanent value , since it is not a write type 
 							# 3 is undo permanent value 
 							
 						dicte['budget'] = dict['budget']
 						dicte['timer'] = time.time() # this is used when we want to delete a request that has crossed certain limit .
-						print "host",host
+						# print "host",host
+
+
+						dicte['ip'] = s.getsockname()[0]
+						dicte['port'] =s.getsockname()[1]
+
+						dicte['client_ip'] = dict['client_ip']
+						dicte['client_port'] = dict['client_port']
+
+						# print("pos = " + str(dicte['pos']))
 						outputs.append(host)
 						message_queue[host].put(dicte)
 
-						dicte['pos'] = '3'
-						dicte['3'] = -1
+						dicte['pos'] = 3
+						dicte[3] = -1
+
 
 						outputs.append(hotel)
 						message_queue[hotel].put(dicte)
 
-						dicte['flag'] = 'insert'
+						# dicte['flag'] = 'insert'
 						# outputs.append(heartbeat)
 						# message_queue[heartbeat].append(dicte)
 
-						# dicte['conn'] = s
-
+						dicte['conn'] = s
 						dicte['valid'] = 1 # else it would be invalid , if we delete this entry 
-						print "c = ", counter
-						requests_list[counter] = dicte
+						# print "c = ", counter
+						temp = copy.deepcopy(dicte)
+						requests_list[counter] = temp
+
+						# print "printing the requests_list"
+						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						# for i in a1_sorted_keys:
+						# 	print i, "\t = ",requests_list[counter][i]
+
+						dicte.pop('conn',None)
 						f.write("Added message in logs "+str(from_)+" "+str(to_) + "\n")
 						
 						dicte['flag'] = 'request'
+
+						# print "\nprinting the final client dict"
+						# dicte_sorted_keys = sorted(dicte, key=dicte.get, reverse=False)
+						# for i in dicte_sorted_keys:
+						# 	print i, "\t = ",dicte[i]
 						# outputs.append(heartbeat)
 						# message_queue[heartbeat].append(dicte)
-						for i in dicte:
-							print i, "\t = ",dicte[i]
 
-						print "client finished"
+						# print "\n \n printing the requests_list"
+						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						# for i in a1_sorted_keys:
+						# 	print i, "\t = ",requests_list[counter][i]
+						inputs.remove(s)
+						print "-----------------client 1 HOP finished --------------------------"
 
 					else : 
 
@@ -251,29 +283,42 @@ while True:
 						dicte['Date'] = dict['date']
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
-						dicte['pos'] = '1'
-						dicte['hops'] = 1
+						dicte['pos'] = 1
+
+						dicte[1] = -1
+						dicte[2] = -1
+						dicte[3] = -1
+
+						dicte['hops'] = 2
 						dicte['people'] = dict['people']
 						if dict['type'] == 1 :
 							# read type 
-							dicte['type'] = 0 # read from permanent
+							dicte['type'] = 1 # read from permanent
 						else :
 							dicte['type'] = 2 # write temp value , since it is not a write type 
 
 						dicte['budget'] = dict['budget']
 						dicte[timer] = time.time() # this is used when we	
+						
+
+						dicte['ip'] = s.getsockname()[0]
+						dicte['port'] =s.getsockname()[1]
+
+
+
 						message_queue[airport1].put(dicte)
 
-						dicte['pos']= '2'
+						dicte['pos']= 2
 						dicte['from']= i
 						dicte['to'] = to_
-						dicte['1'] = -1
-						dicte['2'] = -1
-						dicte['3'] = -1
+
+						dicte[1] = -1
+						dicte[2] = -1
+						dicte[3] = -1
 
 						message_queue[airport2].put(dicte)
 
-						dicte['pos'] = '3'
+						dicte['pos'] = 3
 
 						message_queue[hotel].put(dicte)
 						
@@ -281,10 +326,13 @@ while True:
 						dicte['to'] = to_
 						dicte['inter'] = i
 						dicte['processed'] = 0
-						# dicte['conn'] = s
+						dicte['conn'] = s
+
 
 
 						requests_list[counter] = dicte
+						dicte.pop('conn',None)
+
 						dicte['flag'] = 'insert'
 						# message_queue[heartbeat].append(dicte)
 						dicte['flag'] = 'request'
@@ -303,38 +351,62 @@ while True:
 
 				else : 
 
+					#if s in [airport1,airport2,hotel] :
+					if dict['sender'] in ['airport_1','airport_2','hotel']:
+						print "\n\n+++++++++++++++++++++++++++++++++++++++++++++++++"
+
+					print "msg from airport1, hotel , airport2 -----------------------"
 					# the sender is aiport1  or airport2 or hotel
-					idx = dicte['index']
-					pos = dicte['pos']
+					# print(type(dict))
+					idx = dict['index']
+					pos = dict['pos']
 
 					if idx in requests_list :
-						#if ticket is booked or not
-						requests_list[idx][pos] = dicte['flag'] 
+
+						print("pos = " + str(pos)+ "\tidx = "+str(dict['flag'])+ "\tidx =" +str(dict['type']))
+
+						if dict['type'] == 4 or dict['type'] == 5 or dict['type']== -2 : 
+							#if ticket is booked or not
+							requests_list[idx][pos] = -2
+							
+						else :
+
+							print(str(dict['flag'])+" is used heree")
+							requests_list[idx][pos] = dict['flag']
+						
 						inputs.remove(s)
+
 
 					else : 
 						
 						# this index dict has been removed due to timeout . so send undo message to the particular connection s
-						if dicte['type'] == 1 :
-							# it is a read message ,so no need to send undo operation 
-							# since we already sent a message to client due to timeout , we dont have to care about this
-							print("Common")
-							inputs.remove(s)
-
-						elif dicte['type'] == 2:
+						
+						if dict['type'] == 2:
 							# it is update of temporary , so we send undo message with 
-							dicte['type'] = 4
+							dict['type'] = 4
 							inputs.remove(s)
 							outputs.append(s)
-							message_queue[s].put(dicte)
+							message_queue[s].put(dict)
 
-						elif dicte['type'] == 4:
+						elif dict['type'] == 3:
+
+							dict['type'] = 5
+							inputs.remove(s)
+							outputs.append(s)
+							message_queue[s].put(dict)
+
+						else :
+
+							dict[1] = -2 
+							dict[2]  = -2
+							dict[3] = -2
 							# this is already a undo operation .airport has already done that , so 
 							# we dont have to care about them and we'll ignore this message .
+							
 							print('Add this to commit log info')
 							inputs.remove(s)
 
-
+					print "--------------Database Finished-----------------------"		
 						# elif dicte['type'] == 3  : -> TODO
 						#	dicte['type'] = 5 
 						#	inputs.remove(s)
@@ -358,9 +430,11 @@ while True:
 
 	# Handle outputs
 	for s in writable:
-		print "yoyo"
+		print "\n\n----------- inside writable ------------"
 		try:
 			dict = message_queue[s].get_nowait()
+			print dict
+			print "------------------------------"
 		except Queue.Empty:
 			# No messages waiting so stop checking for writability.
 			#print >>sys.stderr, 'output queue for', s.getpeername(), 'is empty'
@@ -369,17 +443,43 @@ while True:
 			
 			#print >>sys.stderr, 'sending "%s" to %s' % (next_msg, s.getpeername())
 			#now we need to send the message to respective connection
-			print "inside writable"
+			# print "inside writable"
 			if s is airport1:
-				print "s = ",s
-				airport1.connect((ip,port1))
-				print dict
+				print "airport_1"
+				airport1.connect((ips['airport1'][0],ips['airport1'][1]))
+				# print dict
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
+				print "send to the airport_1",(ips['airport1'][0],ips['airport1'][1])
+				s.close()
+			elif s is airport2:
+				print "airport_2"
+				airport2.connect((ips['airport2'][0],ips['airport2'][1]))
+				# print dict
+				dicte =  json.dumps(dict).encode('utf-8')
+				s.send(dicte)
+				print "send to the airport_2",(ips['airport2'][0],ips['airport2'][1])
+				s.close()
+			elif s is hotel:
+				print "hotel"
+				s.connect((ips['hotel'][0],ips['hotel'][1]))
+				dicte =  json.dumps(dict).encode('utf-8')
+				s.send(dicte)
+				print "send to the hotel",(ips['hotel'][0],ips['hotel'][1])
+				s.close()
+			else:
+				# sending back to client
+				print "sending back to client",s.getsockname()
+				print "printing the port from which client talked",(dict['client_ip'],dict['client_port']) 
+				# s.connect( (dicte['client_ip'],dicte['client_port']) )
+				dicte =  json.dumps(dict).encode('utf-8')
+				s.sendall(dicte)
+				s.close()	
 
-			f.write("Sending message now to connection " + str(s))
+
+			f.write("Sending message now to connection " + str(s) + "\n")
 			outputs.remove(s)
-
+		print "-------- end of inside writable --------------\n"
 			
 
 
@@ -399,83 +499,106 @@ while True:
 
 
 	# now we check the request queue if any of the message exceeded its timeout limit
+	print "\n\n+++++++++ checking for removables ++++++++++ "
+	removable = []
+	for key in requests_list :
 
-	# removable = []
-	
-	# for key in requests_list :
+		# if it has timedout .
+		tim = time.time()
+		value  = requests_list[key]
+		print "dict values from the requests_list"
+		for i in value:
+			print i,("\t = "),value[i]
+		s1 = value['conn']
+		print "---------- dict printed -------- "
+		if tim - value['timer'] > timeout  :
+			print "inside timeout "
+			# wrong line need to give a tuple with ip and port
+			
+			# s1 = socket.socket()
+			# s1.connect( (value['ip'],value['port']) )
+			output.append(s1)
 
-	# 	# if it has timedout .
-	# 	tim = time.time()
-	# 	value  = requests_list[key]
+			value['result']= 3 # timeout 
+			if s1 in message_queue :
+				message_queue[s1].put(value)
 
-	# 	if tim - value['timer'] > timeout  :
+			f.write("Message has been removed from list "+str(key)+" due to timeout" + "\n")
+			removable.append(key)
 
-	# 		socket = socket.socket()
-	# 		# wrong line need to give a tuple with ip and port
-	# 		socket.connect(value['conn'])
-	# 		output.append(socket)
+		else :
+			print " \n --------No timeout------"
+			if value['hops'] == 1:
+				print "value 1 = ", value[1] , "\t value 3 = ", value[3]
+				# 1 is for aiport1 and 3 is for hotel
+				if value[1] >0 and value[3] >0 : 
 
-	# 		value['result']= 3 # timeout 
-	# 		if socket in message_queue :
-	# 			message_queue[socket].put(value)
-
-	# 		f.write("Message has been removed from list "+str(key)+" due to timeout" + "\n")
-	# 		removable.append(key)
-
-	# 	else :
-
-	# 		if value['hops'] == 1:
-
-	# 			# 1 is for aiport1 and 3 is for hotel
-	# 			if value['1'] >0 and value['3'] >0 : 
-
-	# 				# this is successful transaction
-	# 				socket = socket.socket()
-	# 				socket.connect(value['conn'])
-	# 				value['result'] = 1 # 1 is successful
-	# 				outputs.append(socket)
-	# 				message_queue[socket].put(value)
-
-
-	# 			elif value['1'] == -2 or value['3'] == -2 :
-
-	# 				# one of them failed , 2 phase commit failed 
-	# 				# this is successful transaction
-	# 				socket = socket.socket()
-	# 				socket.connect(value['conn'])
-	# 				value['result'] = 2 # 1 is un-successful
-	# 				outputs.append(socket)
-	# 				message_queue[socket].put(value)
-	# 				removable.append(key)
-
-
-	# 		else :
-
-	# 			if value['1'] >0 and value['2']>0 and value['3'] >0 : 
-
-	# 				# this is successful transaction
-	# 				socket = socket.socket()
-	# 				socket.connect(value['conn'])
-	# 				value['result'] = 1 # 1 is successful
-	# 				outputs.append(socket)
-	# 				message_queue[socket].put(value)
+					# this is successful transaction
+					# s1 = socket.socket()
+					# s1.connect( (value['client_ip'],value['client_port']) )
+					print "socket ip,port",s.getsockname()
+					print "printing the port from which client talked",(value['client_ip'],value['client_port']) 
+					value['result'] = 1 # 1 is successful
+					outputs.append(value['conn'])
+					print "outputs = "
+					print outputs 
+					if s1 not in message_queue :
+						message_queue[s1] = Queue.Queue()
+					
+					message_queue[s1].put(value)
+					removable.append(key)
 
 
-	# 			elif value['1'] == -2 or value['3'] == -2 or value['2']== -2 :
+				elif value[1] == -2 or value[3] == -2 :
 
-	# 				# one of them failed , 2 phase commit failed 
-	# 				socket = socket.socket()
-	# 				socket.connect(value['conn'])
-	# 				value['result'] = 2 # 1 is successful
-	# 				outputs.append(socket)
-	# 				message_queue[socket].put(value)
-	# 				removable.append(key)
+					# one of them failed , 2 phase commit failed 
+					# this is successful transaction
+					# s1 = socket.socket()
+					# s1.connect( (value['ip'],value['port']) )
+					
+					value['result'] = 2 # 1 is un-successful
+					outputs.append(s1)
+					if s1 not in message_queue :
+						message_queue[s1] = Queue.Queue()
+
+					message_queue[s1].put(value)
+					removable.append(key)
 
 
-	# for i in removable :
-	# 	requests_list.remove(i)
+			else :
+
+				print "value 1 = ", value[1] , "\t value 2 = ", value[2], "\t value 3 = ", value[3]
+				if value[1] >0 and value[2]>0 and value[3] >0 : 
+					# this is successful transaction
+					# s1 = socket.socket()
+					# s1.connect( (value['ip'],value['port']) )
+					value['result'] = 1 # 1 is successful
+					outputs.append(s1)
+					if s1 not in message_queue :
+						message_queue[s1] = Queue.Queue()
+					
+					message_queue[s1].put(value)
+					removable.append(key)
+
+				elif value[1] == -2 or value[3] == -2 or value[2]== -2 :
+
+					# one of them failed , 2 phase commit failed 
+					# this is successful transaction
+					# s1 = socket.socket()
+					# s1.connect( (value['ip'],value['port']) )
+					value['result'] = 2 # 1 is un-successful
+					outputs.append(s1)
+					if s1 not in message_queue :
+						message_queue[s1] = Queue.Queue()
+
+					message_queue[s1].put(value)
+					removable.append(key)
 
 
+	for i in removable :
+		requests_list.pop(i,None)
+
+	print "-------- end of checking for removables ---------"
 
 
 
