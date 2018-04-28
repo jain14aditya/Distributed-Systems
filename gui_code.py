@@ -69,7 +69,7 @@ def CheckCallBack() :
 	print(msg)
 	dict = json.loads(msg.decode('utf-8'))
 	for i in dict:
-		print(i + "\t = " + dict[i])
+		print(str(i) + "\t = " + str(dict[i]))
 	s.close()
 
 

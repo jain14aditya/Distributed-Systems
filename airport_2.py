@@ -53,7 +53,7 @@ while True:
 			message_queue[c] = Queue.Queue()
 
 		else:
-			msg = c.recv(1024)
+			msg = s.recv(1024)
 			print msg
 			dict= json.loads(msg.decode('utf-8'))
 			for i in dict:
@@ -114,6 +114,8 @@ while True:
 			server.send(dicte)
 			server.close()
 			print "send to the central server"
+
+			s.close()
 
 			# f.write("Sending message now to connection " + str(s) + "\n")
 			outputs.remove(s)

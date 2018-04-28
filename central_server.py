@@ -114,6 +114,7 @@ while True:
 			message_queue[connection] = Queue.Queue()
 			f.write("Got Connection from "+str(client_address) + "\n")
 
+
 			# heartbeat case 
 			# dicte = {}
 			# dicte['sender'] = 'central'
@@ -213,34 +214,38 @@ while True:
 						# dicte['flag'] = 'insert'
 						# outputs.append(heartbeat)
 						# message_queue[heartbeat].append(dicte)
-
+						print "\n------------------"
+						print "client(socket) - ",s
+						print "------------------"
 						dicte['conn'] = s
 						dicte['valid'] = 1 # else it would be invalid , if we delete this entry 
 						# print "c = ", counter
 						temp = copy.deepcopy(dicte)
+						temp['conn'] = s
 						requests_list[counter] = temp
 
-						# print "printing the requests_list"
-						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
-						# for i in a1_sorted_keys:
-						# 	print i, "\t = ",requests_list[counter][i]
+						print "printing the requests_list"
+						a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						for i in a1_sorted_keys:
+							print i, "\t = ",requests_list[counter][i]
 
 						dicte.pop('conn',None)
 						f.write("Added message in logs "+str(from_)+" "+str(to_) + "\n")
 						
 						dicte['flag'] = 'request'
 
-						# print "\nprinting the final client dict"
-						# dicte_sorted_keys = sorted(dicte, key=dicte.get, reverse=False)
-						# for i in dicte_sorted_keys:
-						# 	print i, "\t = ",dicte[i]
+						print "\nprinting the final client dict"
+						dicte_sorted_keys = sorted(dicte, key=dicte.get, reverse=False)
+						for i in dicte_sorted_keys:
+							print i, "\t = ",dicte[i]
+						
 						# outputs.append(heartbeat)
 						# message_queue[heartbeat].append(dicte)
 
-						# print "\n \n printing the requests_list"
-						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
-						# for i in a1_sorted_keys:
-						# 	print i, "\t = ",requests_list[counter][i]
+						print "\n \n printing the requests_list"
+						a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						for i in a1_sorted_keys:
+							print i, "\t = ",requests_list[counter][i]
 						inputs.remove(s)
 						print "-----------------client 1 HOP finished --------------------------"
 
@@ -446,12 +451,14 @@ while True:
 			#now we need to send the message to respective connection
 			# print "inside writable"
 			if s is airport1:
-				print "airport_1"
+				print "airport_1" 
 				airport1.connect((ips['airport1'][0],ips['airport1'][1]))
 				# print dict
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the airport_1",(ips['airport1'][0],ips['airport1'][1])
+
+				airport1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				#s.close()
 			elif s is airport2:
 				print "airport_2"
@@ -460,6 +467,7 @@ while True:
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the airport_2",(ips['airport2'][0],ips['airport2'][1])
+				airport2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				#s.close()
 			elif s is hotel:
 				print "hotel"
@@ -467,14 +475,15 @@ while True:
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				print "send to the hotel",(ips['hotel'][0],ips['hotel'][1])
+				hotel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				#s.close()
 			else:
 				# sending back to client
 				print "sending back to client",s.getsockname()
 				print "printing the port from which client talked",(dict['client_ip'],dict['client_port']) 
-				# s.connect( (dicte['client_ip'],dicte['client_port']) )
+				# s.connect(dicte['client_ip'],dicte['client_port']) )
 				dicte =  json.dumps(dict).encode('utf-8')
-				s.sendall(dicte)
+				s.send(dicte)
 				#s.close()	
 
 
@@ -537,15 +546,19 @@ while True:
 					# this is successful transaction
 					# s1 = socket.socket()
 					# s1.connect( (value['client_ip'],value['client_port']) )
-					print "socket ip,port",s.getsockname()
+					# print "socket ip,port",s.getsockname()
 					print "printing the port from which client talked",(value['client_ip'],value['client_port']) 
 					value['result'] = 1 # 1 is successful
 					outputs.append(value['conn'])
+					print "Value = "
+					print value
 					print "outputs = "
 					print outputs 
 					if s1 not in message_queue :
 						message_queue[s1] = Queue.Queue()
 					
+					s2 = value['conn']
+					value.pop('conn',None)
 					message_queue[s1].put(value)
 					removable.append(key)
 

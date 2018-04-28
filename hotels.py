@@ -53,9 +53,10 @@ while True:
 			message_queue[c] = Queue.Queue()
 
 		else:
-			msg = c.recv(1024)
-			print type(msg)
-			print msg
+			msg = s.recv(1024)
+			# s.close()
+			# print type(msg)
+			# print msg
 			dict= json.loads(msg.decode('utf-8'))
 			# for i in dict:
 			# 	print i,"\t = ",dict[i]
@@ -115,7 +116,7 @@ while True:
 			dicte =  json.dumps(dict).encode('utf-8')
 			server.send(dicte)
 			print "send to the central server"
-			server.close()
+			s.close()
 
 			# f.write("Sending message now to connection " + str(s) + "\n")
 			outputs.remove(s)
