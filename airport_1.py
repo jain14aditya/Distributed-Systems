@@ -45,14 +45,18 @@ while True:
 	for s in readable:
 
 		if s is airport1:
+			print "\n\n =========== SERVER listening ================="
 			c, addr = airport1.accept() 
 			print 'Got connection from',c,addr
 			c.setblocking(0)
 			inputs.append(c)
 			# Give the connection a queue for data we want to send
 			message_queue[c] = Queue.Queue()
+			print "=========== SERVER part over ================="
+
 
 		else:
+			print "\n\n +++++++ Query Processing ++++++++"
 			msg = s.recv(1024)
 			# print msg
 			# print type(msg)
@@ -69,7 +73,7 @@ while True:
 
 				cur = db.cursor()
 				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
-				cur.execute('update airport1_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (dict['people'],dict['from'],dict['to'],dict['Date']))
+				# cur.execute('update airport1_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (dict['people'],dict['from'],dict['to'],dict['Date']))
 				# db.commit()
 
 				# cur.execute('select tickets,cost from airport1_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
@@ -94,12 +98,11 @@ while True:
 				outputs.append(s)
 
 				message_queue[s].put(dicte)		
-
-
+			"------- Query Processing -------"
 			# s.close()		
 	# Handle outputs
 	for s in writable:
-		print "yoyo------------"
+		print "\n\n++++++++++ Inside writable ++++++++++"
 		try:
 			dict = message_queue[s].get_nowait()
 		except Queue.Empty:
@@ -110,20 +113,20 @@ while True:
 			
 			#print >>sys.stderr, 'sending "%s" to %s' % (next_msg, s.getpeername())
 			#now we need to send the message to respective connection
-			print "inside writable"
+			# print "inside writable"
 			print dict
 			server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			server.connect((server_ip,server_host))
+			print "send to the central server"
 			dicte =  json.dumps(dict).encode('utf-8')
 			server.send(dicte)
 			#server.close()
-			print "send to the central server"
 
 			# f.write("Sending message now to connection " + str(s) + "\n")
 			s.close()
 
 			outputs.remove(s)
-
+		print "--------- Inside writable Ended -----------"
 
 	# Handle "exceptional conditions"
 	for s in exceptional:

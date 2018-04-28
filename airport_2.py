@@ -45,20 +45,25 @@ while True:
 	for s in readable:
 
 		if s is airport2:
+			print "\n\n =========== SERVER listening ================="
 			c, addr = airport2.accept() 
 			print 'Got connection from',c,addr
 			c.setblocking(0)
 			inputs.append(c)
 			# Give the connection a queue for data we want to send
 			message_queue[c] = Queue.Queue()
+			print "=========== SERVER part over ================="
+
 
 		else:
+			print "\n\n +++++++ Query Processing ++++++++"
 			msg = s.recv(1024)
-			print msg
+			# print msg
+			# print type(msg)
 			dict= json.loads(msg.decode('utf-8'))
-			for i in dict:
-				print i,"\t = ",dict[i]
-			# print(dict)
+			# for i in dict:
+			# 	print i,"\t = ",dict[i]
+			print(dict)
 
 			if dict['type'] == 1 :
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
@@ -68,7 +73,7 @@ while True:
 
 				cur = db.cursor()
 				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
-				cur.execute('update airport2_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (dict['people'],dict['from'],dict['to'],dict['Date']))
+				# cur.execute('update airport2_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (dict['people'],dict['from'],dict['to'],dict['Date']))
 				# db.commit()
 
 				# cur.execute('select tickets,cost from airport2_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
@@ -83,20 +88,21 @@ while True:
 					dicte['ticket'] = row[0]
 					dicte['cost'] = row[1]
 					dicte['index'] = dict['index']
-					dicte['pos'] = 2
+					dicte['pos'] = 1
 					dicte['type']= dict['type']
-					
+					dicte['client_ip'] = dict['client_ip']
+					dicte['client_port'] = dict['client_port']
 					break
-			inputs.remove(s)
-			outputs.append(s)
 
-			message_queue[s].put(dicte)		
+				inputs.remove(s)
+				outputs.append(s)
 
-
+				message_queue[s].put(dicte)		
+			"------- Query Processing -------"
 			# s.close()		
 	# Handle outputs
 	for s in writable:
-		print "yoyo------------"
+		print "\n\n++++++++++ Inside writable ++++++++++"
 		try:
 			dict = message_queue[s].get_nowait()
 		except Queue.Empty:
@@ -107,20 +113,20 @@ while True:
 			
 			#print >>sys.stderr, 'sending "%s" to %s' % (next_msg, s.getpeername())
 			#now we need to send the message to respective connection
-			print "inside writable"
+			# print "inside writable"
 			print dict
 			server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			server.connect((server_ip,server_host))
+			print "send to the central server"
 			dicte =  json.dumps(dict).encode('utf-8')
 			server.send(dicte)
-			server.close()
-			print "send to the central server"
-
-			s.close()
+			#server.close()
 
 			# f.write("Sending message now to connection " + str(s) + "\n")
-			outputs.remove(s)
+			s.close()
 
+			outputs.remove(s)
+		print "--------- Inside writable Ended -----------"
 
 	# Handle "exceptional conditions"
 	for s in exceptional:
