@@ -147,7 +147,18 @@ def BookCallBack() :
 
 	dict =  json.dumps(dicte).encode('utf-8')
 	
-	s.sendall(dict)
+	s.send(dict)
+
+	msg = s.recv(1024)
+	if len(msg) == 0 :
+		print("None")
+	print("recievec data from the central server")
+	print(msg)
+	dict = json.loads(msg.decode('utf-8'))
+	for i in dict:
+		print(str(i) + "\t = " + str(dict[i]))
+	s.close()
+	
 
 
 def main() :

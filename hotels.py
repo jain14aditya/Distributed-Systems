@@ -93,7 +93,190 @@ while True:
 				inputs.remove(s)
 				outputs.append(s)
 
-				message_queue[s].put(dicte)		
+				message_queue[s].put(dicte)
+
+
+			elif dict['type'] == 2 :
+
+				# this is update of temp value in a database
+
+				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+                    user="root",         # your username
+                    passwd="root",  # your password
+                    db="distributed_systems")
+
+				cur = db.cursor()
+				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
+				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
+				# db.commit()
+
+				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+				
+
+				dicte = {}
+					
+  				for row in cur.fetchall():
+					print row
+					dicte['sender'] = 'hotel'
+					dicte['flag'] = 1
+					dicte['availability'] = row[0]
+					dicte['cost'] = row[1]
+					dicte['index'] = dict['index']
+					dicte['pos'] = 3
+					dicte['type']= dict['type']
+					dicte['client_ip'] = dict['client_ip']
+					dicte['client_port'] = dict['client_port']
+					break
+				
+				# then not possible to update or modify 
+				if dict['availability'] < dict['people'] :
+					dict['flag'] = -2 
+
+				else :
+					tem = dict['availability'] - dict['people']
+					cur.execute('update hotel_temp set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
+
+				inputs.remove(s)
+				outputs.append(s)
+
+				message_queue[s].put(dicte)
+
+
+			elif dict['type'] == 3 :
+
+				# this is update of permanent value in hotel_perm
+
+				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+                    user="root",         # your username
+                    passwd="root",  # your password
+                    db="distributed_systems")
+
+				cur = db.cursor()
+				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
+				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
+				# db.commit()
+
+				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				cur.execute('select availability,cost from hotel_perm where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+				
+
+				dicte = {}
+					
+  				for row in cur.fetchall():
+					print row
+					dicte['sender'] = 'hotel'
+					dicte['flag'] = 1
+					dicte['availability'] = row[0]
+					dicte['cost'] = row[1]
+					dicte['index'] = dict['index']
+					dicte['pos'] = 3
+					dicte['type']= dict['type']
+					dicte['client_ip'] = dict['client_ip']
+					dicte['client_port'] = dict['client_port']
+					break
+				
+				# then not possible to update or modify 
+				if dict['availability'] < dict['people'] :
+					dict['flag'] = -2 
+
+				else :
+					tem = dict['availability'] - dict['people']
+					cur.execute('update hotel_perm set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
+
+				inputs.remove(s)
+				outputs.append(s)
+
+				message_queue[s].put(dicte)
+
+
+			elif dict['type'] == 4 :
+
+				# this is undo of temp value 
+				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+                    user="root",         # your username
+                    passwd="root",  # your password
+                    db="distributed_systems")
+
+				cur = db.cursor()
+				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
+				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
+				# db.commit()
+
+				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+				
+
+				dicte = {}
+					
+  				for row in cur.fetchall():
+					print row
+					dicte['sender'] = 'hotel'
+					dicte['flag'] = -2
+					dicte['availability'] = row[0]
+					dicte['cost'] = row[1]
+					dicte['index'] = dict['index']
+					dicte['pos'] = 3
+					dicte['type']= dict['type']
+					dicte['client_ip'] = dict['client_ip']
+					dicte['client_port'] = dict['client_port']
+					break
+				
+				# then not possible to update or modify 
+				tem = dict['availability'] + dict['people']
+				cur.execute('update hotel_temp set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
+
+				inputs.remove(s)
+				outputs.append(s)
+
+				message_queue[s].put(dicte)
+
+
+			elif dict['type'] == 5 :
+
+				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+                    user="root",         # your username
+                    passwd="root",  # your password
+                    db="distributed_systems")
+
+				cur = db.cursor()
+				# print (dict['people'],dict['from'],dict['to'],dict['Date'])
+				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
+				# db.commit()
+
+				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				cur.execute('select availability,cost from hotel_perm where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+				
+
+				dicte = {}
+					
+  				for row in cur.fetchall():
+					print row
+					dicte['sender'] = 'hotel'
+					dicte['flag'] = -2
+					dicte['availability'] = row[0]
+					dicte['cost'] = row[1]
+					dicte['index'] = dict['index']
+					dicte['pos'] = 3
+					dicte['type']= dict['type']
+					dicte['client_ip'] = dict['client_ip']
+					dicte['client_port'] = dict['client_port']
+					break
+				
+				# then not possible to update or modify 
+				tem = dict['availability'] + dict['people']
+				cur.execute('update hotel_perm set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
+
+				inputs.remove(s)
+				outputs.append(s)
+
+				message_queue[s].put(dicte)
+
+
+			else :
+
+				print("Ignore such messages dude")
+
 
 
 			# s.close()		

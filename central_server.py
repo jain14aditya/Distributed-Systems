@@ -310,6 +310,7 @@ while True:
 						dicte['port'] =s.getsockname()[1]
 
 
+						dicte['flag'] = dict['flag']
 
 						message_queue[airport1].put(dicte)
 
@@ -334,8 +335,10 @@ while True:
 						dicte['conn'] = s
 
 
+						temp = copy.deepcopy(dicte)
+						temp['conn'] = s
+						requests_list[counter] = temp
 
-						requests_list[counter] = dicte
 						dicte.pop('conn',None)
 
 						dicte['flag'] = 'insert'
@@ -582,9 +585,12 @@ while True:
 					# s1.connect( (value['ip'],value['port']) )
 					
 					value['result'] = 2 # 1 is un-successful
-					outputs.append(s1)
+					outputs.append(value['conn'])
 					if s1 not in message_queue :
 						message_queue[s1] = Queue.Queue()
+
+					s2 = value['conn']
+					value.pop('conn',None)
 
 					message_queue[s1].put(value)
 					removable.append(key)
