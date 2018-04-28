@@ -96,6 +96,10 @@ while True:
 
 			server_h.connect(hotel[0],hotel[1])
 
+			server_a1.send(json.dumps(dictee).encode('utf-8'))
+			server_a2.send(json.dumps(dictee).encode('utf-8'))
+			server_h.send(json.dumps(dictee).encode('utf-8'))
+			
 			current_time = time.time()
 
 
