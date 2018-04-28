@@ -45,14 +45,17 @@ while True:
 	for s in readable:
 
 		if s is hotels:
+			print "\n\n =========== SERVER listening ================="
 			c, addr = hotels.accept() 
 			print 'Got connection from',c,addr
 			c.setblocking(0)
 			inputs.append(c)
 			# Give the connection a queue for data we want to send
 			message_queue[c] = Queue.Queue()
+			print "=========== SERVER part over ================="
 
 		else:
+			print "\n\n +++++++ Query Processing ++++++++"
 			msg = s.recv(1024)
 			# s.close()
 			# print type(msg)
@@ -63,6 +66,7 @@ while True:
 			print(dict)
 
 			if dict['type'] == 1 :
+				print "\n\n----------------- Type1 started ---------------"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -73,7 +77,7 @@ while True:
 				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
 				# db.commit()
 
-				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				# cur.execute('select availability,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
 				
 				dicte = {}
@@ -94,10 +98,10 @@ while True:
 				outputs.append(s)
 
 				message_queue[s].put(dicte)
-
+				print "----------------- Type1 ended ------------------"
 
 			elif dict['type'] == 2 :
-
+				print "\n\n----------------- Type2 started ---------------"
 				# this is update of temp value in a database
 
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
@@ -110,7 +114,7 @@ while True:
 				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
 				# db.commit()
 
-				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				# cur.execute('select availability,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
 				
 
@@ -129,22 +133,28 @@ while True:
 					# dicte['client_port'] = dict['client_port']
 					break
 				
-				# then not possible to update or modify 
-				if dict['availability'] < dict['people'] :
-					dict['flag'] = -2 
-
+				print "availability = ",dicte['availability'], " people = ",dict['people']
+				if int(dicte['availability']) < int(dict['people']) : 
+					# then it is not possible to book ticket here
+					dicte['flag'] = -2 
 				else :
-					tem = dict['availability'] - dict['people']
-					cur.execute('update hotel_temp set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
+					# print "else part"
+					val = int(dicte['availability']) - int(dict['people'])
+					print "val = ",val 
+					cur.execute('update hotel_temp set availability = %s where to_loc = %s and date_ = %s', (val,dict['to'],dict['Date']))
+					db.commit()
+					cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+					for row1 in cur.fetchall():
+						print row1
 
 				inputs.remove(s)
 				outputs.append(s)
 
 				message_queue[s].put(dicte)
-
+				print "----------------- Type2 started ---------------"
 
 			elif dict['type'] == 3 :
-
+				print "\n\n----------------- Type3 started ---------------"
 				# this is update of permanent value in hotel_perm
 
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
@@ -157,7 +167,7 @@ while True:
 				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
 				# db.commit()
 
-				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				# cur.execute('select availability,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				cur.execute('select availability,cost from hotel_perm where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
 				
 
@@ -176,22 +186,27 @@ while True:
 					# dicte['client_port'] = dict['client_port']
 					break
 				
-				# then not possible to update or modify 
-				if dict['availability'] < dict['people'] :
-					dict['flag'] = -2 
-
+				print "availability = ",dicte['availability'], " people = ",dict['people']
+				if int(dicte['availability']) < int(dict['people']) : 
+					# then it is not possible to book ticket here
+					dicte['flag'] = -2 
 				else :
-					tem = dict['availability'] - dict['people']
-					cur.execute('update hotel_perm set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
-
+					# print "else part"
+					val = int(dicte['availability']) - int(dict['people'])
+					print "val = ",val 
+					cur.execute('update hotel_perm set availability = %s where to_loc = %s and date_ = %s', (val,dict['to'],dict['Date']))
+					db.commit()
+					cur.execute('select availability,cost from hotel_perm where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+					for row1 in cur.fetchall():
+						print row1
 				inputs.remove(s)
 				outputs.append(s)
 
 				message_queue[s].put(dicte)
-
+				print "----------------- Type3 started ---------------"
 
 			elif dict['type'] == 4 :
-
+				print "\n\n----------------- Type4 started ---------------"
 				# this is undo of temp value 
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
@@ -203,7 +218,7 @@ while True:
 				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
 				# db.commit()
 
-				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				# cur.execute('select availability,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
 				
 
@@ -223,17 +238,22 @@ while True:
 					break
 				
 				# then not possible to update or modify 
-				tem = dict['availability'] + dict['people']
-				cur.execute('update hotel_temp set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
+				val = int(dicte['availability']) - int(dict['people'])
+				print "val = ",val 
+				cur.execute('update hotel_temp set availability = %s where to_loc = %s and date_ = %s', (val,dict['to'],dict['Date']))
+				db.commit()
+				cur.execute('select availability,cost from hotel_temp where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+				for row1 in cur.fetchall():
+					print row1
 
 				inputs.remove(s)
 				outputs.append(s)
 
 				message_queue[s].put(dicte)
-
+				print "----------------- Type4 started ---------------"
 
 			elif dict['type'] == 5 :
-
+				print "\n\n----------------- Type5 started ---------------"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -244,7 +264,7 @@ while True:
 				# cur.execute('update hotels_temp set availability = %s where to_loc = %s and date_ = %s', (dict['people'],dict['to'],dict['Date']))
 				# db.commit()
 
-				# cur.execute('select tickets,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				# cur.execute('select availability,cost from hotels_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
 				cur.execute('select availability,cost from hotel_perm where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
 				
 
@@ -264,14 +284,19 @@ while True:
 					break
 				
 				# then not possible to update or modify 
-				tem = dict['availability'] + dict['people']
-				cur.execute('update hotel_perm set availability = %s where to_loc = %s and date_ = %s', (tem,dict['to'],dict['Date']))
+				val = int(dicte['availability']) - int(dict['people'])
+				print "val = ",val 
+				cur.execute('update hotel_perm set availability = %s where to_loc = %s and date_ = %s', (val,dict['to'],dict['Date']))
+				db.commit()
+				cur.execute('select availability,cost from hotel_perm where to_loc = %s and date_ = %s',(dict['to'],dict['Date']))
+				for row1 in cur.fetchall():
+					print row1
 
 				inputs.remove(s)
 				outputs.append(s)
 
 				message_queue[s].put(dicte)
-
+				print "----------------- Type5 started ---------------"
 
 			else :
 
@@ -282,7 +307,7 @@ while True:
 			# s.close()		
 	# Handle outputs
 	for s in writable:
-		print "yoyo------------"
+		print "\n\n++++++++++ Inside writable ++++++++++"
 		try:
 			dict = message_queue[s].get_nowait()
 		except Queue.Empty:
@@ -293,7 +318,7 @@ while True:
 			
 			#print >>sys.stderr, 'sending "%s" to %s' % (next_msg, s.getpeername())
 			#now we need to send the message to respective connection
-			print "inside writable"
+			# print "inside writable"
 			print dict
 			server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			server.connect((server_ip,server_host))
@@ -304,6 +329,7 @@ while True:
 
 			# f.write("Sending message now to connection " + str(s) + "\n")
 			outputs.remove(s)
+		print "--------- Inside writable Ended -----------"
 
 
 	# Handle "exceptional conditions"

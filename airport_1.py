@@ -104,7 +104,7 @@ while True:
 				# "------- Query Processing -------"
 
 			elif dict['type'] == 2 :
-
+				print "\n\n----------------- Type2 started ---------------"
 				print "writing to temp"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
@@ -133,26 +133,27 @@ while True:
 					# dicte['client_ip'] = dict['client_ip']
 					# dicte['client_port'] = dict['client_port']
 					break
-
-				if dicte['ticket'] < dict['people'] : 
-
+				print "ticket = ",dicte['ticket'], " people = ",dict['people']
+				if int(dicte['ticket']) < int(dict['people']) : 
 					# then it is not possible to book ticket here
 					dicte['flag'] = -2 
-
 				else :
-
-					val = dicte['ticket'] - dict['people']
+					# print "else part"
+					val = int(dicte['ticket']) - int(dict['people'])
+					print "val = ",val 
 					cur.execute('update airport1_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (val,dict['from'],dict['to'],dict['Date']))
-
-
-
+					db.commit()
+					cur.execute('select tickets,cost from airport1_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+					for row1 in cur.fetchall():
+						print row1
+				
 				inputs.remove(s)
 				outputs.append(s)
-
 				message_queue[s].put(dicte)	
+				print "----------------- Type2 ended ---------------"
 
 			elif dict['type'] == 3 :
-
+				print "\n\n----------------- Type3 started ---------------"
 				print "remove tickets in airport1_temp"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
@@ -182,24 +183,27 @@ while True:
 					# dicte['client_port'] = dict['client_port']
 					break
 
-				if dicte['ticket'] < dict['people'] : 
-
+				# print "ticket = ",dicte['ticket'], " people = ",dict['people']
+				if int(dicte['ticket']) < int(dict['people']) : 
 					# then it is not possible to book ticket here
 					dicte['flag'] = -2 
 				else :
-
-					val = dicte['ticket'] - dict['people']
+					# print "else part"
+					val = int(dicte['ticket']) - int(dict['people'])
+					print "val = ",val 
 					cur.execute('update airport1_perm set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (val,dict['from'],dict['to'],dict['Date']))
-
-
-
+					db.commit()
+					cur.execute('select tickets,cost from airport1_perm where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+					for row1 in cur.fetchall():
+						print row1
 				inputs.remove(s)
 				outputs.append(s)
 
 				message_queue[s].put(dicte)	
+				print "----------------- Type3 ended ---------------"
 
 			elif dict['type'] == 4 :
-
+				print "\n\n----------------- Type4 started ---------------"
 				print "reverting back the changes from temp database"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
@@ -230,17 +234,21 @@ while True:
 					break
 
 
-				val = dicte['ticket'] + dict['people']
+				val = int(dicte['ticket']) + int(dict['people'])
+				print "val = ",val 
 				cur.execute('update airport1_temp set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (val,dict['from'],dict['to'],dict['Date']))
-
-
-
+				db.commit()
+				cur.execute('select tickets,cost from airport1_temp where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				for row1 in cur.fetchall():
+					print row1
 				inputs.remove(s)
 				outputs.append(s)
 
 				message_queue[s].put(dicte)	
+				print "----------------- Type4 ended ---------------"
 
 			elif dict['type'] == 5 :
+				print "\n\n----------------- Type5 started ---------------"
 				print "reverting back the changes from temp database"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
@@ -271,16 +279,18 @@ while True:
 					break
 
 
-				val = dicte['ticket'] + dict['people']
+				val = int(dicte['ticket']) + int(dict['people'])
+				print "val = ",val 
 				cur.execute('update airport1_perm set tickets = %s where from_loc = %s and to_loc = %s and date_ = %s', (val,dict['from'],dict['to'],dict['Date']))
-
-
-
+				db.commit()
+				cur.execute('select tickets,cost from airport1_perm where from_loc = %s and to_loc = %s and date_ = %s',(dict['from'],dict['to'],dict['Date']))
+				for row1 in cur.fetchall():
+					print row1
 				inputs.remove(s)
 				outputs.append(s)
 
 				message_queue[s].put(dicte)	
-
+				print "\n\n----------------- Type5 ended ---------------"
 
 
 			else :

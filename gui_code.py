@@ -65,11 +65,13 @@ def CheckCallBack() :
 	msg = s.recv(1024)
 	if len(msg) == 0 :
 		print("None")
-	print("recievec data from the central server")
+	print("recieve data from the central server")
 	print(msg)
 	dict = json.loads(msg.decode('utf-8'))
 	for i in dict:
 		print(str(i) + "\t = " + str(dict[i]))
+	print("-----------------------")	
+
 	s.close()
 
 
@@ -131,11 +133,14 @@ def BookCallBack() :
 		return
 
 	s = socket.socket()			
-
+	print("client value = " + str(s.getsockname()))
+	print("sending to (",ip,",",port,")") 
 	# connect to the server on local computer
 	s.connect((ip, port))
+	print("client value = " + str(s.getsockname()))
 
 	dicte = {}
+	dicte['sender'] = 'client'
 	dicte['to'] = to_.get()
 
 	dicte['from'] = from_.get()
@@ -144,19 +149,22 @@ def BookCallBack() :
 	dicte['date'] = E3.get()
 	dicte['people'] = E2.get()
 	dicte['type'] = 2
-
+	# dicte['client_ip'] = s.getsockname()[0]
+	# dicte['client_port'] = s.getsockname()[1]
+	print(dicte)
 	dict =  json.dumps(dicte).encode('utf-8')
 	
-	s.send(dict)
-
+	s.sendall(dict)
 	msg = s.recv(1024)
 	if len(msg) == 0 :
 		print("None")
-	print("recievec data from the central server")
+	print("recieve data from the central server")
 	print(msg)
 	dict = json.loads(msg.decode('utf-8'))
 	for i in dict:
 		print(str(i) + "\t = " + str(dict[i]))
+	print("-----------------------")	
+
 	s.close()
 	
 

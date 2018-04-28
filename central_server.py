@@ -536,13 +536,15 @@ while True:
 		print "---------- dict printed -------- "
 
 		s1 = value['conn']
-		if tim - value['timer'] > timeout  :
-			print "inside timeout "
+		v = tim - value['timer']
+		print "tim - value['timer'] = ",v, " timeour = ", timeout
+		if tim - value['timer'] > timeout:
+			print "\n---------inside timeout --------"
 			# wrong line need to give a tuple with ip and port
 			
 			# s1 = socket.socket()
 			# s1.connect( (value['ip'],value['port']) )
-			output.append(s1)
+			outputs.append(s1)
 
 			value['result']= 3 # timeout 
 			if s1 in message_queue :
@@ -550,6 +552,7 @@ while True:
 
 			f.write("Message has been removed from list "+str(key)+" due to timeout" + "\n")
 			removable.append(key)
+			print "-------end timeout--------------"
 
 		else :
 			print " \n --------No timeout------"
