@@ -568,6 +568,7 @@ while True:
 			removable.append(key)
 			print "-------end timeout--------------"
 
+
 		else :
 
 			print " \n --------No timeout------"
@@ -709,6 +710,7 @@ while True:
 								outputs.append(airport2)
 								message_queue[airport2].put(temp)
 							print( "------------------Ending type2/4--------------------------")
+							value[value['pose'] ] = -2
 
 					if value[3] > 0:
 						if int(value['type'] ) == 2 :
@@ -723,15 +725,16 @@ while True:
 							outputs.append(hotel)
 							message_queue[hotel].put(temp)
 							print( "------------------Ending type2/4--------------------------")
-
+							value[3] = -2
 
 					count = int(0)
-					if value[ value['pose'] ] >0 or value[ value['pose'] ] == -2 :
+					if value[ value['pose'] ] == -2 :
 						count = count +1
-					if value[3] >0 or value[3] == -2 :
+					if value[3] == -2 :
 						count = count +1
 
 					if count ==2 :
+ 						
  						value['result'] = 2 # 1 is un-successful
 						outputs.append(value['conn'])
 						if s1 not in message_queue :
@@ -742,6 +745,7 @@ while True:
 
 						message_queue[s1].put(value)
 						removable.append(key)
+
 
 				print "--------------------1 HOP end-------------------"
 
@@ -868,6 +872,7 @@ while True:
 							outputs.append(airport1)
 							message_queue[airport1].put(a1)
 							print( "------------------Ending type2/4--------------------------")
+							value[1] =-2
 
 					if value[2] > 0:
 						if int(value['type'] ) == 2 :
@@ -889,6 +894,7 @@ while True:
 							outputs.append(airport2)
 							message_queue[airport2].put(a2)
 							print( "------------------Ending type2/4--------------------------")
+							value[2] = -2
 
 					if value[3] > 0:
 						print "qwerty"
@@ -909,16 +915,17 @@ while True:
 							outputs.append(hotel)
 							message_queue[hotel].put(temp)
 							print( "------------------Ending type2/4--------------------------")
+							value[3] = -2
 
 
 					count = int(0)
-					if value[1] >0 or value[1] == -2 :
+					if value[1] == -2 :
 						count = count +1
 
-					if value[2] >0 or value[2] == -2 :
+					if value[2] == -2 :
 						count = count +1
 
-					if value[3] >0 or value[3] == -2 :
+					if value[3] == -2 :
 						count = count +1
 
 					
