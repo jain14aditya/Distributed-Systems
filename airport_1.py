@@ -165,7 +165,7 @@ while True:
 
 			elif dict['type'] == 3 :
 				print "\n\n----------------- Type3 started ---------------"
-				print "remove tickets in airport1_temp"
+				print "remove tickets in airport1_perm"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password
@@ -262,7 +262,7 @@ while True:
 
 			elif dict['type'] == 5 :
 				print "\n\n----------------- Type5 started ---------------"
-				print "reverting back the changes from temp database"
+				print "reverting back the changes from perm database"
 				db = MySQLdb.connect(host="localhost",    # your host, usually localhost
                     user="root",         # your username
                     passwd="root",  # your password

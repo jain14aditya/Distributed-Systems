@@ -29,15 +29,15 @@ def CheckCallBack() :
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
 	if (checkDate(E3.get()) ) == False :
-		tkinter.messagebox.showinfo(" Please enter correct Date")
+		tkinter.messagebox.showinfo("Error!!", "Please enter correct Date")
 		return
 
 	if E1.get().isdigit() == False or  (E1.get().isdigit() == True and (int(E1.get()) < 1 or int(E1.get()) > 10000 ) ) :
-		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 10000")
+		tkinter.messagebox.showinfo("Error!!", " Please enter correct Budget less than 1000")
 		return
 
 	if E2.get().isdigit() == False or  (E2.get().isdigit() == True and (int(E2.get()) < 1 or int(E2.get()) > 4 ) ) :	
-		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 4 " )
+		tkinter.messagebox.showinfo("Error!!","No of people shouldnt exceed 4")
 		return
 
 	#getting the ip from heartbeat
@@ -129,23 +129,23 @@ def checkDate(date) :
 
 def BookCallBack() :
 
-	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
 	global ip,port
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
 	if (checkDate(E3.get()) ) == False :
-		tkinter.messagebox.showinfo(" Please enter correct Date")
+		tkinter.messagebox.showinfo("Error!!", "Please enter correct Date")
 		return
 
 	if E1.get().isdigit() == False or  (E1.get().isdigit() == True and (int(E1.get()) < 1 or int(E1.get()) > 10000 ) ) :
-		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 10000")
+		tkinter.messagebox.showinfo("Error!!", " Please enter correct Budget less than 1000")
 		return
 
 	if E2.get().isdigit() == False or  (E2.get().isdigit() == True and (int(E2.get()) < 1 or int(E2.get()) > 4 ) ) :	
-		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 4 " )
+		tkinter.messagebox.showinfo("Error!!","No of people shouldnt exceed 4")
 		return
 
-
+	#getting the ip from heartbeat
 	s_h = socket.socket()
 	s_h.connect(('0.0.0.0',10004))
 	msg = s_h.recv(1024)
@@ -155,7 +155,7 @@ def BookCallBack() :
 	ip = dict1['address'][0]
 	port = dict1['address'][1]
 	s_h.close()
-
+	# for the central server
 	s = socket.socket()			
 	print("client value = " + str(s.getsockname()))
 	print("sending to (",ip,",",port,")") 
@@ -172,7 +172,7 @@ def BookCallBack() :
 	dicte['budget'] = E1.get()
 	dicte['date'] = E3.get()
 	dicte['people'] = E2.get()
-	dicte['type'] = 2
+	dicte['type'] = 1
 	# dicte['client_ip'] = s.getsockname()[0]
 	# dicte['client_port'] = s.getsockname()[1]
 	print(dicte)

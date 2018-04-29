@@ -105,7 +105,7 @@ def writemsg():
 
 			dictee = {}
 			dictee['sender'] = 'heartbeat'
-			dictee['address'] = [primary_ip,primary_port]
+			dicte['address'] = [primary_ip,primary_port]
 
 			server_a1.connect((airport1[0],airport1[1]))
 

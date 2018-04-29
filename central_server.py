@@ -157,8 +157,7 @@ while True:
 					# print from_,to_
 					if (from_,to_) in graph : 
 						print "\n\n-------------------client 1 HOP started --------------------"
-
-						
+					
 						# direct flight exists ,check if the flag is read ,
 						#if it is read , just get the data from permanent store from airport server 
 						dicte = {}
@@ -269,7 +268,7 @@ while True:
 						for i in locations: 
 							
 							if i!=from_ and i != to_ and (from_,i) in graph and (i,to_) in graph :
-
+								
 								#two hop message , take the one path and query it .
 								#todo - >  can also add minimum cost path to consideration
 								flag = True
