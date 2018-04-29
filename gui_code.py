@@ -11,7 +11,7 @@ import json
 # import tkinter.messagebox
 # import ttkcalender
 # import tkSimpleDialog.Dialog
-ip = '10.102.61.204'
+ip = '0.0.0.0'
 port = 12559		
 E1 = None
 E2 = None
@@ -24,6 +24,7 @@ Frame = None
 		 
 def CheckCallBack() :
 
+	global ip,port
 	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
@@ -39,6 +40,17 @@ def CheckCallBack() :
 		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 4 " )
 		return
 
+	#getting the ip from heartbeat
+	s_h = socket.socket()
+	s_h.connect(('0.0.0.0',10004))
+	msg = s_h.recv(1024)
+
+	dict1 = json.loads(msg.decode('utf-8'))
+
+	ip = dict1['address'][0]
+	port = dict1['address'][1]
+	s_h.close()
+	# for the central server
 	s = socket.socket()			
 	print("client value = " + str(s.getsockname()))
 	print("sending to (",ip,",",port,")") 
@@ -118,6 +130,7 @@ def checkDate(date) :
 def BookCallBack() :
 
 	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
+	global ip,port
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
 	if (checkDate(E3.get()) ) == False :
@@ -131,6 +144,17 @@ def BookCallBack() :
 	if E2.get().isdigit() == False or  (E2.get().isdigit() == True and (int(E2.get()) < 1 or int(E2.get()) > 4 ) ) :	
 		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 4 " )
 		return
+
+
+	s_h = socket.socket()
+	s_h.connect(('0.0.0.0',10004))
+	msg = s_h.recv(1024)
+
+	dict1 = json.loads(msg.decode('utf-8'))
+
+	ip = dict1['address'][0]
+	port = dict1['address'][1]
+	s_h.close()
 
 	s = socket.socket()			
 	print("client value = " + str(s.getsockname()))

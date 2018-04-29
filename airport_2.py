@@ -15,7 +15,7 @@ port = 10001
 
 # Create a TCP/IP socket
 # server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_ip = '10.102.61.204'
+server_ip = '0.0.0.0'
 server_host = 12559
 
 # Next bind to the port
@@ -23,7 +23,7 @@ server_host = 12559
 # instead we have inputted an empty string
 # this makes the server listen to requests 
 # coming from other computers on the network
-airport2.bind(('10.102.61.204',port))		  
+airport2.bind(('0.0.0.0',port))		  
 print "socket binded to %s" %(port)
  
 # put the socket into listening mode
@@ -70,6 +70,7 @@ while True:
 				server_ip = dict['ip']
 				server_host = dict['port']
 				inputs.remove(s)
+				s.close()
 				continue
 
 
