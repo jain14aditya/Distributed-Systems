@@ -11,7 +11,7 @@ import json
 # import tkinter.messagebox
 # import ttkcalender
 # import tkSimpleDialog.Dialog
-ip = '0.0.0.0'
+ip = '192.168.0.10'
 port = 12559		
 E1 = None
 E2 = None
@@ -21,11 +21,26 @@ DropBoxFrom = None
 to_ = None
 from_ = None
 Frame = None
+Lf1= Lf2= Lf3= Lf4= Lf5= Lf6 = None
+Frame2 = None
+Frame3 = None
+Lff1 = Lff2 = Lff3 = Lff4 = Lff5 = Lff6 = None
+top = top1 = top2 =top3 = None
+B1 = B2 = None
 		 
+def sieze() :
+	global top2 
+	top2.withdraw()
+
+
+def sieze() :
+	global top3 
+	top3.withdraw()
+
 def CheckCallBack() :
 
 	global ip,port
-	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame, Frame2,Lf1,Lf2,Lf3,Lf4,Lf5,Lf6,top,top3,top2,B1,B2
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
 	if (checkDate(E3.get()) ) == False :
@@ -40,6 +55,7 @@ def CheckCallBack() :
 		tkinter.messagebox.showinfo(" Please enter correct Budget.Shouldnt exceed 4 " )
 		return
 
+
 	#getting the ip from heartbeat
 	s_h = socket.socket()
 	s_h.connect(('0.0.0.0',10004))
@@ -50,7 +66,10 @@ def CheckCallBack() :
 	ip = dict1['address'][0]
 	port = dict1['address'][1]
 	s_h.close()
-	# for the central server
+
+	
+
+
 	s = socket.socket()			
 	print("client value = " + str(s.getsockname()))
 	print("sending to (",ip,",",port,")") 
@@ -68,8 +87,8 @@ def CheckCallBack() :
 	dicte['date'] = E3.get()
 	dicte['people'] = E2.get()
 	dicte['type'] = 1
-	# dicte['client_ip'] = s.getsockname()[0]
-	# dicte['client_port'] = s.getsockname()[1]
+	dicte['client_ip'] = s.getsockname()[0]
+	dicte['client_port'] = s.getsockname()[1]
 	print(dicte)
 	dict =  json.dumps(dicte).encode('utf-8')
 	
@@ -77,19 +96,43 @@ def CheckCallBack() :
 	msg = s.recv(1024)
 	if len(msg) == 0 :
 		print("None")
-	print("recieve data from the central server")
+	print("recievec data from the central server")
 	print(msg)
 	dict = json.loads(msg.decode('utf-8'))
 	for i in dict:
 		print(str(i) + "\t = " + str(dict[i]))
-	print("-----------------------")	
+	print("---------------------------")
 
 	s.close()
+
+	if dict['cost'] < dicte['budget'] :
+
+		top2.update()
+		top2.deiconify()
+		
+		if(int(dict['hop'])==2 ) :
+			Lf2.set(str(dict['from_'])+' -> '+str(dict['inter']))
+			Lf3.set(str(dict['inter'])+' -> '+str(dict['to_']) )
+		else :
+			Lf2.set(str(dict['from_'])+' -> '+str(dict['to_']))
+			Lf3.set("None")
+	
+		Lf4.set("str(dict['to_'])")
+		Lf5.set("str(dicte['people'])")
+		Lf6.set("str(dict['cost'])")
+	
+	else :
+
+		tkinter.messagebox.showinfo("Cannot book the ticket . Insufficient Budget")
+
+
+
+
 
 
 def checkDate(date) :
 
-	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame 
 	print("hello")
 	yy,mm,dd=E3.get().split('-')
 
@@ -126,11 +169,9 @@ def checkDate(date) :
 
 
 
-
 def BookCallBack() :
 
-	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
-	global ip,port
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame,Frame3,Lff1,Lff2,Lff3,Lff4,Lff5,Lff6,top,top3,top2,B1,B2
 	# here we need to take a message and parse it back to the central server
 	# Create a socket object
 	if (checkDate(E3.get()) ) == False :
@@ -146,6 +187,7 @@ def BookCallBack() :
 		return
 
 
+
 	s_h = socket.socket()
 	s_h.connect(('0.0.0.0',10004))
 	msg = s_h.recv(1024)
@@ -156,15 +198,20 @@ def BookCallBack() :
 	port = dict1['address'][1]
 	s_h.close()
 
-	s = socket.socket()			
+
+
+
+
+	s = socket.socket()		
 	print("client value = " + str(s.getsockname()))
 	print("sending to (",ip,",",port,")") 
 	# connect to the server on local computer
 	s.connect((ip, port))
 	print("client value = " + str(s.getsockname()))
+	
 
+	
 	dicte = {}
-	dicte['sender'] = 'client'
 	dicte['to'] = to_.get()
 
 	dicte['from'] = from_.get()
@@ -173,29 +220,51 @@ def BookCallBack() :
 	dicte['date'] = E3.get()
 	dicte['people'] = E2.get()
 	dicte['type'] = 2
-	# dicte['client_ip'] = s.getsockname()[0]
-	# dicte['client_port'] = s.getsockname()[1]
+
 	print(dicte)
 	dict =  json.dumps(dicte).encode('utf-8')
 	
-	s.sendall(dict)
+	s.send(dict)
+
 	msg = s.recv(1024)
 	if len(msg) == 0 :
 		print("None")
-	print("recieve data from the central server")
+	print("recievec data from the central server")
 	print(msg)
 	dict = json.loads(msg.decode('utf-8'))
 	for i in dict:
 		print(str(i) + "\t = " + str(dict[i]))
-	print("-----------------------")	
-
 	s.close()
+
+	if dict['cost'] < dicte['budget'] :
+
+		top3.update()
+		top3.deiconify()
+		if(int(dict['hop'])==2 ) :
+			Lff2.set(str(dict['from_'])+' -> '+str(dict['inter']))
+			Lff3.set(str(dict['inter'])+' -> '+str(dict['to_']) )
+		else :
+			Lff2.set(str(dict['from_'])+' -> '+str(dict['to_']))
+			Lff3.set("None")
+			
+		Lff4.set("str(dict['to_'])")
+		Lff5.set("str(dicte['people'])")
+		Lff6.set("str(dict['cost'])")
 	
+	else :
+
+		tkinter.messagebox.showinfo("Cannot book the ticket . Insufficient Budget")
+
+
 
 
 def main() :
 
-	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame
+	global E1,E2,E3,to_,from_,DropBoxTo,DropBoxFrom,Frame, Frame2,Frame3
+
+	global Lf1, Lf2, Lf3, Lf4, Lf5, Lf6, Frame2,Frame3
+	global Lff1 , Lff2 , Lff3 , Lff4 , Lff5 , Lff6 	,top,top3,top2,B1,B2 
+
 
 	top = tkinter.Tk()
 	top.geometry("800x800+0+0")
@@ -204,7 +273,6 @@ def main() :
 	frame = tkinter.Frame(top, bg='green')
 	frame.pack(fill='both', expand='yes')
 
-	
 	labelTo = Label(frame,width=10,text = "From",relief = RAISED)
 	labelTo.place(x=100,y=200)
 
@@ -251,6 +319,58 @@ def main() :
 	BookButton = tkinter.Button(frame,text ="Book Availability",command = BookCallBack,bg='yellow')
 	BookButton.place(x=300,y=500)
 
+
+	top2 = tk.TopLevel(top)
+	top3 = tk.TopLevel(top)
+
+	frame2 = tkinter.Frame(top2, bg='green')
+	frame2.pack(fill='both', expand='yes')
+
+	Lf2 = Label(frame2,text="None") #for one hop
+	Lf2.place(x=300,y= 300)
+
+	Lf3 = Label(frame2,text="None") #for 2nd hop
+	Lf3.place(x=300,y= 400)
+
+	Lf4 = Label(frame2,text="None") #for hotel details
+	Lf4.place(x=300,y=500)
+
+	Lf5 = Label(frame2,text="Tickets Available ")
+	Lf5.place(x=500,y=400)
+
+	Lf6 = Label(frame2,text="Cost")
+	Lf6.place(x=500,y=500)
+
+	B1 = tkinter.Button(frame2,text ="Done",command = sieze1,bg= 'yellow')
+	B1.place(x=400,y=500)
+	
+	B2 = tkinter.Button(frame3,text ="Done",command = sieze2,bg= 'yellow')
+	B2.place(x=400,y=500)
+	
+
+
+	frame3 = tkinter.Frame(top3, bg='green')
+	frame3.pack(fill='both', expand='yes')
+
+
+	Lff2 = Label(frame3,text="None") #for one hop
+	Lff2.place(x=300,y= 300)
+
+	Lff3 = Label(frame3,text="None") #for 2nd hop
+	Lff3.place(x=300,y= 400)
+
+	Lff4 = Label(frame3,text="None") #for hotel details
+	Lff4.place(x=300,y=500)
+
+	Lff5 = Label(frame3,text="Tickets Available ")
+	Lff5.place(x=500,y=400)
+
+	Lff6 = Label(frame3,text="Cost")
+	Lff6.place(x=500,y=500)
+
+	
+	top2.mainloop()
+	top3.mainloop()
 	top.mainloop()
 
 
