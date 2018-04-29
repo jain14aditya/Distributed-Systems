@@ -154,10 +154,23 @@ while True:
 
 					from_ = dict['from']
 					to_ = dict['to']
+					path = []
+					print "-------------BFS-------------------"
+					if (from_,to_) in graph:
+						path.append((from_,to_))
+					for i in locations: 
+						if i!=from_ and i != to_ and (from_,i) in graph and (i,to_) in graph:
+							path.append((from_,i,to_))
+
+					print "path = ",path
+					print "-------------End BFS ---------------"
+
+
 					# print from_,to_
 					if (from_,to_) in graph : 
 						print "\n\n-------------------client 1 HOP started --------------------"
-					
+
+						
 						# direct flight exists ,check if the flag is read ,
 						#if it is read , just get the data from permanent store from airport server 
 						dicte = {}
@@ -182,7 +195,7 @@ while True:
 							dicte['pos'] = 2
 							dicte['pose'] = 2
 						
-						
+						dicte['path'] = path
 						dicte['from'] = from_
 						dicte['to'] = to_
 						dicte['Date'] = dict['date']
@@ -268,7 +281,7 @@ while True:
 						for i in locations: 
 							
 							if i!=from_ and i != to_ and (from_,i) in graph and (i,to_) in graph :
-								
+
 								#two hop message , take the one path and query it .
 								#todo - >  can also add minimum cost path to consideration
 								flag = True
@@ -295,6 +308,7 @@ while True:
 
 
 						dicte = {}
+						dicte['path'] = path
 						dicte['from'] = from_
 						dicte['to'] = i
 						dicte['Date'] = dict['date']
