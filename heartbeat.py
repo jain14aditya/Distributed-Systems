@@ -49,7 +49,7 @@ def waitmsg():
 		# Establish connection with client.
 		c, addr = s.accept()
 		#s.setblocking(0)	  
-		print("Got connection from"+ str(addr) )
+		print("Got connection from client"+ str(addr) )
 		# send a thank you message to the client. 
 		dicte = {}
 		dicte['sender'] = 'heartbeat'
@@ -81,9 +81,10 @@ def writemsg():
 			server.send( json.dumps(dicte).encode('utf-8') )
 			server.settimeout(5.0)
 			msgg = server.recv(1024)
+			print "still the primary is = ",(primary_ip, primary_port)
 		except:
 			# server has failed change ips and ports
-
+			print "swapping the primary and backup"
 			temp_ip = primary_ip
 			primary_ip = backup_ip
 			backup_ip = temp_ip
@@ -93,6 +94,7 @@ def writemsg():
 			primary_port = backup_port
 			backup_port = temp_port
 
+			print "sending the msg to all databases to change the server ip"
 			server_a1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			server_a2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			server_h = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -103,8 +105,7 @@ def writemsg():
 
 			dictee = {}
 			dictee['sender'] = 'heartbeat'
-			dictee['ip'] = primary_ip
-			dictee['port'] = primary_port
+			dictee['address'] = [primary_ip,primary_port]
 
 			server_a1.connect((airport1[0],airport1[1]))
 

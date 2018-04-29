@@ -7,6 +7,9 @@ import select
 import Queue
 import copy
 
+# change id 
+# change port
+# change data['id']
 id = 1
 
 # Create a TCP/IP socket
@@ -48,7 +51,7 @@ print("Socket successfully created")
  
 # reserve a port on your computer in our
 # case it is 1245 but it can be anything
-port = 12559			
+port = 12559		
  
 # Next bind to the port
 # we have not typed any ip in the ip field
@@ -145,6 +148,7 @@ while True:
 					dicte = {}
 					dicte['flag'] = 'alive' # 1 is requests_list update , 2 is log update , 3 is zinda hain bolne wala update
 					message_queue[s].put(dicte)
+					continue
 
 				elif dict['sender'] == 'client' :
 
@@ -233,28 +237,28 @@ while True:
 						temp['cost'] = int(0)
 						requests_list[counter] = temp
 
-						print "printing the requests_list"
-						a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
-						for i in a1_sorted_keys:
-							print i, "\t = ",requests_list[counter][i]
+						# print "printing the requests_list"
+						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						# for i in a1_sorted_keys:
+						# 	print i, "\t = ",requests_list[counter][i]
 
 						dicte.pop('conn',None)
 						f.write("Added message in logs "+str(from_)+" "+str(to_) + "\n")
 						
 						dicte['flag'] = 'request'
 
-						print "\nprinting the final client dict"
-						dicte_sorted_keys = sorted(dicte, key=dicte.get, reverse=False)
-						for i in dicte_sorted_keys:
-							print i, "\t = ",dicte[i]
+						# print "\nprinting the final client dict"
+						# dicte_sorted_keys = sorted(dicte, key=dicte.get, reverse=False)
+						# for i in dicte_sorted_keys:
+						# 	print i, "\t = ",dicte[i]
 						
 						# outputs.append(heartbeat)
 						# message_queue[heartbeat].append(dicte)
 
-						print "\n \n printing the requests_list"
-						a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
-						for i in a1_sorted_keys:
-							print i, "\t = ",requests_list[counter][i]
+						# print "\n \n printing the requests_list"
+						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						# for i in a1_sorted_keys:
+						# 	print i, "\t = ",requests_list[counter][i]
 						inputs.remove(s)
 						print "-----------------client 1 HOP finished --------------------------"
 
@@ -473,7 +477,7 @@ while True:
 				print "send to the airport_1",(ips['airport1'][0],ips['airport1'][1])
 
 				tvalue = message_queue[airport1]
-				del message_queue[airport1]
+				# del message_queue[airport1]
 				airport1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				message_queue[airport1] = tvalue
 				#s.close()
@@ -486,7 +490,7 @@ while True:
 				print "send to the airport_2",(ips['airport2'][0],ips['airport2'][1])
 
 				tvalue = message_queue[airport2]
-				del message_queue[airport2]
+				# del message_queue[airport2]
 				airport2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				message_queue[airport2] = tvalue
 
@@ -499,15 +503,15 @@ while True:
 				print "send to the hotel",(ips['hotel'][0],ips['hotel'][1])
 
 				tvalue = message_queue[hotel]
-				del message_queue[hotel]
+				# del message_queue[hotel]
 				hotel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				message_queue[hotel] = tvalue
 				#s.close()
 			else:
 				# sending back to client
-				print "sending back to client",s.getsockname()
 				# print "printing the port from which client talked",(dict['client_ip'],dict['client_port']) 
 				# s.connect(dicte['client_ip'],dicte['client_port']) )
+				print "sending back to client",s.getsockname()
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				#s.close()	
@@ -547,8 +551,16 @@ while True:
 		# 	print i,("\t = "),value[i]
 		# print "---------- dict printed -------- "
 
+		print "\n --printing the requests_list----"
+		a1_sorted_keys = sorted(value, key=value.get, reverse=False)
+		for i in a1_sorted_keys:
+			print i, "\t = ",value[i]
+		print "---------- dict printed -------- "
+
+		
 		s1 = value['conn']
 		v = tim - value['timer']
+		# print "value['from'] = ",value['from'], " value[to] = ", value['to']
 		print "tim - value['timer'] = ",v, " timeout = ", timeout
 		if tim - value['timer'] > timeout:
 			print "\n---------inside timeout --------"

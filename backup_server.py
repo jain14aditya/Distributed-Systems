@@ -7,6 +7,10 @@ import select
 import Queue
 import copy
 
+# change id 
+# change port
+# change data['id']
+
 id = 2
 
 # Create a TCP/IP socket
@@ -48,7 +52,7 @@ print("Socket successfully created")
  
 # reserve a port on your computer in our
 # case it is 1245 but it can be anything
-port = 12560			
+port = 12560	
  
 # Next bind to the port
 # we have not typed any ip in the ip field
@@ -145,7 +149,7 @@ while True:
 					dicte = {}
 					dicte['flag'] = 'alive' # 1 is requests_list update , 2 is log update , 3 is zinda hain bolne wala update
 					message_queue[s].put(dicte)
-
+					continue
 
 				elif dict['sender'] == 'client' :
 
@@ -186,7 +190,7 @@ while True:
 						dicte['Date'] = dict['date']
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
-						dicte['id'] =1 
+						dicte['id'] = 2 
 
 						dicte[ int(dicte['pos']) ] = -1
 						dicte['hops'] = 1
@@ -234,28 +238,28 @@ while True:
 						temp['cost'] = int(0)
 						requests_list[counter] = temp
 
-						print "printing the requests_list"
-						a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
-						for i in a1_sorted_keys:
-							print i, "\t = ",requests_list[counter][i]
+						# print "printing the requests_list"
+						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						# for i in a1_sorted_keys:
+						# 	print i, "\t = ",requests_list[counter][i]
 
 						dicte.pop('conn',None)
 						f.write("Added message in logs "+str(from_)+" "+str(to_) + "\n")
 						
 						dicte['flag'] = 'request'
 
-						print "\nprinting the final client dict"
-						dicte_sorted_keys = sorted(dicte, key=dicte.get, reverse=False)
-						for i in dicte_sorted_keys:
-							print i, "\t = ",dicte[i]
+						# print "\nprinting the final client dict"
+						# dicte_sorted_keys = sorted(dicte, key=dicte.get, reverse=False)
+						# for i in dicte_sorted_keys:
+						# 	print i, "\t = ",dicte[i]
 						
 						# outputs.append(heartbeat)
 						# message_queue[heartbeat].append(dicte)
 
-						print "\n \n printing the requests_list"
-						a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
-						for i in a1_sorted_keys:
-							print i, "\t = ",requests_list[counter][i]
+						# print "\n \n printing the requests_list"
+						# a1_sorted_keys = sorted(requests_list[counter], key=requests_list[counter].get, reverse=False)
+						# for i in a1_sorted_keys:
+						# 	print i, "\t = ",requests_list[counter][i]
 						inputs.remove(s)
 						print "-----------------client 1 HOP finished --------------------------"
 
@@ -299,7 +303,7 @@ while True:
 						dicte['sender'] = 'central'
 						dicte['index'] = counter
 						dicte['pos'] = 1
-						dicte['id'] = 1
+						dicte['id'] = 2
 
 						dicte[1] = -1
 						dicte[2] = -1
@@ -384,15 +388,11 @@ while True:
 				
 
 					if idx in requests_list and dict['id'] == id:
-
 						print("pos = " + str(pos)+ "\tidx = "+str(dict['flag'])+ "\tidx =" +str(dict['type']))
-
 						if dict['type'] == 4 or dict['type'] == 5 or dict['type']== -2 : 
 							#if ticket is booked or not
 							requests_list[idx][pos] = -2
-							
 						else :
-
 							# print(str(dict['flag'])+" is used heree")
 							requests_list[idx][pos] = dict['flag']
 							requests_list[idx]['cost']+= int(dict['cost'])
@@ -478,7 +478,7 @@ while True:
 				print "send to the airport_1",(ips['airport1'][0],ips['airport1'][1])
 
 				tvalue = message_queue[airport1]
-				del message_queue[airport1]
+				# del message_queue[airport1]
 				airport1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				message_queue[airport1] = tvalue
 				#s.close()
@@ -491,7 +491,7 @@ while True:
 				print "send to the airport_2",(ips['airport2'][0],ips['airport2'][1])
 
 				tvalue = message_queue[airport2]
-				del message_queue[airport2]
+				# del message_queue[airport2]
 				airport2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				message_queue[airport2] = tvalue
 
@@ -504,15 +504,15 @@ while True:
 				print "send to the hotel",(ips['hotel'][0],ips['hotel'][1])
 
 				tvalue = message_queue[hotel]
-				del message_queue[hotel]
+				# del message_queue[hotel]
 				hotel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 				message_queue[hotel] = tvalue
 				#s.close()
 			else:
 				# sending back to client
-				print "sending back to client",s.getsockname()
 				# print "printing the port from which client talked",(dict['client_ip'],dict['client_port']) 
 				# s.connect(dicte['client_ip'],dicte['client_port']) )
+				print "sending back to client",s.getsockname()
 				dicte =  json.dumps(dict).encode('utf-8')
 				s.send(dicte)
 				#s.close()	
@@ -552,8 +552,16 @@ while True:
 		# 	print i,("\t = "),value[i]
 		# print "---------- dict printed -------- "
 
+		print "\n --printing the requests_list----"
+		a1_sorted_keys = sorted(value, key=value.get, reverse=False)
+		for i in a1_sorted_keys:
+			print i, "\t = ",value[i]
+		print "---------- dict printed -------- "
+
+		
 		s1 = value['conn']
 		v = tim - value['timer']
+		# print "value['from'] = ",value['from'], " value[to] = ", value['to']
 		print "tim - value['timer'] = ",v, " timeout = ", timeout
 		if tim - value['timer'] > timeout:
 			print "\n---------inside timeout --------"
@@ -572,6 +580,7 @@ while True:
 			f.write("Message has been removed from list "+str(key)+" due to timeout" + "\n")
 			removable.append(key)
 			print "-------end timeout--------------"
+
 
 		else :
 
@@ -689,7 +698,6 @@ while True:
 					# this is successful transaction
 					# s1 = socket.socket()
 					# s1.connect( (value['ip'],value['port']) )
-					
 					if value[int(value['pose'])] > 0:
 
 						if int(value['type'] ) == 2 :
@@ -715,6 +723,7 @@ while True:
 								outputs.append(airport2)
 								message_queue[airport2].put(temp)
 							print( "------------------Ending type2/4--------------------------")
+							value[value['pose'] ] = -2
 
 					if value[3] > 0:
 						if int(value['type'] ) == 2 :
@@ -729,15 +738,16 @@ while True:
 							outputs.append(hotel)
 							message_queue[hotel].put(temp)
 							print( "------------------Ending type2/4--------------------------")
-
+							value[3] = -2
 
 					count = int(0)
-					if value[ value['pose'] ] >0 or value[ value['pose'] ] == -2 :
+					if value[ value['pose'] ] == -2 :
 						count = count +1
-					if value[3] >0 or value[3] == -2 :
+					if value[3] == -2 :
 						count = count +1
 
 					if count ==2 :
+ 						
  						value['result'] = 2 # 1 is un-successful
 						outputs.append(value['conn'])
 						if s1 not in message_queue :
@@ -748,6 +758,7 @@ while True:
 
 						message_queue[s1].put(value)
 						removable.append(key)
+
 
 				print "--------------------1 HOP end-------------------"
 
@@ -874,6 +885,7 @@ while True:
 							outputs.append(airport1)
 							message_queue[airport1].put(a1)
 							print( "------------------Ending type2/4--------------------------")
+							value[1] =-2
 
 					if value[2] > 0:
 						if int(value['type'] ) == 2 :
@@ -895,6 +907,7 @@ while True:
 							outputs.append(airport2)
 							message_queue[airport2].put(a2)
 							print( "------------------Ending type2/4--------------------------")
+							value[2] = -2
 
 					if value[3] > 0:
 						print "qwerty"
@@ -915,16 +928,17 @@ while True:
 							outputs.append(hotel)
 							message_queue[hotel].put(temp)
 							print( "------------------Ending type2/4--------------------------")
+							value[3] = -2
 
 
 					count = int(0)
-					if value[1] >0 or value[1] == -2 :
+					if value[1] == -2 :
 						count = count +1
 
-					if value[2] >0 or value[2] == -2 :
+					if value[2] == -2 :
 						count = count +1
 
-					if value[3] >0 or value[3] == -2 :
+					if value[3] == -2 :
 						count = count +1
 
 					

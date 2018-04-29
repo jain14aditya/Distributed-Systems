@@ -14,7 +14,7 @@ port = 10002
  
 
 # Create a TCP/IP socket
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_ip = '0.0.0.0'
 server_host = 12559
 
@@ -67,8 +67,9 @@ while True:
 
 			if dict['sender'] == 'heartbeat' :
 				# now we need to update it from the message it sent
-				server_ip = dict['ip']
-				server_host = dict['port']
+				server_ip = dict['address'][0]
+				server_host = dict['address'][1]
+				print "recieved the heartbeat NEW PRIMARY address = ",(server_ip,server_host)
 				inputs.remove(s)
 				s.close()
 				continue
